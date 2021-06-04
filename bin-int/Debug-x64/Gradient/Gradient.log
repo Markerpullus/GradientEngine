@@ -1,0 +1,6 @@
+﻿  Log.cpp
+Z:\Programming\Gradient\Gradient\src\Gradient\Log.h(21,52): warning C4251: 'Gradient::Log::coreLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Gradient::Log'
+Z:\Programming\Gradient\Gradient\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
+Z:\Programming\Gradient\Gradient\src\Gradient\Log.h(23,54): warning C4251: 'Gradient::Log::clientLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Gradient::Log'
+Z:\Programming\Gradient\Gradient\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
+  Gradient.vcxproj -> Z:\Programming\Gradient\bin\Debug-x64\Gradient\Gradient.dll
