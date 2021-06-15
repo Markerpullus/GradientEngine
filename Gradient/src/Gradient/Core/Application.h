@@ -1,11 +1,14 @@
 #pragma once
 
-#include "Core.h"
+#include "Gradient/Core.h"
+#include "Gradient/Rendering/Window.h"
 
 namespace Gradient
 {
 	class GD_API Application
 	{
+	protected:
+		Window* window;
 	public:
 		Application();
 		virtual ~Application();
@@ -14,5 +17,5 @@ namespace Gradient
 	};
 	
 	// Defined by client
-	Application* createApplication();
+	Application* CreateApplication();
 }

@@ -45,5 +45,6 @@
     <ClCompile Include="src\Gradient\Rendering\Window.cpp">
       <Filter>Gradient\Rendering</Filter>
     </ClCompile>
+    <ClCompile Include="src\Gradient\Core.cpp" />
   </ItemGroup>
 </Project>

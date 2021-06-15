@@ -11,6 +11,7 @@ workspace "Gradient"
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
+IncludeDir["SPDLOG"] = "Gradient/vendor/spdlog/include"
 IncludeDir["GLFW"] = "Gradient/vendor/glfw/include"
 IncludeDir["GLAD"] = "Gradient/vendor/glad/include"
 
@@ -33,8 +34,8 @@ project "Gradient"
 
 	includedirs
 	{
-		"%{prj.name}/src/Gradient",
-		"%{prj.name}/vendor/spdlog/include",
+		"%{prj.name}/src",
+		"%{IncludeDir.SPDLOG}",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.GLAD}"
 	}
@@ -94,8 +95,9 @@ project "Sandbox"
 	includedirs
 	{
 		"Gradient/src",
-		"Gradient/src/Gradient",
-		"Gradient/src/vendor/spdlog/include"
+		"%{IncludeDir.SPDLOG}",
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.GLAD}"
 	}
 
 	links

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Core.h"
+#include "Gradient/Core.h"
 
 namespace Gradient
 {
@@ -23,9 +23,9 @@ namespace Gradient
 	class GD_API Event
 	{
 	public:
-		inline eventName getEventName() { return name; };
+		inline eventName GetEventName() { return name; };
 
-		inline eventType getEventType() { return type; };
+		inline eventType GetEventType() { return type; };
 
 		Event(eventName n, eventType t)
 			:name(n), type(t)
