@@ -1,42 +1,49 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Gradient">
+      <UniqueIdentifier>{D3A9F532-BF76-503E-E88F-3EE6D4BB85CC}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="Gradient\Core">
+      <UniqueIdentifier>{0BEA907B-77AA-0CB2-40E5-552FAC64518E}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Gradient\EventSystem">
+      <UniqueIdentifier>{0944CA63-F5D2-532D-9EF1-67288A5F64D3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gradient\Rendering">
+      <UniqueIdentifier>{E0163A90-CCFA-FAE5-355B-F538215EE567}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Gradient.h" />
     <ClInclude Include="src\Gradient\Core.h">
-      <Filter>Header Files</Filter>
+      <Filter>Gradient</Filter>
     </ClInclude>
-    <ClInclude Include="src\Gradient\Application.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\Gradient\Core\Application.h">
+      <Filter>Gradient\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Gradient.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\Gradient\Core\Log.h">
+      <Filter>Gradient\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Gradient\Entry.h">
-      <Filter>Header Files</Filter>
+      <Filter>Gradient</Filter>
     </ClInclude>
-    <ClInclude Include="src\Gradient\Log.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\Gradient\EventSystem\Event.h">
+      <Filter>Gradient\EventSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gradient\Rendering\Window.h">
+      <Filter>Gradient\Rendering</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Gradient\Application.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\Gradient\Core\Application.cpp">
+      <Filter>Gradient\Core</Filter>
     </ClCompile>
-    <ClCompile Include="src\Gradient\Log.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\Gradient\Core\Log.cpp">
+      <Filter>Gradient\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Gradient\Rendering\Window.cpp">
+      <Filter>Gradient\Rendering</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

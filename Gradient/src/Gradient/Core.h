@@ -7,5 +7,9 @@
 		#define GD_API __declspec(dllimport)
 	#endif
 #else
-	#error Windows only!
+	#ifdef GD_BUILD_SO
+		#define GD_API __attribute__(visibility("default"))
+	#else
+		#define GD_API
+	#endif
 #endif
