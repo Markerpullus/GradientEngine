@@ -19,6 +19,8 @@
     x;\
     ASSERT(glLogCall(#x, __FILE__, __LINE__))
 
+#define GD_BIND_EVENT_CALLBACK(fn) [this](auto&&... args) -> decltype(auto) { return this->fn(std::forward<decltype(args)>(args)...); }
+
 void glClearError();
 
 bool glLogCall(const char* function, const char* file, const int line);

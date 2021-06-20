@@ -1,4 +1,4 @@
-#include "Core.h"
+#include "Gradient/Core.h"
 #include "Gradient/Core/Log.h"
 #include "glad/glad.h"
 

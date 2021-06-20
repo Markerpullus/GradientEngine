@@ -1,50 +1,1317 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Gradient">
-      <UniqueIdentifier>{D3A9F532-BF76-503E-E88F-3EE6D4BB85CC}</UniqueIdentifier>
+    <Filter Include="src">
+      <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Gradient\Core">
-      <UniqueIdentifier>{0BEA907B-77AA-0CB2-40E5-552FAC64518E}</UniqueIdentifier>
+    <Filter Include="src\Gradient">
+      <UniqueIdentifier>{CAAC6F63-B60F-FF07-5F95-37BE4BD7CA8A}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Gradient\EventSystem">
-      <UniqueIdentifier>{0944CA63-F5D2-532D-9EF1-67288A5F64D3}</UniqueIdentifier>
+    <Filter Include="src\Gradient\Core">
+      <UniqueIdentifier>{625FC6F2-CE75-C488-17ED-4FAA83429510}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Gradient\Rendering">
-      <UniqueIdentifier>{E0163A90-CCFA-FAE5-355B-F538215EE567}</UniqueIdentifier>
+    <Filter Include="src\Gradient\EventSystem">
+      <UniqueIdentifier>{8071096E-6C96-58EE-95E1-3D7E8165570C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor">
+      <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost">
+      <UniqueIdentifier>{69CA52F0-552D-E294-FEB2-1A4BEAF4AD17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost">
+      <UniqueIdentifier>{9FD133E1-8BB5-F436-F415-EF89E018DFB8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\assert">
+      <UniqueIdentifier>{804319B2-EC05-4D3C-35B6-DBC8A1B7251A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\bind">
+      <UniqueIdentifier>{0BB7AC95-77EE-F42C-80F8-5850ECAE1B26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\bind\detail">
+      <UniqueIdentifier>{6DF4C644-591A-91AB-4260-16772E25B677}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\config">
+      <UniqueIdentifier>{E47778B6-503A-AC40-99EA-3ACD05EC841E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\config\abi">
+      <UniqueIdentifier>{5F3915AC-CB51-FCD5-94FE-8B6F00D6906F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\config\compiler">
+      <UniqueIdentifier>{EE738E27-DAAF-9191-43C2-A9882F1D3AAC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\config\detail">
+      <UniqueIdentifier>{2627A8D6-1278-9318-3BDC-81DA278C2682}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\config\no_tr1">
+      <UniqueIdentifier>{4680A5EE-32D1-9030-5B35-7FF247E5239A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\config\platform">
+      <UniqueIdentifier>{D8704024-C4AC-438E-2DBF-5B85191AECA8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\config\stdlib">
+      <UniqueIdentifier>{D560ACFA-C1B1-973C-EA15-86FED6C52AA6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\container_hash">
+      <UniqueIdentifier>{14B26B4D-8020-C1CC-C909-7CCC35B7B668}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\container_hash\detail">
+      <UniqueIdentifier>{560BCEF4-4288-C137-6B05-C24B57E15DCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\core">
+      <UniqueIdentifier>{775DAD95-E394-F52C-EC9E-595058551C26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\detail">
+      <UniqueIdentifier>{81E01BB8-EDA2-4F42-3653-DECEA2542820}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\exception">
+      <UniqueIdentifier>{3D50F1EB-290B-E197-D2C2-59E2BE5C2B28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\function">
+      <UniqueIdentifier>{F4C1E8C8-60CF-16AF-E9B5-129A55C2E265}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\function\detail">
+      <UniqueIdentifier>{367FBE96-22BB-C100-8BCD-D9F777286A1B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\integer">
+      <UniqueIdentifier>{9CB67B51-88C6-2722-F17F-8C40DDAE16BB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor">
+      <UniqueIdentifier>{15CBF8AA-81AE-07EB-8AB1-3527F613CE3B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\arithmetic">
+      <UniqueIdentifier>{8E505585-7AB8-1B53-E323-3069CFAA323F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\arithmetic\limits">
+      <UniqueIdentifier>{6F504758-DB16-A474-2472-32D7907712D9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\array">
+      <UniqueIdentifier>{633A6A38-CFFE-6828-9864-99F204E8045E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\config">
+      <UniqueIdentifier>{9A70234A-86C2-FA39-6FE1-374A5BD21323}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\control">
+      <UniqueIdentifier>{E558998E-51E8-5A79-5AE4-3B91C6F29585}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\debug">
+      <UniqueIdentifier>{6B219938-D7E5-9728-A04B-C8F20CCF335E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\detail">
+      <UniqueIdentifier>{37D9C64B-232B-9E3B-0C4A-DB4BF83AB724}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\detail\dmc">
+      <UniqueIdentifier>{5A1A8A19-4682-50E7-AFED-64FD9B7467D3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\detail\limits">
+      <UniqueIdentifier>{F8602546-64D1-27BF-2DF0-A147991F60C0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\facilities">
+      <UniqueIdentifier>{81560F0E-6DBE-D5DB-D629-EAF1C2B0ECC7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\facilities\detail">
+      <UniqueIdentifier>{23D37804-8F99-D520-D8F4-638344FA4385}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\iteration">
+      <UniqueIdentifier>{D39FDF37-3FBA-42D9-88DC-526DF4356AE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\iteration\detail">
+      <UniqueIdentifier>{352C1377-21D5-7AA6-4A6B-9625367395E7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\iteration\detail\bounds">
+      <UniqueIdentifier>{2F1D90AC-9B04-7BA2-A4F2-7C1E10591E65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\iteration\detail\iter">
+      <UniqueIdentifier>{B8231EFD-2440-10EE-ED17-7D5B59F379AF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits">
+      <UniqueIdentifier>{59B05144-451B-1250-EE36-77B5DA80D532}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\iteration\detail\limits">
+      <UniqueIdentifier>{36AA72C3-A291-5DB9-AB7F-5F3517E6007C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\logical">
+      <UniqueIdentifier>{5F86E042-CB15-A22D-D411-83454020DD39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\logical\limits">
+      <UniqueIdentifier>{20B1438E-0C2F-9427-F526-52BFE143D64F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\punctuation">
+      <UniqueIdentifier>{9E84B850-0AEA-4BD7-93C2-EDAFFF264146}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\punctuation\detail">
+      <UniqueIdentifier>{A05EB726-8CF2-ACCE-F5B6-0683E169E7C0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\repetition">
+      <UniqueIdentifier>{C70A98EE-B372-5EBC-1CDE-72D2086575A8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\repetition\limits">
+      <UniqueIdentifier>{88309DF2-F4F6-F90E-3D52-8871A9576873}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\slot">
+      <UniqueIdentifier>{A669BF01-9250-81F9-3BA1-E7162767FA5F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\slot\detail">
+      <UniqueIdentifier>{A84A79FA-14B0-0C81-9D88-AE5909ED01F0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\tuple">
+      <UniqueIdentifier>{EEA9C339-5A6E-C229-23D4-F2F38F575E5F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\tuple\detail">
+      <UniqueIdentifier>{F069B96D-DC7C-B9C6-8566-96B371585614}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\variadic">
+      <UniqueIdentifier>{67037CBD-5380-6F00-7CFD-6F1468D90B94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\variadic\detail">
+      <UniqueIdentifier>{49419120-B57C-F1E3-BE71-6E732A2C7614}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\preprocessor\variadic\limits">
+      <UniqueIdentifier>{28357F33-9470-DFF6-9D65-5C8609206427}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\type_index">
+      <UniqueIdentifier>{67E721F2-D3FF-081C-9CAC-98B508849DB5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\type_index\detail">
+      <UniqueIdentifier>{49A52EAB-358C-F0A2-DEDC-56C0CAA26909}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\type_traits">
+      <UniqueIdentifier>{06614E50-F286-18B7-DBCC-9D82C7913D83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\boost\boost\type_traits\detail">
+      <UniqueIdentifier>{08365CBA-74FA-5AAA-3D60-8B74A9E3F6DF}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Gradient.h" />
+    <ClInclude Include="src\Gradient.h">
+      <Filter>src</Filter>
+    </ClInclude>
     <ClInclude Include="src\Gradient\Core.h">
-      <Filter>Gradient</Filter>
+      <Filter>src\Gradient</Filter>
     </ClInclude>
     <ClInclude Include="src\Gradient\Core\Application.h">
-      <Filter>Gradient\Core</Filter>
+      <Filter>src\Gradient\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Gradient\Core\Log.h">
-      <Filter>Gradient\Core</Filter>
+      <Filter>src\Gradient\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gradient\Core\Window.h">
+      <Filter>src\Gradient\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Gradient\Entry.h">
-      <Filter>Gradient</Filter>
+      <Filter>src\Gradient</Filter>
     </ClInclude>
     <ClInclude Include="src\Gradient\EventSystem\Event.h">
-      <Filter>Gradient\EventSystem</Filter>
+      <Filter>src\Gradient\EventSystem</Filter>
     </ClInclude>
-    <ClInclude Include="src\Gradient\Rendering\Window.h">
-      <Filter>Gradient\Rendering</Filter>
+    <ClInclude Include="src\Gradient\EventSystem\KeyCodes.h">
+      <Filter>src\Gradient\EventSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gradient\EventSystem\KeyEvent.h">
+      <Filter>src\Gradient\EventSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gradient\EventSystem\MouseCodes.h">
+      <Filter>src\Gradient\EventSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gradient\EventSystem\MouseEvent.h">
+      <Filter>src\Gradient\EventSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gradient\EventSystem\WindowEvent.h">
+      <Filter>src\Gradient\EventSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\assert.hpp">
+      <Filter>vendor\boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\assert\source_location.hpp">
+      <Filter>vendor\boost\boost\assert</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\bind.hpp">
+      <Filter>vendor\boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\bind\arg.hpp">
+      <Filter>vendor\boost\boost\bind</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\bind\bind.hpp">
+      <Filter>vendor\boost\boost\bind</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\bind\bind_cc.hpp">
+      <Filter>vendor\boost\boost\bind</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\bind\bind_mf2_cc.hpp">
+      <Filter>vendor\boost\boost\bind</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\bind\bind_mf_cc.hpp">
+      <Filter>vendor\boost\boost\bind</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\bind\bind_template.hpp">
+      <Filter>vendor\boost\boost\bind</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\bind\detail\result_traits.hpp">
+      <Filter>vendor\boost\boost\bind\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\bind\mem_fn.hpp">
+      <Filter>vendor\boost\boost\bind</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\bind\mem_fn_cc.hpp">
+      <Filter>vendor\boost\boost\bind</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\bind\mem_fn_template.hpp">
+      <Filter>vendor\boost\boost\bind</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\bind\mem_fn_vw.hpp">
+      <Filter>vendor\boost\boost\bind</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\bind\placeholders.hpp">
+      <Filter>vendor\boost\boost\bind</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\bind\std_placeholders.hpp">
+      <Filter>vendor\boost\boost\bind</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\bind\storage.hpp">
+      <Filter>vendor\boost\boost\bind</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config.hpp">
+      <Filter>vendor\boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\abi\borland_prefix.hpp">
+      <Filter>vendor\boost\boost\config\abi</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\abi\borland_suffix.hpp">
+      <Filter>vendor\boost\boost\config\abi</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\abi\msvc_prefix.hpp">
+      <Filter>vendor\boost\boost\config\abi</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\abi\msvc_suffix.hpp">
+      <Filter>vendor\boost\boost\config\abi</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\abi_prefix.hpp">
+      <Filter>vendor\boost\boost\config</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\abi_suffix.hpp">
+      <Filter>vendor\boost\boost\config</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\assert_cxx03.hpp">
+      <Filter>vendor\boost\boost\config</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\assert_cxx11.hpp">
+      <Filter>vendor\boost\boost\config</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\assert_cxx14.hpp">
+      <Filter>vendor\boost\boost\config</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\assert_cxx17.hpp">
+      <Filter>vendor\boost\boost\config</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\assert_cxx98.hpp">
+      <Filter>vendor\boost\boost\config</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\auto_link.hpp">
+      <Filter>vendor\boost\boost\config</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\compiler\borland.hpp">
+      <Filter>vendor\boost\boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\compiler\clang.hpp">
+      <Filter>vendor\boost\boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\compiler\codegear.hpp">
+      <Filter>vendor\boost\boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\compiler\comeau.hpp">
+      <Filter>vendor\boost\boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\compiler\common_edg.hpp">
+      <Filter>vendor\boost\boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\compiler\compaq_cxx.hpp">
+      <Filter>vendor\boost\boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\compiler\cray.hpp">
+      <Filter>vendor\boost\boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\compiler\diab.hpp">
+      <Filter>vendor\boost\boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\compiler\digitalmars.hpp">
+      <Filter>vendor\boost\boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\compiler\gcc.hpp">
+      <Filter>vendor\boost\boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\compiler\gcc_xml.hpp">
+      <Filter>vendor\boost\boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\compiler\greenhills.hpp">
+      <Filter>vendor\boost\boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\compiler\hp_acc.hpp">
+      <Filter>vendor\boost\boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\compiler\intel.hpp">
+      <Filter>vendor\boost\boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\compiler\kai.hpp">
+      <Filter>vendor\boost\boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\compiler\metrowerks.hpp">
+      <Filter>vendor\boost\boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\compiler\mpw.hpp">
+      <Filter>vendor\boost\boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\compiler\nvcc.hpp">
+      <Filter>vendor\boost\boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\compiler\pathscale.hpp">
+      <Filter>vendor\boost\boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\compiler\pgi.hpp">
+      <Filter>vendor\boost\boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\compiler\sgi_mipspro.hpp">
+      <Filter>vendor\boost\boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\compiler\sunpro_cc.hpp">
+      <Filter>vendor\boost\boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\compiler\vacpp.hpp">
+      <Filter>vendor\boost\boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\compiler\visualc.hpp">
+      <Filter>vendor\boost\boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\compiler\xlcpp.hpp">
+      <Filter>vendor\boost\boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\compiler\xlcpp_zos.hpp">
+      <Filter>vendor\boost\boost\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\detail\cxx_composite.hpp">
+      <Filter>vendor\boost\boost\config\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\detail\posix_features.hpp">
+      <Filter>vendor\boost\boost\config\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\detail\select_compiler_config.hpp">
+      <Filter>vendor\boost\boost\config\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\detail\select_platform_config.hpp">
+      <Filter>vendor\boost\boost\config\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\detail\select_stdlib_config.hpp">
+      <Filter>vendor\boost\boost\config\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\detail\suffix.hpp">
+      <Filter>vendor\boost\boost\config\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\header_deprecated.hpp">
+      <Filter>vendor\boost\boost\config</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\helper_macros.hpp">
+      <Filter>vendor\boost\boost\config</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\no_tr1\cmath.hpp">
+      <Filter>vendor\boost\boost\config\no_tr1</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\no_tr1\complex.hpp">
+      <Filter>vendor\boost\boost\config\no_tr1</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\no_tr1\functional.hpp">
+      <Filter>vendor\boost\boost\config\no_tr1</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\no_tr1\memory.hpp">
+      <Filter>vendor\boost\boost\config\no_tr1</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\no_tr1\utility.hpp">
+      <Filter>vendor\boost\boost\config\no_tr1</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\platform\aix.hpp">
+      <Filter>vendor\boost\boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\platform\amigaos.hpp">
+      <Filter>vendor\boost\boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\platform\beos.hpp">
+      <Filter>vendor\boost\boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\platform\bsd.hpp">
+      <Filter>vendor\boost\boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\platform\cloudabi.hpp">
+      <Filter>vendor\boost\boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\platform\cray.hpp">
+      <Filter>vendor\boost\boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\platform\cygwin.hpp">
+      <Filter>vendor\boost\boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\platform\haiku.hpp">
+      <Filter>vendor\boost\boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\platform\hpux.hpp">
+      <Filter>vendor\boost\boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\platform\irix.hpp">
+      <Filter>vendor\boost\boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\platform\linux.hpp">
+      <Filter>vendor\boost\boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\platform\macos.hpp">
+      <Filter>vendor\boost\boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\platform\qnxnto.hpp">
+      <Filter>vendor\boost\boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\platform\solaris.hpp">
+      <Filter>vendor\boost\boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\platform\symbian.hpp">
+      <Filter>vendor\boost\boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\platform\vms.hpp">
+      <Filter>vendor\boost\boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\platform\vxworks.hpp">
+      <Filter>vendor\boost\boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\platform\win32.hpp">
+      <Filter>vendor\boost\boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\platform\zos.hpp">
+      <Filter>vendor\boost\boost\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\pragma_message.hpp">
+      <Filter>vendor\boost\boost\config</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\requires_threads.hpp">
+      <Filter>vendor\boost\boost\config</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\stdlib\dinkumware.hpp">
+      <Filter>vendor\boost\boost\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\stdlib\libcomo.hpp">
+      <Filter>vendor\boost\boost\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\stdlib\libcpp.hpp">
+      <Filter>vendor\boost\boost\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\stdlib\libstdcpp3.hpp">
+      <Filter>vendor\boost\boost\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\stdlib\modena.hpp">
+      <Filter>vendor\boost\boost\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\stdlib\msl.hpp">
+      <Filter>vendor\boost\boost\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\stdlib\roguewave.hpp">
+      <Filter>vendor\boost\boost\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\stdlib\sgi.hpp">
+      <Filter>vendor\boost\boost\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\stdlib\stlport.hpp">
+      <Filter>vendor\boost\boost\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\stdlib\vacpp.hpp">
+      <Filter>vendor\boost\boost\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\stdlib\xlcpp_zos.hpp">
+      <Filter>vendor\boost\boost\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\user.hpp">
+      <Filter>vendor\boost\boost\config</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\warning_disable.hpp">
+      <Filter>vendor\boost\boost\config</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\config\workaround.hpp">
+      <Filter>vendor\boost\boost\config</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\container_hash\detail\float_functions.hpp">
+      <Filter>vendor\boost\boost\container_hash\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\container_hash\detail\hash_float.hpp">
+      <Filter>vendor\boost\boost\container_hash\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\container_hash\detail\limits.hpp">
+      <Filter>vendor\boost\boost\container_hash\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\container_hash\extensions.hpp">
+      <Filter>vendor\boost\boost\container_hash</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\container_hash\hash.hpp">
+      <Filter>vendor\boost\boost\container_hash</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\container_hash\hash_fwd.hpp">
+      <Filter>vendor\boost\boost\container_hash</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\core\addressof.hpp">
+      <Filter>vendor\boost\boost\core</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\core\demangle.hpp">
+      <Filter>vendor\boost\boost\core</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\core\enable_if.hpp">
+      <Filter>vendor\boost\boost\core</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\core\is_same.hpp">
+      <Filter>vendor\boost\boost\core</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\core\no_exceptions_support.hpp">
+      <Filter>vendor\boost\boost\core</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\core\ref.hpp">
+      <Filter>vendor\boost\boost\core</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\cstdint.hpp">
+      <Filter>vendor\boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\current_function.hpp">
+      <Filter>vendor\boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\detail\container_fwd.hpp">
+      <Filter>vendor\boost\boost\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\detail\workaround.hpp">
+      <Filter>vendor\boost\boost\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\exception\exception.hpp">
+      <Filter>vendor\boost\boost\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\function.hpp">
+      <Filter>vendor\boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\function\detail\function_iterate.hpp">
+      <Filter>vendor\boost\boost\function\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\function\detail\maybe_include.hpp">
+      <Filter>vendor\boost\boost\function\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\function\detail\prologue.hpp">
+      <Filter>vendor\boost\boost\function\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\function\function0.hpp">
+      <Filter>vendor\boost\boost\function</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\function\function1.hpp">
+      <Filter>vendor\boost\boost\function</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\function\function10.hpp">
+      <Filter>vendor\boost\boost\function</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\function\function2.hpp">
+      <Filter>vendor\boost\boost\function</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\function\function3.hpp">
+      <Filter>vendor\boost\boost\function</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\function\function4.hpp">
+      <Filter>vendor\boost\boost\function</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\function\function5.hpp">
+      <Filter>vendor\boost\boost\function</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\function\function6.hpp">
+      <Filter>vendor\boost\boost\function</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\function\function7.hpp">
+      <Filter>vendor\boost\boost\function</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\function\function8.hpp">
+      <Filter>vendor\boost\boost\function</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\function\function9.hpp">
+      <Filter>vendor\boost\boost\function</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\function\function_base.hpp">
+      <Filter>vendor\boost\boost\function</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\function\function_fwd.hpp">
+      <Filter>vendor\boost\boost\function</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\function\function_template.hpp">
+      <Filter>vendor\boost\boost\function</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\function_equal.hpp">
+      <Filter>vendor\boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\get_pointer.hpp">
+      <Filter>vendor\boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\integer.hpp">
+      <Filter>vendor\boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\integer\static_log2.hpp">
+      <Filter>vendor\boost\boost\integer</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\integer_fwd.hpp">
+      <Filter>vendor\boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\integer_traits.hpp">
+      <Filter>vendor\boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\is_placeholder.hpp">
+      <Filter>vendor\boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\limits.hpp">
+      <Filter>vendor\boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\mem_fn.hpp">
+      <Filter>vendor\boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\arithmetic\dec.hpp">
+      <Filter>vendor\boost\boost\preprocessor\arithmetic</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\arithmetic\inc.hpp">
+      <Filter>vendor\boost\boost\preprocessor\arithmetic</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\arithmetic\limits\dec_1024.hpp">
+      <Filter>vendor\boost\boost\preprocessor\arithmetic\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\arithmetic\limits\dec_256.hpp">
+      <Filter>vendor\boost\boost\preprocessor\arithmetic\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\arithmetic\limits\dec_512.hpp">
+      <Filter>vendor\boost\boost\preprocessor\arithmetic\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\arithmetic\limits\inc_1024.hpp">
+      <Filter>vendor\boost\boost\preprocessor\arithmetic\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\arithmetic\limits\inc_256.hpp">
+      <Filter>vendor\boost\boost\preprocessor\arithmetic\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\arithmetic\limits\inc_512.hpp">
+      <Filter>vendor\boost\boost\preprocessor\arithmetic\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\array\data.hpp">
+      <Filter>vendor\boost\boost\preprocessor\array</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\array\elem.hpp">
+      <Filter>vendor\boost\boost\preprocessor\array</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\array\size.hpp">
+      <Filter>vendor\boost\boost\preprocessor\array</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\cat.hpp">
+      <Filter>vendor\boost\boost\preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\config\config.hpp">
+      <Filter>vendor\boost\boost\preprocessor\config</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\config\limits.hpp">
+      <Filter>vendor\boost\boost\preprocessor\config</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\control\if.hpp">
+      <Filter>vendor\boost\boost\preprocessor\control</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\control\iif.hpp">
+      <Filter>vendor\boost\boost\preprocessor\control</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\debug\error.hpp">
+      <Filter>vendor\boost\boost\preprocessor\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\detail\auto_rec.hpp">
+      <Filter>vendor\boost\boost\preprocessor\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\detail\dmc\auto_rec.hpp">
+      <Filter>vendor\boost\boost\preprocessor\detail\dmc</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\detail\limits\auto_rec_1024.hpp">
+      <Filter>vendor\boost\boost\preprocessor\detail\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\detail\limits\auto_rec_256.hpp">
+      <Filter>vendor\boost\boost\preprocessor\detail\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\detail\limits\auto_rec_512.hpp">
+      <Filter>vendor\boost\boost\preprocessor\detail\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\enum.hpp">
+      <Filter>vendor\boost\boost\preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\enum_params.hpp">
+      <Filter>vendor\boost\boost\preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\facilities\check_empty.hpp">
+      <Filter>vendor\boost\boost\preprocessor\facilities</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\facilities\detail\is_empty.hpp">
+      <Filter>vendor\boost\boost\preprocessor\facilities\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\facilities\empty.hpp">
+      <Filter>vendor\boost\boost\preprocessor\facilities</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\facilities\expand.hpp">
+      <Filter>vendor\boost\boost\preprocessor\facilities</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\facilities\is_1.hpp">
+      <Filter>vendor\boost\boost\preprocessor\facilities</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\facilities\is_empty.hpp">
+      <Filter>vendor\boost\boost\preprocessor\facilities</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\facilities\is_empty_variadic.hpp">
+      <Filter>vendor\boost\boost\preprocessor\facilities</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\facilities\overload.hpp">
+      <Filter>vendor\boost\boost\preprocessor\facilities</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\inc.hpp">
+      <Filter>vendor\boost\boost\preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iterate.hpp">
+      <Filter>vendor\boost\boost\preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\bounds\lower1.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\bounds</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\bounds\lower2.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\bounds</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\bounds\lower3.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\bounds</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\bounds\lower4.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\bounds</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\bounds\lower5.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\bounds</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\bounds\upper1.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\bounds</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\bounds\upper2.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\bounds</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\bounds\upper3.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\bounds</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\bounds\upper4.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\bounds</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\bounds\upper5.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\bounds</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\finish.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\forward1.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\forward2.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\forward3.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\forward4.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\forward5.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\forward1_1024.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\forward1_256.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\forward1_512.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\forward2_1024.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\forward2_256.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\forward2_512.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\forward3_1024.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\forward3_256.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\forward3_512.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\forward4_1024.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\forward4_256.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\forward4_512.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\forward5_1024.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\forward5_256.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\forward5_512.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\reverse1_1024.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\reverse1_256.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\reverse1_512.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\reverse2_1024.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\reverse2_256.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\reverse2_512.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\reverse3_1024.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\reverse3_256.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\reverse3_512.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\reverse4_1024.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\reverse4_256.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\reverse4_512.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\reverse5_1024.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\reverse5_256.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\limits\reverse5_512.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\reverse1.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\reverse2.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\reverse3.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\reverse4.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\iter\reverse5.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\iter</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\limits\local_1024.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\limits\local_256.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\limits\local_512.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\limits\rlocal_1024.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\limits\rlocal_256.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\limits\rlocal_512.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\local.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\rlocal.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\self.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\detail\start.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\iterate.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\local.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\iteration\self.hpp">
+      <Filter>vendor\boost\boost\preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\logical\bool.hpp">
+      <Filter>vendor\boost\boost\preprocessor\logical</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\logical\limits\bool_1024.hpp">
+      <Filter>vendor\boost\boost\preprocessor\logical\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\logical\limits\bool_256.hpp">
+      <Filter>vendor\boost\boost\preprocessor\logical\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\logical\limits\bool_512.hpp">
+      <Filter>vendor\boost\boost\preprocessor\logical\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\punctuation\comma.hpp">
+      <Filter>vendor\boost\boost\preprocessor\punctuation</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\punctuation\comma_if.hpp">
+      <Filter>vendor\boost\boost\preprocessor\punctuation</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\punctuation\detail\is_begin_parens.hpp">
+      <Filter>vendor\boost\boost\preprocessor\punctuation\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\punctuation\is_begin_parens.hpp">
+      <Filter>vendor\boost\boost\preprocessor\punctuation</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\repeat.hpp">
+      <Filter>vendor\boost\boost\preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\repetition\enum.hpp">
+      <Filter>vendor\boost\boost\preprocessor\repetition</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\repetition\enum_params.hpp">
+      <Filter>vendor\boost\boost\preprocessor\repetition</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\repetition\limits\repeat_1024.hpp">
+      <Filter>vendor\boost\boost\preprocessor\repetition\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\repetition\limits\repeat_256.hpp">
+      <Filter>vendor\boost\boost\preprocessor\repetition\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\repetition\limits\repeat_512.hpp">
+      <Filter>vendor\boost\boost\preprocessor\repetition\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\repetition\repeat.hpp">
+      <Filter>vendor\boost\boost\preprocessor\repetition</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\slot\detail\counter.hpp">
+      <Filter>vendor\boost\boost\preprocessor\slot\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\slot\detail\def.hpp">
+      <Filter>vendor\boost\boost\preprocessor\slot\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\slot\detail\shared.hpp">
+      <Filter>vendor\boost\boost\preprocessor\slot\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\slot\detail\slot1.hpp">
+      <Filter>vendor\boost\boost\preprocessor\slot\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\slot\detail\slot2.hpp">
+      <Filter>vendor\boost\boost\preprocessor\slot\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\slot\detail\slot3.hpp">
+      <Filter>vendor\boost\boost\preprocessor\slot\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\slot\detail\slot4.hpp">
+      <Filter>vendor\boost\boost\preprocessor\slot\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\slot\detail\slot5.hpp">
+      <Filter>vendor\boost\boost\preprocessor\slot\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\slot\slot.hpp">
+      <Filter>vendor\boost\boost\preprocessor\slot</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\tuple\detail\is_single_return.hpp">
+      <Filter>vendor\boost\boost\preprocessor\tuple\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\tuple\eat.hpp">
+      <Filter>vendor\boost\boost\preprocessor\tuple</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\tuple\elem.hpp">
+      <Filter>vendor\boost\boost\preprocessor\tuple</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\tuple\rem.hpp">
+      <Filter>vendor\boost\boost\preprocessor\tuple</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\tuple\size.hpp">
+      <Filter>vendor\boost\boost\preprocessor\tuple</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\variadic\detail\has_opt.hpp">
+      <Filter>vendor\boost\boost\preprocessor\variadic\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\variadic\elem.hpp">
+      <Filter>vendor\boost\boost\preprocessor\variadic</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\variadic\has_opt.hpp">
+      <Filter>vendor\boost\boost\preprocessor\variadic</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\variadic\limits\elem_128.hpp">
+      <Filter>vendor\boost\boost\preprocessor\variadic\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\variadic\limits\elem_256.hpp">
+      <Filter>vendor\boost\boost\preprocessor\variadic\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\variadic\limits\elem_64.hpp">
+      <Filter>vendor\boost\boost\preprocessor\variadic\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\variadic\limits\size_128.hpp">
+      <Filter>vendor\boost\boost\preprocessor\variadic\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\variadic\limits\size_256.hpp">
+      <Filter>vendor\boost\boost\preprocessor\variadic\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\variadic\limits\size_64.hpp">
+      <Filter>vendor\boost\boost\preprocessor\variadic\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\preprocessor\variadic\size.hpp">
+      <Filter>vendor\boost\boost\preprocessor\variadic</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\ref.hpp">
+      <Filter>vendor\boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\static_assert.hpp">
+      <Filter>vendor\boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\throw_exception.hpp">
+      <Filter>vendor\boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type.hpp">
+      <Filter>vendor\boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_index.hpp">
+      <Filter>vendor\boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_index\ctti_type_index.hpp">
+      <Filter>vendor\boost\boost\type_index</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_index\detail\compile_time_type_info.hpp">
+      <Filter>vendor\boost\boost\type_index\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_index\detail\ctti_register_class.hpp">
+      <Filter>vendor\boost\boost\type_index\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_index\detail\stl_register_class.hpp">
+      <Filter>vendor\boost\boost\type_index\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_index\stl_type_index.hpp">
+      <Filter>vendor\boost\boost\type_index</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_index\type_index_facade.hpp">
+      <Filter>vendor\boost\boost\type_index</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\add_const.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\add_lvalue_reference.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\add_reference.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\add_rvalue_reference.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\add_volatile.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\alignment_of.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\composite_traits.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\conditional.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\declval.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\detail\config.hpp">
+      <Filter>vendor\boost\boost\type_traits\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\detail\is_function_cxx_03.hpp">
+      <Filter>vendor\boost\boost\type_traits\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\detail\is_function_cxx_11.hpp">
+      <Filter>vendor\boost\boost\type_traits\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\detail\is_function_msvc10_fix.hpp">
+      <Filter>vendor\boost\boost\type_traits\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\detail\is_function_ptr_helper.hpp">
+      <Filter>vendor\boost\boost\type_traits\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\detail\is_function_ptr_tester.hpp">
+      <Filter>vendor\boost\boost\type_traits\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\detail\is_mem_fun_pointer_impl.hpp">
+      <Filter>vendor\boost\boost\type_traits\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\detail\is_mem_fun_pointer_tester.hpp">
+      <Filter>vendor\boost\boost\type_traits\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\detail\is_member_function_pointer_cxx_03.hpp">
+      <Filter>vendor\boost\boost\type_traits\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\detail\is_member_function_pointer_cxx_11.hpp">
+      <Filter>vendor\boost\boost\type_traits\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\detail\is_rvalue_reference_msvc10_fix.hpp">
+      <Filter>vendor\boost\boost\type_traits\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\detail\yes_no_type.hpp">
+      <Filter>vendor\boost\boost\type_traits\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\enable_if.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\has_trivial_copy.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\has_trivial_destructor.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\integral_constant.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\intrinsics.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_abstract.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_arithmetic.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_array.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_base_and_derived.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_class.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_complete.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_const.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_constructible.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_convertible.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_copy_constructible.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_default_constructible.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_destructible.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_enum.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_floating_point.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_function.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_integral.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_lvalue_reference.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_member_function_pointer.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_member_pointer.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_noncopyable.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_pod.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_pointer.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_polymorphic.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_reference.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_rvalue_reference.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_same.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_scalar.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_signed.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_union.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_unsigned.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_void.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\is_volatile.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\make_signed.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\remove_cv.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\remove_reference.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\type_traits\type_identity.hpp">
+      <Filter>vendor\boost\boost\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\version.hpp">
+      <Filter>vendor\boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\boost\boost\visit_each.hpp">
+      <Filter>vendor\boost\boost</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Gradient\Core.cpp">
+      <Filter>src\Gradient</Filter>
+    </ClCompile>
     <ClCompile Include="src\Gradient\Core\Application.cpp">
-      <Filter>Gradient\Core</Filter>
+      <Filter>src\Gradient\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\Gradient\Core\Log.cpp">
-      <Filter>Gradient\Core</Filter>
+      <Filter>src\Gradient\Core</Filter>
     </ClCompile>
-    <ClCompile Include="src\Gradient\Rendering\Window.cpp">
-      <Filter>Gradient\Rendering</Filter>
+    <ClCompile Include="src\Gradient\Core\Window.cpp">
+      <Filter>src\Gradient\Core</Filter>
     </ClCompile>
-    <ClCompile Include="src\Gradient\Core.cpp" />
   </ItemGroup>
 </Project>

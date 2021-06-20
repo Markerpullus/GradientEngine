@@ -4,15 +4,15 @@
 
 namespace Gradient
 {
-	enum eventName
+	enum class EventName
 	{
 		None = 0,
-		MouseDown, MouseUp, MouseMove, MouseDrag, MouseScrolled,
-		KeyUp, KeyDown, KeyRepeat,
-		MouseEnterWindow, MouseLeaveWindow, WindowResize
+		MouseDown, MouseUp, MouseMoved, MouseScrolled,
+		KeyUp, KeyDown, KeyRepeat, KeyTyped,
+		WindowClose, WindowResize
 	};
 
-	enum eventType
+	enum class EventType
 	{
 		None = 0,
 		MouseEvent,
@@ -20,21 +20,15 @@ namespace Gradient
 		WindowEvent
 	};
 
-	class GD_API Event
+	class Event
 	{
 	public:
-		inline eventName GetEventName() { return name; };
-
-		inline eventType GetEventType() { return type; };
-
-		Event(eventName n, eventType t)
+		Event(EventName n, EventType t)
 			:name(n), type(t)
-		{
-		}
+		{ }
 
-	private:
-		eventName name;
+		EventName name;
 
-		eventType type;
+		EventType type;
 	};
 }

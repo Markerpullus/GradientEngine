@@ -10,7 +10,7 @@ int main(int argc, char** argv)
 	GD_CORE_INFO("Initialized Log!");
 
 	auto app = Gradient::CreateApplication();
-	app->run();
+	app->Run();
 	delete app;
 }
 

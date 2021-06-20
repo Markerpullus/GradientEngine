@@ -3,4 +3,6 @@ Z:\Programming\Gradient\Gradient\src\Gradient\Core\Log.h(21,52): warning C4251: 
 Z:\Programming\Gradient\Gradient\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
 Z:\Programming\Gradient\Gradient\src\Gradient\Core\Log.h(23,54): warning C4251: 'Gradient::Log::clientLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Gradient::Log'
 Z:\Programming\Gradient\Gradient\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
+Z:\Programming\Gradient\Gradient\src\Gradient\Core\Application.h(14,33): warning C4251: 'Gradient::Application::window': class 'std::unique_ptr<Gradient::Window,std::default_delete<Gradient::Window>>' needs to have dll-interface to be used by clients of class 'Gradient::Application'
+Z:\Programming\Gradient\Gradient\src\Gradient\Core\Application.h(14): message : see declaration of 'std::unique_ptr<Gradient::Window,std::default_delete<Gradient::Window>>'
   Sandbox.vcxproj -> Z:\Programming\Gradient\bin\Debug-windows-x86_64\Sandbox\Sandbox.exe
