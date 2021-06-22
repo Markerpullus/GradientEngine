@@ -1,6 +1,7 @@
 #include "Gradient/Core/Window.h"
 #include "Gradient/Core/Log.h"
 #include "Gradient/EventSystem/KeyEvent.h"
+#include "Gradient/EventSystem/MouseEvent.h"
 
 namespace Gradient
 {	
@@ -8,22 +9,72 @@ namespace Gradient
 	void Window::ConnectEventCallBacks()
 	{
 		// Key Events
-		glfwSetKeyCallback(data.Win,
+		glfwSetKeyCallback(data.Win, 
 			[](GLFWwindow* win, int key, int scancode, int action, int mods)
+			{
+				Window* self = (Window*)glfwGetWindowUserPointer(win);
+				KeyCode k = (KeyCode)key;
+				switch (action)
+				{
+				case GLFW_PRESS:
+					self->EventHandler(KeyDownEvent(k));
+					break;
+				case GLFW_RELEASE:
+					self->EventHandler(KeyUpEvent(k));
+					break;
+				case GLFW_REPEAT:
+					self->EventHandler(KeyRepeatEvent(k));
+					break;
+				}
+			});
+
+		// Type Event
+		glfwSetCharCallback(data.Win,
+			[](GLFWwindow* win, unsigned int key)
+			{
+				Window* self = (Window*)glfwGetWindowUserPointer(win);
+				self->EventHandler(KeyTypedEvent((KeyCode)key));
+			});
+
+		// Mouse Button Event
+		glfwSetMouseButtonCallback(data.Win,
+			[](GLFWwindow* win, int button, int action, int mods)
 			{
 				Window* self = (Window*)glfwGetWindowUserPointer(win);
 				switch (action)
 				{
 				case GLFW_PRESS:
-					self->EventHandler(KeyDownEvent((KeyCode)key));
+					self->EventHandler(MouseDownEvent((MouseCode)button));
 					break;
 				case GLFW_RELEASE:
-					self->EventHandler(KeyUpEvent((KeyCode)key));
-					break;
-				case GLFW_REPEAT:
-					self->EventHandler(KeyRepeatEvent((KeyCode)key));
+					self->EventHandler(MouseUpEvent((MouseCode)button));
 					break;
 				}
+			});
+
+		// Mouse Scroll Event
+		glfwSetScrollCallback(data.Win,
+			[](GLFWwindow* win, double xOffset, double yOffset)
+			{
+				Window* self = (Window*)glfwGetWindowUserPointer(win);
+				self->EventHandler(MouseScrolledEvent(xOffset, yOffset));
+			});
+
+		// Mouse Move Event
+		glfwSetCursorPosCallback(data.Win, 
+			[](GLFWwindow* win, double xPos, double yPos)
+			{
+				Window* self = (Window*)glfwGetWindowUserPointer(win);
+				self->EventHandler(MouseMovedEvent(xPos, yPos));
+			});
+
+		// Mouse Enter/Leave Window Event
+		glfwSetCursorEnterCallback(data.Win, 
+			[](GLFWwindow* win, int entered)
+			{
+				Window* self = (Window*)glfwGetWindowUserPointer(win);
+				entered ? self->EventHandler(MouseEnterWindowEvent())
+					: self->EventHandler(MouseLeaveWindowEvent());
 			});
 	}
 

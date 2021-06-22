@@ -7,7 +7,7 @@ namespace Gradient
 	enum class EventName
 	{
 		None = 0,
-		MouseDown, MouseUp, MouseMoved, MouseScrolled,
+		MouseDown, MouseUp, MouseMoved, MouseScrolled, MouseEnterWindow, MouseLeaveWindow,
 		KeyUp, KeyDown, KeyRepeat, KeyTyped,
 		WindowClose, WindowResize
 	};
@@ -30,5 +30,9 @@ namespace Gradient
 		EventName name;
 
 		EventType type;
+
+		virtual inline EventName GetName() { return name; } // Useless function just to satisfy the conditions for dynamic casting
+
+		virtual inline EventType GetType() { return type; }
 	};
 }

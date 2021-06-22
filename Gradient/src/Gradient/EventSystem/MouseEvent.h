@@ -32,7 +32,7 @@ namespace Gradient
 		double xOffset, yOffset;
 
 		MouseScrolledEvent(double x, double y)
-			: Event(EventName::MouseScrolled, EventType::MouseEvent)
+			: Event(EventName::MouseScrolled, EventType::MouseEvent), xOffset(x), yOffset(y)
 		{ }
 	};
 
@@ -42,7 +42,23 @@ namespace Gradient
 		double xPos, yPos;
 
 		MouseMovedEvent(double x, double y)
-			: Event(EventName::MouseMoved, EventType::MouseEvent)
+			: Event(EventName::MouseMoved, EventType::MouseEvent), xPos(x), yPos(y)
+		{ }
+	};
+
+	class MouseEnterWindowEvent : public Event
+	{
+	public:
+		MouseEnterWindowEvent()
+			: Event(EventName::MouseEnterWindow, EventType::MouseEvent)
+		{ }
+	};
+
+	class MouseLeaveWindowEvent : public Event
+	{
+	public:
+		MouseLeaveWindowEvent()
+			: Event(EventName::MouseLeaveWindow, EventType::MouseEvent)
 		{ }
 	};
 }

@@ -3,6 +3,7 @@
 #include "Gradient/Core.h"
 #include "Gradient/Core/Window.h"
 #include "Gradient/EventSystem/Event.h"
+#include "Gradient/EventSystem/KeyEvent.h"
 
 #include <memory>
 

@@ -14,6 +14,11 @@ namespace Gradient
 		KeyDownEvent(KeyCode c)
 			: Event(EventName::KeyDown, EventType::KeyEvent), keyCode(c)
 		{ }
+
+		char ToChar()
+		{
+			return char((int)keyCode);
+		}
 	};
 
 	class KeyUpEvent : public Event
@@ -24,6 +29,11 @@ namespace Gradient
 		KeyUpEvent(KeyCode c)
 			: Event(EventName::KeyUp, EventType::KeyEvent), keyCode(c)
 		{ }
+
+		char ToChar()
+		{
+			return char((int)keyCode);
+		}
 	};
 
 	class KeyRepeatEvent : public Event
@@ -34,6 +44,11 @@ namespace Gradient
 		KeyRepeatEvent(KeyCode c)
 			: Event(EventName::KeyRepeat, EventType::KeyEvent), keyCode(c)
 		{ }
+
+		char ToChar()
+		{
+			return char((int)keyCode);
+		}
 	};
 
 	class KeyTypedEvent : public Event
@@ -44,5 +59,10 @@ namespace Gradient
 		KeyTypedEvent(KeyCode c)
 			: Event(EventName::KeyTyped, EventType::KeyEvent), keyCode(c)
 		{ }
+
+		char ToChar()
+		{
+			return char((int)keyCode);
+		}
 	};
 }

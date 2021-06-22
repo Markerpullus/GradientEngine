@@ -22,13 +22,16 @@ namespace Gradient
 		switch (e.name)
 		{
 		case EventName::KeyDown:
-			GD_CORE_INFO("Key Down");
+			GD_CORE_INFO("Key Down: {}", dynamic_cast<KeyDownEvent&>(e).ToChar());
 			break;
 		case EventName::KeyUp:
-			GD_CORE_INFO("Key Up");
+			GD_CORE_INFO("Key Up: {}", dynamic_cast<KeyUpEvent&>(e).ToChar());
 			break;
 		case EventName::KeyRepeat:
 			GD_CORE_INFO("Key Repeat");
+			break;
+		case EventName::KeyTyped:
+			GD_CORE_INFO("Key Typed: {}", dynamic_cast<KeyTypedEvent&>(e).ToChar());
 			break;
 		}
 	}
