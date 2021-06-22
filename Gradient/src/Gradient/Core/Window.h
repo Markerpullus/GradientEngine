@@ -35,7 +35,7 @@ namespace Gradient
 
 		void Init(int w, int h, char* n);
 
-		inline GLFWwindow* GetWin() { return data.Win; }
+		inline GLFWwindow* GetGLFWwindow() { return data.Win; }
 
 		inline WindowData GetData() { return data; }
 

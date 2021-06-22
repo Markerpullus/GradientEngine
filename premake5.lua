@@ -15,6 +15,7 @@ IncludeDir["SPDLOG"] = "Gradient/vendor/spdlog/include"
 IncludeDir["GLFW"] = "Gradient/vendor/glfw/include"
 IncludeDir["GLAD"] = "Gradient/vendor/glad/include"
 IncludeDir["BOOST"] = "Gradient/vendor/boost"
+IncludeDir["GLM"] = "Gradient/vendor/glm"
 
 include "Gradient/vendor/glfw"
 include "Gradient/vendor/glad"
@@ -32,7 +33,9 @@ project "Gradient"
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp",
 
-		"%{prj.name}/vendor/boost/**.hpp"
+		"%{prj.name}/vendor/boost/**.hpp",
+		"%{prj.name}/vendor/glm/**.hpp",
+		"%{prj.name}/vendor/glm/**.inl"
 	}
 
 	includedirs
@@ -41,7 +44,8 @@ project "Gradient"
 		"%{IncludeDir.SPDLOG}",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.GLAD}",
-		"%{IncludeDir.BOOST}"
+		"%{IncludeDir.BOOST}",
+		"%{IncludeDir.GLM}"
 	}
 
 	filter "system:windows"
@@ -102,7 +106,8 @@ project "Sandbox"
 		"%{IncludeDir.SPDLOG}",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.GLAD}",
-		"%{IncludeDir.BOOST}"
+		"%{IncludeDir.BOOST}",
+		"%{IncludeDir.GLM}"
 	}
 
 	links
