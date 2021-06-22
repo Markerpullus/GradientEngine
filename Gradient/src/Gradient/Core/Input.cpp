@@ -15,7 +15,7 @@ namespace Gradient
 		return (mouseStatus == GLFW_PRESS) || (mouseStatus == GLFW_REPEAT);
 	}
 
-	glm::vec2 Input::GetMousePos()
+	Vector2 Input::GetMousePos()
 	{
 		double xpos, ypos;
 		glfwGetCursorPos(Application::GetSelf()->GetWindow().GetGLFWwindow(), &xpos, &ypos);

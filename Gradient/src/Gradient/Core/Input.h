@@ -2,7 +2,7 @@
 
 #include "Gradient/EventSystem/KeyCodes.h"
 #include "Gradient/EventSystem/MouseCodes.h"
-#include "glm/vec2.hpp"
+#include "Gradient/Math/Math.h"
 
 namespace Gradient
 {
@@ -13,6 +13,6 @@ namespace Gradient
 
 		static bool IsMouseButtonPressed(MouseCode button);
 
-		static glm::vec2 GetMousePos();
+		static Vector2 GetMousePos();
 	};
 }

@@ -10,6 +10,7 @@ namespace Gradient
 	{
 		window = std::make_unique<Window>(Window());
 		window->SetMainEventCallBack(boost::bind(&Application::MainEventHandler, this, _1));
+		self = this;
 	}
 
 	Application::~Application()
@@ -38,12 +39,12 @@ namespace Gradient
 
 	void Application::Run()
 	{
-		while (!glfwWindowShouldClose(window->GetWin()))
+		while (!glfwWindowShouldClose(window->GetGLFWwindow()))
 		{
 			glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 			glClear(GL_COLOR_BUFFER_BIT);
 
-			glfwSwapBuffers(window->GetWin());
+			glfwSwapBuffers(window->GetGLFWwindow());
 			glfwPollEvents();
 		}
 	}
