@@ -8,20 +8,20 @@ namespace Gradient
 	void Window::ConnectEventCallBacks()
 	{
 		// Key Events
-		glfwSetKeyCallback(data.Window,
+		glfwSetKeyCallback(data.Win,
 			[](GLFWwindow* win, int key, int scancode, int action, int mods)
 			{
-				WindowData& data = *(WindowData*)glfwGetWindowUserPointer(win);
+				Window* self = (Window*)glfwGetWindowUserPointer(win);
 				switch (action)
 				{
 				case GLFW_PRESS:
-					data.EventHandler(KeyDownEvent((KeyCode)key));
+					self->EventHandler(KeyDownEvent((KeyCode)key));
 					break;
 				case GLFW_RELEASE:
-					data.EventHandler(KeyUpEvent((KeyCode)key));
+					self->EventHandler(KeyUpEvent((KeyCode)key));
 					break;
 				case GLFW_REPEAT:
-					data.EventHandler(KeyRepeatEvent((KeyCode)key));
+					self->EventHandler(KeyRepeatEvent((KeyCode)key));
 					break;
 				}
 			});
@@ -50,19 +50,20 @@ namespace Gradient
 		glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 		glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
-		data.Window = glfwCreateWindow(w, h, n, NULL, NULL);
+		data.Win = glfwCreateWindow(w, h, n, NULL, NULL);
 		data.Width = w;
 		data.Height = h;
 		data.Name = n;
+		glfwSetWindowUserPointer(data.Win, reinterpret_cast<void*>(this));
 
-		if (data.Window == NULL)
+		if (data.Win == NULL)
 		{
 			GD_CORE_CRITICAL("Failed to create window");
 			glfwTerminate();
 			return;
 		}
 
-		glfwMakeContextCurrent(data.Window);
+		glfwMakeContextCurrent(data.Win);
 
 		glfwSwapInterval(1);
 
@@ -75,7 +76,7 @@ namespace Gradient
 
 		glViewport(0, 0, w, h);
 		GD_CORE_INFO("Using OpenGL version: {0}", glGetString(GL_VERSION));
-		glfwSetInputMode(data.Window, GLFW_STICKY_KEYS, GL_TRUE);
+		glfwSetInputMode(data.Win, GLFW_STICKY_KEYS, GL_TRUE);
 
 		ConnectEventCallBacks();
 	}
@@ -83,6 +84,6 @@ namespace Gradient
 	void Window::SetVSync(bool vsync)
 	{
 		glfwSwapInterval(vsync);
-		data.VSync = vsync;
+		VSync = vsync;
 	}
 }

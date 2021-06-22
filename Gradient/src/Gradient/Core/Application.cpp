@@ -2,13 +2,14 @@
 #include "Gradient/Core/Log.h"
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
+#include "boost/bind.hpp"
 
 namespace Gradient
 {
 	Application::Application()
 	{
 		window = std::make_unique<Window>(Window());
-		window->SetMainEventCallBack(GD_BIND_EVENT_CALLBACK(Application::MainEventHandler));
+		window->SetMainEventCallBack(boost::bind(&Application::MainEventHandler, this, _1));
 	}
 
 	Application::~Application()
@@ -18,7 +19,18 @@ namespace Gradient
 
 	void Application::MainEventHandler(Event& e)
 	{
-		GD_CORE_INFO("Key is pressed");
+		switch (e.name)
+		{
+		case EventName::KeyDown:
+			GD_CORE_INFO("Key Down");
+			break;
+		case EventName::KeyUp:
+			GD_CORE_INFO("Key Up");
+			break;
+		case EventName::KeyRepeat:
+			GD_CORE_INFO("Key Repeat");
+			break;
+		}
 	}
 
 	void Application::Run()

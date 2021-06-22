@@ -4,29 +4,28 @@
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
 #include "Gradient/EventSystem/Event.h"
-
-#include <functional>
+#include "boost/function.hpp"
 
 namespace Gradient
 {
 	class GD_API Window
 	{
 	private:
-		using MainEventCallBack = std::function<void(Event&)>;
+		using MainEventCallBack = boost::function<void(Event&)>;
 
 		struct WindowData
 		{
-			GLFWwindow* Window;
+			GLFWwindow* Win;
 			int Width;
 			int Height;
 			char* Name;
-
-			bool VSync;
-
-			MainEventCallBack EventHandler;
 		};
 
 		WindowData data;
+
+		bool VSync;
+
+		MainEventCallBack EventHandler;
 
 		void ConnectEventCallBacks();
 
@@ -36,14 +35,14 @@ namespace Gradient
 
 		void Init(int w, int h, char* n);
 
-		inline GLFWwindow* GetWin() { return data.Window; }
+		inline GLFWwindow* GetWin() { return data.Win; }
 
 		inline WindowData GetData() { return data; }
 
-		inline void SetMainEventCallBack(const MainEventCallBack& func) { data.EventHandler = func; }
+		inline void SetMainEventCallBack(const MainEventCallBack& func) { EventHandler = func; }
 
 		void SetVSync(bool vsync);
 
-		inline bool IsVsync() { return data.VSync; }
+		inline bool IsVsync() { return VSync; }
 	};
 }
