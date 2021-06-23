@@ -2546,6 +2546,7 @@
     </ClInclude>
     <ClInclude Include="src\Gradient\Math\Math.h" />
     <ClInclude Include="src\Gradient\Scopes\Scope.h" />
+    <ClInclude Include="src\Gradient\Rendering\VertexBuffer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Gradient\Core.cpp">
@@ -2564,5 +2565,6 @@
       <Filter>src\Gradient\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\Gradient\Scopes\Scope.cpp" />
+    <ClCompile Include="src\Gradient\Rendering\VertexBuffer.cpp" />
   </ItemGroup>
 </Project>

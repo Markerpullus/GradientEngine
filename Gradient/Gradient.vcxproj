@@ -930,6 +930,7 @@
     <ClInclude Include="vendor\glm\glm\vec3.hpp" />
     <ClInclude Include="vendor\glm\glm\vec4.hpp" />
     <ClInclude Include="vendor\glm\glm\vector_relational.hpp" />
+    <ClInclude Include="src\Gradient\Rendering\VertexBuffer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Gradient\Scopes\Scope.cpp" />
@@ -938,6 +939,7 @@
     <ClCompile Include="src\Gradient\Core\Input.cpp" />
     <ClCompile Include="src\Gradient\Core\Log.cpp" />
     <ClCompile Include="src\Gradient\Core\Window.cpp" />
+    <ClCompile Include="src\Gradient\Rendering\VertexBuffer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="vendor\glfw\GLFW.vcxproj">
