@@ -1,12 +1,13 @@
 #pragma once
 
+#include "Gradient/Core.h"
 #include "Gradient/EventSystem/KeyCodes.h"
 #include "Gradient/EventSystem/MouseCodes.h"
 #include "Gradient/Math/Math.h"
 
 namespace Gradient
 {
-	class Input
+	class GD_API Input
 	{
 	public:
 		static bool IsKeyPressed(KeyCode key);

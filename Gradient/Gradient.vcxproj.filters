@@ -2545,6 +2545,7 @@
       <Filter>vendor\glm\glm</Filter>
     </ClInclude>
     <ClInclude Include="src\Gradient\Math\Math.h" />
+    <ClInclude Include="src\Gradient\Scopes\Scope.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Gradient\Core.cpp">
@@ -2562,5 +2563,6 @@
     <ClCompile Include="src\Gradient\Core\Window.cpp">
       <Filter>src\Gradient\Core</Filter>
     </ClCompile>
+    <ClCompile Include="src\Gradient\Scopes\Scope.cpp" />
   </ItemGroup>
 </Project>
