@@ -79,7 +79,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>GD_PLATFORM_WINDOWS;GD_BUILD_DLL;GD_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\glfw\include;vendor\glad\include;vendor\boost;vendor\glm;vendor\stb;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\glfw\include;vendor\glad\include;vendor\boost;vendor\glm;vendor\stb;vendor\tinyobjloader;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -101,7 +101,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>GD_PLATFORM_WINDOWS;GD_BUILD_DLL;GD_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\glfw\include;vendor\glad\include;vendor\boost;vendor\glm;vendor\stb;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\glfw\include;vendor\glad\include;vendor\boost;vendor\glm;vendor\stb;vendor\tinyobjloader;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -128,7 +128,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>GD_PLATFORM_WINDOWS;GD_BUILD_DLL;GD_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\glfw\include;vendor\glad\include;vendor\boost;vendor\glm;vendor\stb;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\glfw\include;vendor\glad\include;vendor\boost;vendor\glm;vendor\stb;vendor\tinyobjloader;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -150,6 +150,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Gradient\Rendering\Model.h" />
     <ClInclude Include="src\Gradient.h" />
     <ClInclude Include="src\Gradient\Core.h" />
     <ClInclude Include="src\Gradient\Core\Application.h" />
@@ -938,8 +939,10 @@
     <ClInclude Include="vendor\glm\glm\vec4.hpp" />
     <ClInclude Include="vendor\glm\glm\vector_relational.hpp" />
     <ClInclude Include="vendor\stb\stb\stb_image.h" />
+    <ClInclude Include="vendor\tinyobjloader\tol\tinyobjloader.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Gradient\Rendering\Model.cpp" />
     <ClCompile Include="src\Gradient\Core.cpp" />
     <ClCompile Include="src\Gradient\Core\Application.cpp" />
     <ClCompile Include="src\Gradient\Core\Input.cpp" />
@@ -951,6 +954,7 @@
     <ClCompile Include="src\Gradient\Rendering\VertexBuffer.cpp" />
     <ClCompile Include="src\Gradient\Scopes\Scope.cpp" />
     <ClCompile Include="vendor\stb\stb\stb_image.cpp" />
+    <ClCompile Include="vendor\tinyobjloader\tol\tinyobjloader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="vendor\glfw\GLFW.vcxproj">

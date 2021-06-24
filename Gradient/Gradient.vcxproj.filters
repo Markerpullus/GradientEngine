@@ -2560,6 +2560,8 @@
     <ClInclude Include="src\Gradient\Rendering\VertexBuffer.h" />
     <ClInclude Include="vendor\stb\stb\stb_image.h" />
     <ClInclude Include="src\Gradient\Core\Input.h" />
+    <ClInclude Include="vendor\tinyobjloader\tol\tinyobjloader.h" />
+    <ClInclude Include="src\Gradient\Rendering\Model.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Gradient\Core.cpp">
@@ -2583,5 +2585,7 @@
     <ClCompile Include="src\Gradient\Rendering\VertexBuffer.cpp" />
     <ClCompile Include="vendor\stb\stb\stb_image.cpp" />
     <ClCompile Include="src\Gradient\Core\Input.cpp" />
+    <ClCompile Include="vendor\tinyobjloader\tol\tinyobjloader.cpp" />
+    <ClCompile Include="src\Gradient\Rendering\Model.cpp" />
   </ItemGroup>
 </Project>

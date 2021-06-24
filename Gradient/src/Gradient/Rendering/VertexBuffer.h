@@ -7,6 +7,7 @@ namespace Gradient
 	struct Vertex
 	{
 		Vector3 Position;
+		Vector3 Color;
 		Vector3 Normal;
 		Vector2 TexCoords;
 	};

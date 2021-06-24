@@ -17,8 +17,8 @@ namespace Gradient
 
 	Vector2 Input::GetMousePos()
 	{
-		double xpos, ypos;
-		glfwGetCursorPos(Application::GetSelf()->GetWindow().GetGLFWwindow(), &xpos, &ypos);
-		return glm::vec2((float)xpos, (float)ypos);
+		glm::dvec2 pos;
+		glfwGetCursorPos(Application::GetSelf()->GetWindow().GetGLFWwindow(), &pos.x, &pos.y);
+		return (glm::vec2)pos;
 	}
 }
