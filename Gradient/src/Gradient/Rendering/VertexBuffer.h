@@ -1,7 +1,16 @@
 #pragma once
 
+#include "Gradient/Math/Math.h"
+
 namespace Gradient
 {
+	struct Vertex
+	{
+		Vector3 Position;
+		Vector3 Normal;
+		Vector2 TexCoords;
+	};
+
 	class VertexBuffer
 	{
 	public:

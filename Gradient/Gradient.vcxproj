@@ -147,6 +147,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Gradient\Rendering\IndexBuffer.h" />
     <ClInclude Include="src\Gradient\Scopes\Scope.h" />
     <ClInclude Include="src\Gradient.h" />
     <ClInclude Include="src\Gradient\Core.h" />
@@ -931,8 +932,10 @@
     <ClInclude Include="vendor\glm\glm\vec4.hpp" />
     <ClInclude Include="vendor\glm\glm\vector_relational.hpp" />
     <ClInclude Include="src\Gradient\Rendering\VertexBuffer.h" />
+    <ClInclude Include="src\Gradient\Rendering\VertexArray.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Gradient\Rendering\IndexBuffer.cpp" />
     <ClCompile Include="src\Gradient\Scopes\Scope.cpp" />
     <ClCompile Include="src\Gradient\Core.cpp" />
     <ClCompile Include="src\Gradient\Core\Application.cpp" />
@@ -940,6 +943,7 @@
     <ClCompile Include="src\Gradient\Core\Log.cpp" />
     <ClCompile Include="src\Gradient\Core\Window.cpp" />
     <ClCompile Include="src\Gradient\Rendering\VertexBuffer.cpp" />
+    <ClCompile Include="src\Gradient\Rendering\VertexArray.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="vendor\glfw\GLFW.vcxproj">
