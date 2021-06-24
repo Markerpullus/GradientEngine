@@ -2554,14 +2554,13 @@
       <Filter>vendor\glm\glm</Filter>
     </ClInclude>
     <ClInclude Include="src\Gradient\Math\Math.h" />
-    <ClInclude Include="src\Gradient\Rendering\IndexBuffer.h" />
-    <ClInclude Include="src\Gradient\Rendering\Texture.h" />
-    <ClInclude Include="src\Gradient\Rendering\VertexArray.h" />
-    <ClInclude Include="src\Gradient\Rendering\VertexBuffer.h" />
     <ClInclude Include="vendor\stb\stb\stb_image.h" />
     <ClInclude Include="src\Gradient\Core\Input.h" />
     <ClInclude Include="vendor\tinyobjloader\tol\tinyobjloader.h" />
     <ClInclude Include="src\Gradient\Rendering\Model.h" />
+    <ClInclude Include="src\Gradient\Rendering\Mesh.h" />
+    <ClInclude Include="src\Gradient\Rendering\Shader.h" />
+    <ClInclude Include="src\Gradient\Rendering\Material.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Gradient\Core.cpp">
@@ -2579,13 +2578,11 @@
     <ClCompile Include="src\Gradient\Scopes\Scope.cpp">
       <Filter>src\Gradient\Scopes</Filter>
     </ClCompile>
-    <ClCompile Include="src\Gradient\Rendering\IndexBuffer.cpp" />
-    <ClCompile Include="src\Gradient\Rendering\Texture.cpp" />
-    <ClCompile Include="src\Gradient\Rendering\VertexArray.cpp" />
-    <ClCompile Include="src\Gradient\Rendering\VertexBuffer.cpp" />
     <ClCompile Include="vendor\stb\stb\stb_image.cpp" />
     <ClCompile Include="src\Gradient\Core\Input.cpp" />
     <ClCompile Include="vendor\tinyobjloader\tol\tinyobjloader.cpp" />
     <ClCompile Include="src\Gradient\Rendering\Model.cpp" />
+    <ClCompile Include="src\Gradient\Rendering\Mesh.cpp" />
+    <ClCompile Include="src\Gradient\Rendering\Shader.cpp" />
   </ItemGroup>
 </Project>
