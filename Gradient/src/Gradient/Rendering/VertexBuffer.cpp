@@ -1,5 +1,5 @@
-#include "Gradient/Rendering/VertexBuffer.h"
 #include "glad/glad.h"
+#include "Gradient/Rendering/VertexBuffer.h"
 
 namespace Gradient
 {

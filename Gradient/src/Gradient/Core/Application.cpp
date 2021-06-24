@@ -6,6 +6,7 @@
 
 namespace Gradient
 {
+	Application* Application::self;
 	Application::Application()
 	{
 		window = std::make_unique<Window>(Window());

@@ -1,5 +1,5 @@
-#include "Gradient/Core/Input.h"
 #include "Gradient/Core/Application.h"
+#include "Gradient/Core/Input.h"
 
 namespace Gradient
 {

@@ -13,6 +13,15 @@
     <Filter Include="src\Gradient\EventSystem">
       <UniqueIdentifier>{8071096E-6C96-58EE-95E1-3D7E8165570C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Gradient\Math">
+      <UniqueIdentifier>{E39FCBF2-4FB6-C988-982D-55AA04839A10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Gradient\Rendering">
+      <UniqueIdentifier>{977A1187-8374-3AD9-6CE1-D0E9587AA045}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Gradient\Scopes">
+      <UniqueIdentifier>{06BB53E2-721C-31F0-FB89-77A267EA67AF}</UniqueIdentifier>
+    </Filter>
     <Filter Include="vendor">
       <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
     </Filter>
@@ -210,9 +219,6 @@
     <ClInclude Include="src\Gradient\Core\Application.h">
       <Filter>src\Gradient\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Gradient\Core\Input.h">
-      <Filter>src\Gradient\Core</Filter>
-    </ClInclude>
     <ClInclude Include="src\Gradient\Core\Log.h">
       <Filter>src\Gradient\Core</Filter>
     </ClInclude>
@@ -239,6 +245,9 @@
     </ClInclude>
     <ClInclude Include="src\Gradient\EventSystem\WindowEvent.h">
       <Filter>src\Gradient\EventSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gradient\Scopes\Scope.h">
+      <Filter>src\Gradient\Scopes</Filter>
     </ClInclude>
     <ClInclude Include="vendor\boost\boost\assert.hpp">
       <Filter>vendor\boost\boost</Filter>
@@ -2545,10 +2554,12 @@
       <Filter>vendor\glm\glm</Filter>
     </ClInclude>
     <ClInclude Include="src\Gradient\Math\Math.h" />
-    <ClInclude Include="src\Gradient\Scopes\Scope.h" />
-    <ClInclude Include="src\Gradient\Rendering\VertexBuffer.h" />
-    <ClInclude Include="src\Gradient\Rendering\VertexArray.h" />
     <ClInclude Include="src\Gradient\Rendering\IndexBuffer.h" />
+    <ClInclude Include="src\Gradient\Rendering\Texture.h" />
+    <ClInclude Include="src\Gradient\Rendering\VertexArray.h" />
+    <ClInclude Include="src\Gradient\Rendering\VertexBuffer.h" />
+    <ClInclude Include="vendor\stb\stb\stb_image.h" />
+    <ClInclude Include="src\Gradient\Core\Input.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Gradient\Core.cpp">
@@ -2557,18 +2568,20 @@
     <ClCompile Include="src\Gradient\Core\Application.cpp">
       <Filter>src\Gradient\Core</Filter>
     </ClCompile>
-    <ClCompile Include="src\Gradient\Core\Input.cpp">
-      <Filter>src\Gradient\Core</Filter>
-    </ClCompile>
     <ClCompile Include="src\Gradient\Core\Log.cpp">
       <Filter>src\Gradient\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\Gradient\Core\Window.cpp">
       <Filter>src\Gradient\Core</Filter>
     </ClCompile>
-    <ClCompile Include="src\Gradient\Scopes\Scope.cpp" />
-    <ClCompile Include="src\Gradient\Rendering\VertexBuffer.cpp" />
-    <ClCompile Include="src\Gradient\Rendering\VertexArray.cpp" />
+    <ClCompile Include="src\Gradient\Scopes\Scope.cpp">
+      <Filter>src\Gradient\Scopes</Filter>
+    </ClCompile>
     <ClCompile Include="src\Gradient\Rendering\IndexBuffer.cpp" />
+    <ClCompile Include="src\Gradient\Rendering\Texture.cpp" />
+    <ClCompile Include="src\Gradient\Rendering\VertexArray.cpp" />
+    <ClCompile Include="src\Gradient\Rendering\VertexBuffer.cpp" />
+    <ClCompile Include="vendor\stb\stb\stb_image.cpp" />
+    <ClCompile Include="src\Gradient\Core\Input.cpp" />
   </ItemGroup>
 </Project>

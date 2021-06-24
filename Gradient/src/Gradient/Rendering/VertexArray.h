@@ -1,8 +1,8 @@
 #pragma once
 
+#include "glad/glad.h"
 #include "Gradient/Core.h"
 #include "Gradient/Rendering/VertexBuffer.h"
-#include "glad/glad.h"
 
 #include <vector>
 
