@@ -2585,4 +2585,7 @@
     <ClCompile Include="src\Gradient\Rendering\Mesh.cpp" />
     <ClCompile Include="src\Gradient\Rendering\Shader.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Gradient\Shaders\Phong.glsl" />
+  </ItemGroup>
 </Project>

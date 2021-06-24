@@ -11,7 +11,7 @@ namespace Gradient
 	class Shader
 	{
 	private:
-		unsigned int programID;
+		unsigned int id;
 		unsigned int vsid;
 		unsigned int fsid;
 		std::unordered_map<std::string, int> uniformLocationCache;

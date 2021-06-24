@@ -38,4 +38,31 @@ namespace Gradient
 		Setup();
 	}
 
+	void Mesh::Draw(Shader& shader)
+	{
+		for (unsigned int i = 0; i < textures.size(); i++)
+		{
+			glActiveTexture(GL_TEXTURE0 + i);
+
+			switch (textures.at(i).Type)
+			{
+			case TextureType::Diffuse:
+				shader.SetUniform1i("u_mat.Diffuse", i);
+				break;
+			case TextureType::Specular:
+				shader.SetUniform1i("u_mat.Specular", i);
+				break;
+			}
+			glBindTexture(GL_TEXTURE_2D, textures.at(i).ID);
+		}
+
+		// Bind and draw
+		glBindVertexArray(vao);
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo);
+		glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, (const void*)0);
+
+		// Clean up
+		glBindVertexArray(0);
+		glActiveTexture(GL_TEXTURE0);
+	}
 }

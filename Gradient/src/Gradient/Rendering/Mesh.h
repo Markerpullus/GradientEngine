@@ -15,10 +15,16 @@ namespace Gradient
 		Vector3 Tangent;
 	};
 
+	enum class TextureType
+	{
+		Diffuse,
+		Specular
+	};
+
 	struct Texture
 	{
 		unsigned int ID;
-		char* Type;
+		TextureType Type;
 	};
 
 	class Mesh

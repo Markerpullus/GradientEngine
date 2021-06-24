@@ -60,14 +60,14 @@ namespace Gradient
 	{
 		std::string vertexShader, fragmentShader;
 		ReadShader(file, vertexShader, fragmentShader);
-		programID = glCreateProgram();
+		id = glCreateProgram();
 		vsid = CompileShader(GL_VERTEX_SHADER, vertexShader);
 		fsid = CompileShader(GL_FRAGMENT_SHADER, fragmentShader);
 
-		glAttachShader(programID, vsid);
-		glAttachShader(programID, fsid);
-		glLinkProgram(programID);
-		glValidateProgram(programID);
+		glAttachShader(id, vsid);
+		glAttachShader(id, fsid);
+		glLinkProgram(id);
+		glValidateProgram(id);
 
 		glDeleteShader(vsid);
 		glDeleteShader(fsid);
@@ -76,12 +76,12 @@ namespace Gradient
 	Shader::~Shader()
 	{
 		glUseProgram(0);
-		glDeleteProgram(programID);
+		glDeleteProgram(id);
 	}
 
 	void Shader::Bind()
 	{
-		glUseProgram(programID);
+		glUseProgram(id);
 	}
 
 	void Shader::Unbind()
@@ -145,7 +145,7 @@ namespace Gradient
 		if (uniformLocationCache.find(name) != uniformLocationCache.end())
 			return uniformLocationCache[name];
 
-		int location = glGetUniformLocation(programID, name.c_str());
+		int location = glGetUniformLocation(id, name.c_str());
 		ASSERT(location != -1);
 		uniformLocationCache.insert({ name, location });
 		return location;
