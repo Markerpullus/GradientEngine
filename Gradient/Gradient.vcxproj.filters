@@ -2557,12 +2557,15 @@
     <ClInclude Include="vendor\stb\stb\stb_image.h" />
     <ClInclude Include="src\Gradient\Core\Input.h" />
     <ClInclude Include="vendor\tinyobjloader\tol\tinyobjloader.h" />
-    <ClInclude Include="src\Gradient\Rendering\Model.h" />
-    <ClInclude Include="src\Gradient\Rendering\Mesh3D.h" />
+    <ClInclude Include="src\Gradient\Rendering\Model\Model.h" />
+    <ClInclude Include="src\Gradient\Rendering\Model\Mesh3D.h" />
     <ClInclude Include="src\Gradient\Rendering\Shader.h" />
     <ClInclude Include="src\Gradient\Rendering\Material.h" />
     <ClInclude Include="src\Gradient\Rendering\Texture.h" />
-    <ClInclude Include="src\Gradient\Rendering\Mesh2D.h" />
+    <ClInclude Include="src\Gradient\Rendering\Model\Mesh2D.h" />
+    <ClInclude Include="src\Gradient\Rendering\Camera\Camera.h" />
+    <ClInclude Include="src\Gradient\Rendering\Camera\OrthographicCamera.h" />
+    <ClInclude Include="src\Gradient\Rendering\Camera\PerspectiveCamera.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Gradient\Core.cpp">
@@ -2583,11 +2586,13 @@
     <ClCompile Include="vendor\stb\stb\stb_image.cpp" />
     <ClCompile Include="src\Gradient\Core\Input.cpp" />
     <ClCompile Include="vendor\tinyobjloader\tol\tinyobjloader.cpp" />
-    <ClCompile Include="src\Gradient\Rendering\Model.cpp" />
-    <ClCompile Include="src\Gradient\Rendering\Mesh3D.cpp" />
+    <ClCompile Include="src\Gradient\Rendering\Model\Model.cpp" />
+    <ClCompile Include="src\Gradient\Rendering\Model\Mesh3D.cpp" />
     <ClCompile Include="src\Gradient\Rendering\Shader.cpp" />
     <ClCompile Include="src\Gradient\Rendering\Texture.cpp" />
-    <ClCompile Include="src\Gradient\Rendering\Mesh2D.cpp" />
+    <ClCompile Include="src\Gradient\Rendering\Model\Mesh2D.cpp" />
+    <ClCompile Include="src\Gradient\Rendering\Camera\OrthographicCamera.cpp" />
+    <ClCompile Include="src\Gradient\Rendering\Camera\PerspectiveCamera.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\Gradient\Shaders\Phong.glsl" />

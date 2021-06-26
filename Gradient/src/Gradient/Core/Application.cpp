@@ -3,7 +3,7 @@
 #include "boost/bind.hpp"
 #include "Gradient/Core/Application.h"
 #include "Gradient/Core/Log.h"
-#include "Gradient/Rendering/Mesh2D.h"
+#include "Gradient/Rendering/Model/Mesh2D.h"
 
 namespace Gradient
 {
@@ -52,7 +52,7 @@ namespace Gradient
 		std::vector<unsigned int> indices = { 0, 1, 2, 2, 3, 0 };
 		std::vector<Texture> textures = { Texture("glizzy.png", TextureType::Default) };
 		Mesh2D mesh(vertices, indices, textures);
-		Shader shader("2D.glsl");
+		Shader shader("../Gradient/src/Gradient/Shaders/2D.glsl");
 
 		while (!glfwWindowShouldClose(window->GetGLFWwindow()))
 		{
