@@ -9,7 +9,6 @@ namespace Gradient
 
 	void Shader::ReadShader(const std::string& file, std::string& vertexShader, std::string& fragmentShader)
 	{
-		GD_CORE_INFO(file);
 		std::ifstream stream(file);
 		ASSERT(stream.good());
 		enum class shaderType
@@ -20,7 +19,6 @@ namespace Gradient
 		shaderType type;
 		while (getline(stream, line))
 		{
-			GD_CORE_INFO("{}", line);
 			if (line.find("#shader") != std::string::npos)
 			{
 				if (line.find("vertex") != std::string::npos)
@@ -33,6 +31,7 @@ namespace Gradient
 					fragmentShader.append(line + '\n');
 			}
 		}
+		GD_CORE_INFO("Loaded shader from file: {}", file);
 	}
 
 	unsigned int Shader::CompileShader(unsigned int type, const std::string& source)
@@ -92,55 +91,55 @@ namespace Gradient
 		glUseProgram(0);
 	}
 
-	void Shader::SetUniform1i(const char* name, int val1)
+	void Shader::SetUniform1i(const std::string& name, int val1)
 	{
 		glUniform1i(GetUniformLocation(name), val1);
 	}
 
-	void Shader::SetUniform1f(const char* name, float val1)
+	void Shader::SetUniform1f(const std::string& name, float val1)
 	{
 		glUniform1f(GetUniformLocation(name), val1);
 	}
 
-	void Shader::SetUniform3f(const char* name, float val1, float val2, float val3)
+	void Shader::SetUniform3f(const std::string& name, float val1, float val2, float val3)
 	{
 		glUniform3f(GetUniformLocation(name), val1, val2, val3);
 	}
 
-	void Shader::SetUniform3f(const char* name, glm::vec3 vals)
+	void Shader::SetUniform3f(const std::string& name, Vector3 vals)
 	{
 		glUniform3fv(GetUniformLocation(name), 1, &vals[0]);
 	}
 
-	void Shader::SetUniform4f(const char* name, float val1, float val2, float val3, float val4)
+	void Shader::SetUniform4f(const std::string& name, float val1, float val2, float val3, float val4)
 	{
 		glUniform4f(GetUniformLocation(name), val1, val2, val3, val4);
 	}
 
-	void Shader::SetUniform4f(const char* name, glm::vec4 vals)
+	void Shader::SetUniform4f(const std::string& name, Vector4 vals)
 	{
 		glUniform4fv(GetUniformLocation(name), 1, &vals[0]);
 	}
 
-	void Shader::SetUniformMat4f(const char* name, const glm::mat4& mat)
+	void Shader::SetUniformMat4f(const std::string& name, const Matrix4& mat)
 	{
 		glUniformMatrix4fv(GetUniformLocation(name), 1, GL_FALSE, &mat[0][0]);
 	}
 
-	void Shader::SetUniformMaterial(char* name, const Material& mat)
+	void Shader::SetUniformMaterial(const std::string& name, const Material& mat)
 	{
-		SetUniform3f(strcat(name, ".ambient"), mat.Ambient);
-		SetUniform3f(strcat(name, ".diffuse"), mat.Diffuse);
-		SetUniform3f(strcat(name, ".specular"), mat.Specular);
-		SetUniform1f(strcat(name, ".shininess"), mat.Shininess);
+		SetUniform3f(name + ".ambient", mat.Ambient);
+		SetUniform3f(name + ".diffuse", mat.Diffuse);
+		SetUniform3f(name + ".specular", mat.Specular);
+		SetUniform1f(name + ".shininess", mat.Shininess);
 	}
 
-	void Shader::SetUniformLight(char* name, const Light& light)
+	void Shader::SetUniformLight(const std::string& name, const Light& light)
 	{
-		SetUniform3f(strcat(name, ".position"), light.Position);
-		SetUniform3f(strcat(name, ".ambient"), light.Ambient);
-		SetUniform3f(strcat(name, ".diffuse"), light.Diffuse);
-		SetUniform3f(strcat(name, ".specular"), light.Specular);
+		SetUniform3f(name + ".position", light.Position);
+		SetUniform3f(name + ".ambient", light.Ambient);
+		SetUniform3f(name + ".diffuse", light.Diffuse);
+		SetUniform3f(name + ".specular", light.Specular);
 	}
 
 	unsigned int Shader::GetUniformLocation(const std::string& name)

@@ -29,23 +29,23 @@ namespace Gradient
 
 		void Unbind();
 
-		void SetUniform1i(const char* name, int val1);
+		void SetUniform1i(const std::string& name, int val1);
 
-		void SetUniform1f(const char* name, float val1);
+		void SetUniform1f(const std::string& name, float val1);
 
-		void SetUniform3f(const char* name, float val1, float val2, float val3);
+		void SetUniform3f(const std::string& name, float val1, float val2, float val3);
 
-		void SetUniform3f(const char* name, glm::vec3 vals);
+		void SetUniform3f(const std::string& name, Vector3 vals);
 
-		void SetUniform4f(const char* name, float val1, float val2, float val3, float val4);
+		void SetUniform4f(const std::string& name, float val1, float val2, float val3, float val4);
 
-		void SetUniform4f(const char* name, glm::vec4 vals);
+		void SetUniform4f(const std::string& name, Vector4 vals);
 
-		void SetUniformMat4f(const char* name, const glm::mat4& mat);
+		void SetUniformMat4f(const std::string& name, const Matrix4& mat);
 
-		void SetUniformMaterial(char* name, const Material& mat);
+		void SetUniformMaterial(const std::string& name, const Material& mat);
 
-		void SetUniformLight(char* name, const Light& light);
+		void SetUniformLight(const std::string& name, const Light& light);
 
 		unsigned int GetUniformLocation(const std::string& name);
 	};
