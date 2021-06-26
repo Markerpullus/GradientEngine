@@ -31,6 +31,6 @@
 *.out
 *.app
 
-.vs/
-bin/
-bin-int/
+/.vs
+/bin
+/bin-int
