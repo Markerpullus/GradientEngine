@@ -1,8 +1,9 @@
-#include "Gradient/Core/Application.h"
-#include "Gradient/Core/Log.h"
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
 #include "boost/bind.hpp"
+#include "Gradient/Core/Application.h"
+#include "Gradient/Core/Log.h"
+#include "Gradient/Rendering/Mesh2D.h"
 
 namespace Gradient
 {
@@ -40,10 +41,26 @@ namespace Gradient
 
 	void Application::Run()
 	{
+		/*
+		Vector3 positions[] = { Vector3(0.5f, 0.5f, 0.0f), Vector3(0.5f, -0.5f, 0.0f), Vector3(-0.5f, -0.5f, 0.0f), Vector3(-0.5f, 0.5f, 0.0f) };
+		Vector2 texCoords[] = { Vector2(1.0f, 1.0f), Vector2(1.0f, -1.0f), Vector2(-1.0f, -1.0f), Vector2(-1.0f, 1.0f) };
+		Vertex2D verticesArray[4];
+		for (int i = 0; i < 4; i++)
+		{
+			verticesArray[i] = Vertex2D{positions[i], texCoords[i]};
+		}
+		std::vector<Vertex2D> vertices(verticesArray, verticesArray + 4);
+		std::vector<unsigned int> indices = { 0, 1, 2, 2, 3, 0 };
+		std::vector<Texture> textures = { Texture("Z:/Programming/Gradient/Gradient/glizzy.png", TextureType::Default) };
+		Mesh2D mesh(vertices, indices, textures);*/
+		Shader shader("Z:/Programming/Gradient/Gradient/src/Shaders/2D.glsl");
+
 		while (!glfwWindowShouldClose(window->GetGLFWwindow()))
 		{
 			glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 			glClear(GL_COLOR_BUFFER_BIT);
+
+			//mesh.Draw(shader);
 
 			glfwSwapBuffers(window->GetGLFWwindow());
 			glfwPollEvents();

@@ -150,9 +150,10 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Gradient\Rendering\Mesh2D.h" />
     <ClInclude Include="src\Gradient\Rendering\Material.h" />
     <ClInclude Include="src\Gradient\Rendering\Shader.h" />
-    <ClInclude Include="src\Gradient\Rendering\Mesh.h" />
+    <ClInclude Include="src\Gradient\Rendering\Mesh3D.h" />
     <ClInclude Include="src\Gradient\Rendering\Model.h" />
     <ClInclude Include="src\Gradient.h" />
     <ClInclude Include="src\Gradient\Core.h" />
@@ -168,6 +169,7 @@
     <ClInclude Include="src\Gradient\EventSystem\MouseEvent.h" />
     <ClInclude Include="src\Gradient\EventSystem\WindowEvent.h" />
     <ClInclude Include="src\Gradient\Math\Math.h" />
+    <ClInclude Include="src\Gradient\Rendering\Texture.h" />
     <ClInclude Include="src\Gradient\Scopes\Scope.h" />
     <ClInclude Include="vendor\boost\boost\assert.hpp" />
     <ClInclude Include="vendor\boost\boost\assert\source_location.hpp" />
@@ -941,14 +943,16 @@
     <ClInclude Include="vendor\tinyobjloader\tol\tinyobjloader.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Gradient\Rendering\Mesh2D.cpp" />
     <ClCompile Include="src\Gradient\Rendering\Shader.cpp" />
-    <ClCompile Include="src\Gradient\Rendering\Mesh.cpp" />
+    <ClCompile Include="src\Gradient\Rendering\Mesh3D.cpp" />
     <ClCompile Include="src\Gradient\Rendering\Model.cpp" />
     <ClCompile Include="src\Gradient\Core.cpp" />
     <ClCompile Include="src\Gradient\Core\Application.cpp" />
     <ClCompile Include="src\Gradient\Core\Input.cpp" />
     <ClCompile Include="src\Gradient\Core\Log.cpp" />
     <ClCompile Include="src\Gradient\Core\Window.cpp" />
+    <ClCompile Include="src\Gradient\Rendering\Texture.cpp" />
     <ClCompile Include="src\Gradient\Scopes\Scope.cpp" />
     <ClCompile Include="vendor\stb\stb\stb_image.cpp" />
     <ClCompile Include="vendor\tinyobjloader\tol\tinyobjloader.cpp" />
@@ -963,6 +967,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="src\Gradient\Shaders\Phong.glsl" />
+    <None Include="src\Gradient\Shaders\2D.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

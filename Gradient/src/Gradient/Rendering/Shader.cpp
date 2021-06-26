@@ -9,7 +9,9 @@ namespace Gradient
 
 	void Shader::ReadShader(const std::string& file, std::string& vertexShader, std::string& fragmentShader)
 	{
+		GD_CORE_INFO(file);
 		std::ifstream stream(file);
+		ASSERT(stream.good());
 		enum class shaderType
 		{
 			None = -1, Vertex = 0, Fragment = 1
@@ -18,6 +20,7 @@ namespace Gradient
 		shaderType type;
 		while (getline(stream, line))
 		{
+			GD_CORE_INFO("{}", line);
 			if (line.find("#shader") != std::string::npos)
 			{
 				if (line.find("vertex") != std::string::npos)

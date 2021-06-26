@@ -1,7 +1,42 @@
-﻿  Input.cpp
+﻿  Application.cpp
+Z:\Programming\Gradient\Gradient\vendor\boost\boost\bind.hpp(41): message : The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.
 Z:\Programming\Gradient\Gradient\src\Gradient\Core\Window.h(28,33): warning C4251: 'Gradient::Window::EventHandler': class 'boost::function<void (Gradient::Event &)>' needs to have dll-interface to be used by clients of class 'Gradient::Window'
 Z:\Programming\Gradient\Gradient\src\Gradient\Core\Window.h(14): message : see declaration of 'boost::function<void (Gradient::Event &)>'
 Z:\Programming\Gradient\Gradient\src\Gradient\Core\Application.h(15,33): warning C4251: 'Gradient::Application::window': class 'std::unique_ptr<Gradient::Window,std::default_delete<Gradient::Window>>' needs to have dll-interface to be used by clients of class 'Gradient::Application'
 Z:\Programming\Gradient\Gradient\src\Gradient\Core\Application.h(15): message : see declaration of 'std::unique_ptr<Gradient::Window,std::default_delete<Gradient::Window>>'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': macro redefinition
+Z:\Programming\Gradient\Gradient\vendor\glad\include\glad\glad.h(32): message : see previous definition of 'APIENTRY'
+Z:\Programming\Gradient\Gradient\src\Gradient\Core\Log.h(21,52): warning C4251: 'Gradient::Log::coreLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Gradient::Log'
+Z:\Programming\Gradient\Gradient\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
+Z:\Programming\Gradient\Gradient\src\Gradient\Core\Log.h(23,54): warning C4251: 'Gradient::Log::clientLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Gradient::Log'
+Z:\Programming\Gradient\Gradient\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
+Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Mesh2D.h(21,33): warning C4251: 'Gradient::Mesh2D::vertices': class 'std::vector<Gradient::Vertex2D,std::allocator<Gradient::Vertex2D>>' needs to have dll-interface to be used by clients of class 'Gradient::Mesh2D'
+Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Mesh2D.h(21): message : see declaration of 'std::vector<Gradient::Vertex2D,std::allocator<Gradient::Vertex2D>>'
+Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Mesh2D.h(22,36): warning C4251: 'Gradient::Mesh2D::indices': class 'std::vector<unsigned int,std::allocator<T>>' needs to have dll-interface to be used by clients of class 'Gradient::Mesh2D'
+          with
+          [
+              T=fmt::v7::detail::bigint::bigit
+          ]
+Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Mesh2D.h(22): message : see declaration of 'std::vector<unsigned int,std::allocator<T>>'
+          with
+          [
+              T=fmt::v7::detail::bigint::bigit
+          ]
+Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Mesh2D.h(23,32): warning C4251: 'Gradient::Mesh2D::textures': class 'std::vector<Gradient::Texture,std::allocator<Gradient::Texture>>' needs to have dll-interface to be used by clients of class 'Gradient::Mesh2D'
+Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Mesh2D.h(23): message : see declaration of 'std::vector<Gradient::Texture,std::allocator<Gradient::Texture>>'
+  Shader.cpp
+Z:\Programming\Gradient\Gradient\src\Gradient\Core\Log.h(21,52): warning C4251: 'Gradient::Log::coreLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Gradient::Log'
+Z:\Programming\Gradient\Gradient\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
+Z:\Programming\Gradient\Gradient\src\Gradient\Core\Log.h(23,54): warning C4251: 'Gradient::Log::clientLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Gradient::Log'
+Z:\Programming\Gradient\Gradient\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
+Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Shader.cpp(132,16): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Shader.cpp(133,16): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Shader.cpp(134,16): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Shader.cpp(135,16): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Shader.cpp(140,16): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Shader.cpp(141,16): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Shader.cpp(142,16): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Shader.cpp(143,16): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Generating Code...
      Creating library ..\bin\Debug-windows-x86_64\Gradient\Gradient.lib and object ..\bin\Debug-windows-x86_64\Gradient\Gradient.exp
   Gradient.vcxproj -> Z:\Programming\Gradient\bin\Debug-windows-x86_64\Gradient\Gradient.dll

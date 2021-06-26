@@ -3,6 +3,8 @@
 
 layout(location = 0) in vec4 position;
 layout(location = 1) in vec4 normal;
+layout(location = 2) in vec2 texCoords;
+layout(location = 3) in vec4 tangent;
 
 out vec3 v_normal;
 out vec3 v_fragPos;
@@ -26,9 +28,8 @@ void main()
 
 struct Material
 {
-	vec3 Ambient;
-	vec3 Diffuse;
-	vec3 Specular;
+	sampler2D Diffuse;
+	sampler2D Specular;
 
 	float Shininess;
 };
