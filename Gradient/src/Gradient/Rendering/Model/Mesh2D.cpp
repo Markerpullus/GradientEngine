@@ -40,7 +40,6 @@ namespace Gradient
 
 		shader.SetUniform1i("u_texture", 0);
 		glBindTexture(GL_TEXTURE_2D, texture.id);
-		
 
 		// Bind and draw
 		glBindVertexArray(vao);

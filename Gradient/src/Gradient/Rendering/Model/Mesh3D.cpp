@@ -32,29 +32,26 @@ namespace Gradient
 		glBindVertexArray(0);
 	}
 
-	Mesh3D::Mesh3D(std::vector<Vertex3D>& v, std::vector<unsigned int>& i, std::vector<Texture>& t)
-		: vertices(v), indices(i), textures(t)
+	Mesh3D::Mesh3D(std::vector<Vertex3D>& v, std::vector<unsigned int>& i, Material& m)
+		: vertices(v), indices(i), material(m)
 	{
 		Setup();
 	}
 
 	void Mesh3D::Draw(Shader& shader)
 	{
-		for (unsigned int i = 0; i < textures.size(); i++)
-		{
-			glActiveTexture(GL_TEXTURE0 + i);
+		// Set Diffuse
+		glActiveTexture(GL_TEXTURE0);
+		shader.SetUniform1i("u_mat.Diffuse", 0);
+		glBindTexture(GL_TEXTURE_2D, material.Diffuse.id);
 
-			switch (textures.at(i).Type)
-			{
-			case TextureType::Diffuse:
-				shader.SetUniform1i("u_mat.Diffuse", i);
-				break;
-			case TextureType::Specular:
-				shader.SetUniform1i("u_mat.Specular", i);
-				break;
-			}
-			glBindTexture(GL_TEXTURE_2D, textures.at(i).id);
-		}
+		// Set Specular
+		glActiveTexture(GL_TEXTURE1);
+		shader.SetUniform1i("u_mat.Specular", 1);
+		glBindTexture(GL_TEXTURE_2D, material.Specular.id);
+
+		// Set Shininess
+		shader.SetUniform1f("u_mat.Shininess", material.Shininess);
 
 		// Bind and draw
 		glBindVertexArray(vao);

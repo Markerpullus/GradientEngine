@@ -5,15 +5,7 @@
 
 namespace Gradient
 {
-	struct MaterialPlain
-	{
-		Vector3 Diffuse;
-		Vector3 Specular;
-
-		float Shininess;
-	};
-
-	struct MaterialTexture
+	struct Material
 	{
 		Texture Diffuse;
 		Texture Specular;
