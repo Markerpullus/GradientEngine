@@ -28,21 +28,19 @@ namespace Gradient
 		glBindVertexArray(0);
 	}
 
-	Mesh2D::Mesh2D(std::vector<Vertex2D>& v, std::vector<unsigned int>& i, std::vector<Texture>& t)
-		: vertices(v), indices(i), textures(t)
+	Mesh2D::Mesh2D(std::vector<Vertex2D>& v, std::vector<unsigned int>& i, Texture t)
+		: vertices(v), indices(i), texture(t)
 	{
 		Setup();
 	}
 
 	void Mesh2D::Draw(Shader& shader)
 	{
-		for (unsigned int i = 0; i < textures.size(); i++)
-		{
-			glActiveTexture(GL_TEXTURE0 + i);
+		glActiveTexture(GL_TEXTURE0);
 
-			shader.SetUniform1i("tex", i);
-			glBindTexture(GL_TEXTURE_2D, textures.at(i).ID);
-		}
+		shader.SetUniform1i("u_texture", 0);
+		glBindTexture(GL_TEXTURE_2D, texture.id);
+		
 
 		// Bind and draw
 		glBindVertexArray(vao);

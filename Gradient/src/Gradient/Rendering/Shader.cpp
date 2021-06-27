@@ -135,8 +135,8 @@ namespace Gradient
 
 	void Shader::SetUniformMaterial(const std::string& name, const MaterialTexture& mat)
 	{
-		SetUniform1i(name + ".Diffuse", mat.Diffuse.ID);
-		SetUniform1i(name + ".Specular", mat.Specular.ID);
+		SetUniform1i(name + ".Diffuse", mat.Diffuse.id);
+		SetUniform1i(name + ".Specular", mat.Specular.id);
 		SetUniform1f(name + ".Shininess", mat.Shininess);
 	}
 

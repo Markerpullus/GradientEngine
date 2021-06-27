@@ -960,9 +960,7 @@
     <ClCompile Include="vendor\tinyobjloader\tol\tinyobjloader.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\Gradient\Shaders\2DPlain.glsl" />
     <None Include="src\Gradient\Shaders\2DTexture.glsl" />
-    <None Include="src\Gradient\Shaders\PhongPlain.glsl" />
     <None Include="src\Gradient\Shaders\PhongTexture.glsl" />
   </ItemGroup>
   <ItemGroup>

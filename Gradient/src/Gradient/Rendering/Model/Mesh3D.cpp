@@ -53,7 +53,7 @@ namespace Gradient
 				shader.SetUniform1i("u_mat.Specular", i);
 				break;
 			}
-			glBindTexture(GL_TEXTURE_2D, textures.at(i).ID);
+			glBindTexture(GL_TEXTURE_2D, textures.at(i).id);
 		}
 
 		// Bind and draw

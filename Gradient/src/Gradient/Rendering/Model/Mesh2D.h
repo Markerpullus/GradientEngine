@@ -20,14 +20,14 @@ namespace Gradient
 	private:
 		std::vector<Vertex2D> vertices;
 		std::vector<unsigned int> indices;
-		std::vector<Texture> textures;
+		Texture texture;
 
 		unsigned int vao, ibo, vbo;
 
 		void Setup();
 
 	public:
-		Mesh2D(std::vector<Vertex2D>& v, std::vector<unsigned int>& i, std::vector<Texture>& t);
+		Mesh2D(std::vector<Vertex2D>& v, std::vector<unsigned int>& i, Texture t);
 
 		void Draw(Shader& shader);
 	};

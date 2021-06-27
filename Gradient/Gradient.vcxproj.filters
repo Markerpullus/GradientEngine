@@ -2665,10 +2665,6 @@
     <None Include="src\Gradient\Shaders\2DTexture.glsl">
       <Filter>src\Gradient\Shaders</Filter>
     </None>
-    <None Include="src\Gradient\Shaders\PhongPlain.glsl">
-      <Filter>src\Gradient\Shaders</Filter>
-    </None>
     <None Include="src\Gradient\Shaders\PhongTexture.glsl" />
-    <None Include="src\Gradient\Shaders\2DPlain.glsl" />
   </ItemGroup>
 </Project>
