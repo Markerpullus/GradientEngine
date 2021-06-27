@@ -26,21 +26,21 @@ void main()
 #shader fragment
 #version 330 core
 
-struct Material
+struct MaterialPlain
 {
-	sampler2D Diffuse;
-	sampler2D Specular;
+	vec3 Diffuse;
+	vec3 Specular;
 
 	float Shininess;
 };
 
 struct Light
 {
-	vec3 Position;
-
 	vec3 Ambient;
 	vec3 Diffuse;
 	vec3 Specular;
+
+	vec3 Position;
 };
 
 out vec4 color;
@@ -48,14 +48,14 @@ out vec4 color;
 in vec3 v_normal;
 in vec3 v_fragPos;
 
-uniform Material u_mat;
+uniform MaterialPlain u_mat;
 uniform Light u_light;
 uniform vec3 u_viewPos;
 
 void main()
 {
 	// ambient
-	vec3 ambient = u_light.Ambient * u_mat.Ambient;
+	vec3 ambient = u_light.Ambient * u_mat.Diffuse;
 
 	// diffuse
 	vec3 normal = normalize(v_normal);
@@ -70,6 +70,5 @@ void main()
 	vec3 specular = u_light.Specular * (u_mat.Specular * spec);
 
 	// set color
-	vec3 result = (specular + diffuse + ambient) * vec3(1.0f, 0.5f, 0.31f);
-	color = vec4(result, 1.0f);
+	color result = vec4(ambient + diffuse + specular, 1.0f);
 };

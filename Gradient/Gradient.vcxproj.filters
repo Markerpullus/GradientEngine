@@ -2662,11 +2662,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\Gradient\Shaders\2D.glsl">
+    <None Include="src\Gradient\Shaders\2DTexture.glsl">
       <Filter>src\Gradient\Shaders</Filter>
     </None>
-    <None Include="src\Gradient\Shaders\Phong.glsl">
+    <None Include="src\Gradient\Shaders\PhongPlain.glsl">
       <Filter>src\Gradient\Shaders</Filter>
     </None>
+    <None Include="src\Gradient\Shaders\PhongTexture.glsl" />
+    <None Include="src\Gradient\Shaders\2DPlain.glsl" />
   </ItemGroup>
 </Project>

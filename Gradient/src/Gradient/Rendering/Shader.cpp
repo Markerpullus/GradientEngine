@@ -137,14 +137,15 @@ namespace Gradient
 	{
 		SetUniform1i(name + ".Diffuse", mat.Diffuse.ID);
 		SetUniform1i(name + ".Specular", mat.Specular.ID);
+		SetUniform1f(name + ".Shininess", mat.Shininess);
 	}
 
 	void Shader::SetUniformLight(const std::string& name, const Light& light)
 	{
-		SetUniform3f(name + ".Position", light.Position);
 		SetUniform3f(name + ".Ambient", light.Ambient);
 		SetUniform3f(name + ".Diffuse", light.Diffuse);
 		SetUniform3f(name + ".Specular", light.Specular);
+		SetUniform3f(name + ".Position", light.Position);
 	}
 
 	unsigned int Shader::GetUniformLocation(const std::string& name)
