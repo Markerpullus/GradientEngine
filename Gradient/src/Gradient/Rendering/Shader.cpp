@@ -126,20 +126,6 @@ namespace Gradient
 		glUniformMatrix4fv(GetUniformLocation(name), 1, GL_FALSE, &mat[0][0]);
 	}
 
-	void Shader::SetUniformMaterial(const std::string& name, const MaterialPlain& mat)
-	{
-		SetUniform3f(name + ".Diffuse", mat.Diffuse);
-		SetUniform3f(name + ".Specular", mat.Specular);
-		SetUniform1f(name + ".Shininess", mat.Shininess);
-	}
-
-	void Shader::SetUniformMaterial(const std::string& name, const MaterialTexture& mat)
-	{
-		SetUniform1i(name + ".Diffuse", mat.Diffuse.id);
-		SetUniform1i(name + ".Specular", mat.Specular.id);
-		SetUniform1f(name + ".Shininess", mat.Shininess);
-	}
-
 	void Shader::SetUniformLight(const std::string& name, const Light& light)
 	{
 		SetUniform3f(name + ".Ambient", light.Ambient);
