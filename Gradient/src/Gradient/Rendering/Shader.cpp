@@ -126,20 +126,25 @@ namespace Gradient
 		glUniformMatrix4fv(GetUniformLocation(name), 1, GL_FALSE, &mat[0][0]);
 	}
 
-	void Shader::SetUniformMaterial(const std::string& name, const Material& mat)
+	void Shader::SetUniformMaterial(const std::string& name, const MaterialPlain& mat)
 	{
-		SetUniform3f(name + ".ambient", mat.Ambient);
-		SetUniform3f(name + ".diffuse", mat.Diffuse);
-		SetUniform3f(name + ".specular", mat.Specular);
-		SetUniform1f(name + ".shininess", mat.Shininess);
+		SetUniform3f(name + ".Diffuse", mat.Diffuse);
+		SetUniform3f(name + ".Specular", mat.Specular);
+		SetUniform1f(name + ".Shininess", mat.Shininess);
+	}
+
+	void Shader::SetUniformMaterial(const std::string& name, const MaterialTexture& mat)
+	{
+		SetUniform1i(name + ".Diffuse", mat.Diffuse.ID);
+		SetUniform1i(name + ".Specular", mat.Specular.ID);
 	}
 
 	void Shader::SetUniformLight(const std::string& name, const Light& light)
 	{
-		SetUniform3f(name + ".position", light.Position);
-		SetUniform3f(name + ".ambient", light.Ambient);
-		SetUniform3f(name + ".diffuse", light.Diffuse);
-		SetUniform3f(name + ".specular", light.Specular);
+		SetUniform3f(name + ".Position", light.Position);
+		SetUniform3f(name + ".Ambient", light.Ambient);
+		SetUniform3f(name + ".Diffuse", light.Diffuse);
+		SetUniform3f(name + ".Specular", light.Specular);
 	}
 
 	unsigned int Shader::GetUniformLocation(const std::string& name)
