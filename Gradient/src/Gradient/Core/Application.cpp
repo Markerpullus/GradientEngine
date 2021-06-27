@@ -50,8 +50,8 @@ namespace Gradient
 		}
 		std::vector<Vertex2D> vertices(verticesArray, verticesArray + 4);
 		std::vector<unsigned int> indices = { 0, 1, 2, 2, 3, 0 };
-		std::vector<Texture> textures = { Texture("glizzy.png", TextureType::Default) };
-		Mesh2D mesh(vertices, indices, textures);
+		Texture texture = Texture(100, 100, Vector3(1.0f, 0.0f, 1.0f), TextureType::Default);
+		Mesh2D mesh(vertices, indices, texture);
 		Shader shader("../Gradient/src/Gradient/Shaders/2D.glsl");
 
 		while (!glfwWindowShouldClose(window->GetGLFWwindow()))

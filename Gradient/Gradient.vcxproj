@@ -960,8 +960,8 @@
     <ClCompile Include="vendor\tinyobjloader\tol\tinyobjloader.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\Gradient\Shaders\2DTexture.glsl" />
-    <None Include="src\Gradient\Shaders\PhongTexture.glsl" />
+    <None Include="src\Gradient\Shaders\2D.glsl" />
+    <None Include="src\Gradient\Shaders\Phong.glsl" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="vendor\glfw\GLFW.vcxproj">

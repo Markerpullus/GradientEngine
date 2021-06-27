@@ -23,5 +23,5 @@ out vec4 color;
 
 void main()
 {
-	color = vec4(u_colorMultiplier * vec3(texture(u_texture, v_texCoord)));
+	color = vec4(u_colorMultiplier * vec3(texture(u_texture, v_texCoord)), 1.0f);
 };
