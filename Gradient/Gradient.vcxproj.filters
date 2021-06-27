@@ -2657,6 +2657,7 @@
     <ClCompile Include="vendor\tinyobjloader\tol\tinyobjloader.cpp">
       <Filter>vendor\tinyobjloader\tol</Filter>
     </ClCompile>
+    <ClCompile Include="src\Gradient\Rendering\Camera\Camera.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\Gradient\Shaders\2D.glsl">

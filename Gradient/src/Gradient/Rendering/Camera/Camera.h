@@ -2,8 +2,7 @@
 
 #include "Gradient//Core.h"
 #include "Gradient/Math/Math.h"
-#include "Gradient/Rendering/Model/Mesh2D.h"
-#include "Gradient/Rendering/Model/Mesh3D.h"
+#include "Gradient/Rendering/Model/Model.h"
 
 namespace Gradient
 {
@@ -28,16 +27,16 @@ namespace Gradient
 		{ };
 		~Camera() = default;
 
-		inline virtual void SetPosition(Vector3 p) { position = p; }
-
-		inline virtual void SetRotation(Vector3 r) { rotation = r; }
-
-		inline virtual void SetUpVector(Vector3 u) { up = u; }
+		void SetPosition(Vector3 p);
+		
+		void SetRotation(Vector3 r);
+		
+		void SetUpVector(Vector3 u);
 
 		inline CameraData GetCamData() { return cam; }
 
-		virtual void DrawMesh2D(Mesh2D& mesh) = 0;
+		void DrawModel(Model2D& model);
 
-		virtual void DrawMesh3D(Mesh3D& mesh) = 0;
+		void DrawModel(Model3D& model);
 	};
 }

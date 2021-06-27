@@ -9,7 +9,6 @@ namespace Gradient
 	class GD_API Model2D
 	{
 	private:
-		Matrix4 model;
 		std::vector<Mesh2D> meshes;
 
 	public:
@@ -17,15 +16,14 @@ namespace Gradient
 			: meshes(m), model(modelMat)
 		{ }
 
-		inline std::vector<Mesh2D> GetMeshes() { return meshes; }
+		Matrix4 model;
 
-		inline void SetModelMatrix(Matrix4 modelMat) { model = modelMat; }
+		inline std::vector<Mesh2D> GetMeshes() { return meshes; }
 	};
 
 	class GD_API Model3D
 	{
 	private:
-		Matrix4 model;
 		std::vector<Mesh3D> meshes;
 
 	public:
@@ -33,8 +31,8 @@ namespace Gradient
 			: meshes(m), model(modelMat)
 		{ }
 
-		inline std::vector<Mesh3D> GetMeshes() { return meshes; }
+		Matrix4 model;
 
-		inline void SetModelMatrix(Matrix4 modelMat) { model = modelMat; }
+		inline std::vector<Mesh3D> GetMeshes() { return meshes; }
 	};
 }

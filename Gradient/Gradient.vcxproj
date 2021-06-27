@@ -948,6 +948,7 @@
     <ClCompile Include="src\Gradient\Core\Input.cpp" />
     <ClCompile Include="src\Gradient\Core\Log.cpp" />
     <ClCompile Include="src\Gradient\Core\Window.cpp" />
+    <ClCompile Include="src\Gradient\Rendering\Camera\Camera.cpp" />
     <ClCompile Include="src\Gradient\Rendering\Camera\OrthographicCamera.cpp" />
     <ClCompile Include="src\Gradient\Rendering\Camera\PerspectiveCamera.cpp" />
     <ClCompile Include="src\Gradient\Rendering\Model\Mesh2D.cpp" />
