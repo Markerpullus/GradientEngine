@@ -9,7 +9,5 @@
 
 #include "Gradient/Math/Math.h"
 
-#include "Gradient/Rendering/Mesh2D.h"
-
 // Main Function of Engine
 #include "Gradient/Entry.h"

@@ -29,11 +29,14 @@ namespace Gradient
 
 	void OrthographicCamera::DrawMesh2D(Mesh2D& mesh)
 	{
+		// TODO
+		return;
 	}
 
 	void OrthographicCamera::DrawMesh3D(Mesh3D& mesh)
 	{
-
+		// TODO
+		return;
 	}
 
 }

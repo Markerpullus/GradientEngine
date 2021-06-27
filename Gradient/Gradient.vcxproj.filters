@@ -19,8 +19,17 @@
     <Filter Include="src\Gradient\Rendering">
       <UniqueIdentifier>{977A1187-8374-3AD9-6CE1-D0E9587AA045}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Gradient\Rendering\Camera">
+      <UniqueIdentifier>{2F5F8C49-9B77-7373-6424-030DD0FB070D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Gradient\Rendering\Model">
+      <UniqueIdentifier>{1739B1EB-03F4-A097-ACAB-19E29845EB27}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Gradient\Scopes">
       <UniqueIdentifier>{06BB53E2-721C-31F0-FB89-77A267EA67AF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Gradient\Shaders">
+      <UniqueIdentifier>{A3FB7037-8F8A-FA00-38A9-0EFC24170BA7}</UniqueIdentifier>
     </Filter>
     <Filter Include="vendor">
       <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
@@ -208,6 +217,18 @@
     <Filter Include="vendor\glm\glm\gtx">
       <UniqueIdentifier>{B3A6A76B-9F8A-68C1-08EB-6214F4ED5243}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vendor\stb">
+      <UniqueIdentifier>{8BD3C5A8-778B-07F6-E092-E051CC69A2E6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\stb\stb">
+      <UniqueIdentifier>{635F6677-4F2D-5A7D-38C1-CAA3242E36E2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\tinyobjloader">
+      <UniqueIdentifier>{386CC32A-24FB-4CF4-CD19-61EFB9875D9A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\tinyobjloader\tol">
+      <UniqueIdentifier>{368AAA7A-22AF-F9FA-4BFA-DE8A377EF818}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Gradient.h">
@@ -217,6 +238,9 @@
       <Filter>src\Gradient</Filter>
     </ClInclude>
     <ClInclude Include="src\Gradient\Core\Application.h">
+      <Filter>src\Gradient\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gradient\Core\Input.h">
       <Filter>src\Gradient\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Gradient\Core\Log.h">
@@ -245,6 +269,36 @@
     </ClInclude>
     <ClInclude Include="src\Gradient\EventSystem\WindowEvent.h">
       <Filter>src\Gradient\EventSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gradient\Math\Math.h">
+      <Filter>src\Gradient\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gradient\Rendering\Camera\Camera.h">
+      <Filter>src\Gradient\Rendering\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gradient\Rendering\Camera\OrthographicCamera.h">
+      <Filter>src\Gradient\Rendering\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gradient\Rendering\Camera\PerspectiveCamera.h">
+      <Filter>src\Gradient\Rendering\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gradient\Rendering\Material.h">
+      <Filter>src\Gradient\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gradient\Rendering\Model\Mesh2D.h">
+      <Filter>src\Gradient\Rendering\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gradient\Rendering\Model\Mesh3D.h">
+      <Filter>src\Gradient\Rendering\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gradient\Rendering\Model\Model.h">
+      <Filter>src\Gradient\Rendering\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gradient\Rendering\Shader.h">
+      <Filter>src\Gradient\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gradient\Rendering\Texture.h">
+      <Filter>src\Gradient\Rendering</Filter>
     </ClInclude>
     <ClInclude Include="src\Gradient\Scopes\Scope.h">
       <Filter>src\Gradient\Scopes</Filter>
@@ -2553,19 +2607,12 @@
     <ClInclude Include="vendor\glm\glm\vector_relational.hpp">
       <Filter>vendor\glm\glm</Filter>
     </ClInclude>
-    <ClInclude Include="src\Gradient\Math\Math.h" />
-    <ClInclude Include="vendor\stb\stb\stb_image.h" />
-    <ClInclude Include="src\Gradient\Core\Input.h" />
-    <ClInclude Include="vendor\tinyobjloader\tol\tinyobjloader.h" />
-    <ClInclude Include="src\Gradient\Rendering\Model\Model.h" />
-    <ClInclude Include="src\Gradient\Rendering\Model\Mesh3D.h" />
-    <ClInclude Include="src\Gradient\Rendering\Shader.h" />
-    <ClInclude Include="src\Gradient\Rendering\Material.h" />
-    <ClInclude Include="src\Gradient\Rendering\Texture.h" />
-    <ClInclude Include="src\Gradient\Rendering\Model\Mesh2D.h" />
-    <ClInclude Include="src\Gradient\Rendering\Camera\Camera.h" />
-    <ClInclude Include="src\Gradient\Rendering\Camera\OrthographicCamera.h" />
-    <ClInclude Include="src\Gradient\Rendering\Camera\PerspectiveCamera.h" />
+    <ClInclude Include="vendor\stb\stb\stb_image.h">
+      <Filter>vendor\stb\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\tinyobjloader\tol\tinyobjloader.h">
+      <Filter>vendor\tinyobjloader\tol</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Gradient\Core.cpp">
@@ -2574,28 +2621,52 @@
     <ClCompile Include="src\Gradient\Core\Application.cpp">
       <Filter>src\Gradient\Core</Filter>
     </ClCompile>
+    <ClCompile Include="src\Gradient\Core\Input.cpp">
+      <Filter>src\Gradient\Core</Filter>
+    </ClCompile>
     <ClCompile Include="src\Gradient\Core\Log.cpp">
       <Filter>src\Gradient\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\Gradient\Core\Window.cpp">
       <Filter>src\Gradient\Core</Filter>
     </ClCompile>
+    <ClCompile Include="src\Gradient\Rendering\Camera\OrthographicCamera.cpp">
+      <Filter>src\Gradient\Rendering\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Gradient\Rendering\Camera\PerspectiveCamera.cpp">
+      <Filter>src\Gradient\Rendering\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Gradient\Rendering\Model\Mesh2D.cpp">
+      <Filter>src\Gradient\Rendering\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Gradient\Rendering\Model\Mesh3D.cpp">
+      <Filter>src\Gradient\Rendering\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Gradient\Rendering\Model\Model.cpp">
+      <Filter>src\Gradient\Rendering\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Gradient\Rendering\Shader.cpp">
+      <Filter>src\Gradient\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Gradient\Rendering\Texture.cpp">
+      <Filter>src\Gradient\Rendering</Filter>
+    </ClCompile>
     <ClCompile Include="src\Gradient\Scopes\Scope.cpp">
       <Filter>src\Gradient\Scopes</Filter>
     </ClCompile>
-    <ClCompile Include="vendor\stb\stb\stb_image.cpp" />
-    <ClCompile Include="src\Gradient\Core\Input.cpp" />
-    <ClCompile Include="vendor\tinyobjloader\tol\tinyobjloader.cpp" />
-    <ClCompile Include="src\Gradient\Rendering\Model\Model.cpp" />
-    <ClCompile Include="src\Gradient\Rendering\Model\Mesh3D.cpp" />
-    <ClCompile Include="src\Gradient\Rendering\Shader.cpp" />
-    <ClCompile Include="src\Gradient\Rendering\Texture.cpp" />
-    <ClCompile Include="src\Gradient\Rendering\Model\Mesh2D.cpp" />
-    <ClCompile Include="src\Gradient\Rendering\Camera\OrthographicCamera.cpp" />
-    <ClCompile Include="src\Gradient\Rendering\Camera\PerspectiveCamera.cpp" />
+    <ClCompile Include="vendor\stb\stb\stb_image.cpp">
+      <Filter>vendor\stb\stb</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\tinyobjloader\tol\tinyobjloader.cpp">
+      <Filter>vendor\tinyobjloader\tol</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\Gradient\Shaders\Phong.glsl" />
-    <None Include="src\Gradient\Shaders\2D.glsl" />
+    <None Include="src\Gradient\Shaders\2D.glsl">
+      <Filter>src\Gradient\Shaders</Filter>
+    </None>
+    <None Include="src\Gradient\Shaders\Phong.glsl">
+      <Filter>src\Gradient\Shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -30,12 +30,14 @@ namespace Gradient
 
 	void PerspectiveCamera::DrawMesh2D(Mesh2D& mesh)
 	{
-
+		// TODO
+		return;
 	}
 
 	void PerspectiveCamera::DrawMesh3D(Mesh3D& mesh)
 	{
-
+		// TODO
+		return;
 	}
 
 }

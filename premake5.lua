@@ -32,8 +32,7 @@ project "Gradient"
 
 	files
 	{
-		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/src/**",
 
 		"%{prj.name}/vendor/boost/**.hpp",
 		"%{prj.name}/vendor/glm/**.hpp",
@@ -51,7 +50,7 @@ project "Gradient"
 		"%{IncludeDir.BOOST}",
 		"%{IncludeDir.GLM}",
 		"%{IncludeDir.STB}",
-		"{IncludeDir.TOL}"
+		"%{IncludeDir.TOL}"
 	}
 
 	filter "system:windows"
@@ -74,7 +73,7 @@ project "Gradient"
 		
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/TestGame")
 		}
 
 	filter "configurations:Debug"
@@ -92,8 +91,8 @@ project "Gradient"
 	filter { "system:windows", "configurations:Release" }
 		buildoptions "/MT"
 
-project "Sandbox"
-	location "Sandbox"
+project "TestGame"
+	location "TestGame"
 	kind "ConsoleApp"
 	language "C++"
 
@@ -102,8 +101,7 @@ project "Sandbox"
 
 	files
 	{
-		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**"
 	}
 
 	includedirs
@@ -115,7 +113,7 @@ project "Sandbox"
 		"%{IncludeDir.BOOST}",
 		"%{IncludeDir.GLM}",
 		"%{IncludeDir.STB}",
-		"{IncludeDir.TOL}"
+		"%{IncludeDir.TOL}"
 	}
 
 	links

@@ -84,7 +84,6 @@
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <PreprocessToFile>false</PreprocessToFile>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -93,7 +92,7 @@
       <ImportLibrary>..\bin\Debug-windows-x86_64\Gradient\Gradient.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Debug-windows-x86_64\Gradient\Gradient.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Gradient\Gradient.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Gradient\Gradient.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Debug-windows-x86_64\Gradient\Gradient.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Gradient\Gradient.dll ..\bin\Debug-windows-x86_64\TestGame &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Gradient\Gradient.dll ..\bin\Debug-windows-x86_64\TestGame &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -110,7 +109,6 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <AdditionalOptions>/MT %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <PreprocessToFile>false</PreprocessToFile>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -120,7 +118,7 @@
       <ImportLibrary>..\bin\Release-windows-x86_64\Gradient\Gradient.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Release-windows-x86_64\Gradient\Gradient.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\Gradient\Gradient.dll ..\bin\Release-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\Gradient\Gradient.dll ..\bin\Release-windows-x86_64\Sandbox &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Release-windows-x86_64\Gradient\Gradient.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\Gradient\Gradient.dll ..\bin\Release-windows-x86_64\TestGame &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\Gradient\Gradient.dll ..\bin\Release-windows-x86_64\TestGame &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
@@ -136,7 +134,6 @@
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <PreprocessToFile>false</PreprocessToFile>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -146,18 +143,10 @@
       <ImportLibrary>..\bin\Dist-windows-x86_64\Gradient\Gradient.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Dist-windows-x86_64\Gradient\Gradient.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\Gradient\Gradient.dll ..\bin\Dist-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\Gradient\Gradient.dll ..\bin\Dist-windows-x86_64\Sandbox &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Dist-windows-x86_64\Gradient\Gradient.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\Gradient\Gradient.dll ..\bin\Dist-windows-x86_64\TestGame &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\Gradient\Gradient.dll ..\bin\Dist-windows-x86_64\TestGame &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Gradient\Rendering\Camera\PerspectiveCamera.h" />
-    <ClInclude Include="src\Gradient\Rendering\Camera\OrthographicCamera.h" />
-    <ClInclude Include="src\Gradient\Rendering\Camera\Camera.h" />
-    <ClInclude Include="src\Gradient\Rendering\Model\Mesh2D.h" />
-    <ClInclude Include="src\Gradient\Rendering\Material.h" />
-    <ClInclude Include="src\Gradient\Rendering\Shader.h" />
-    <ClInclude Include="src\Gradient\Rendering\Model\Mesh3D.h" />
-    <ClInclude Include="src\Gradient\Rendering\Model\Model.h" />
     <ClInclude Include="src\Gradient.h" />
     <ClInclude Include="src\Gradient\Core.h" />
     <ClInclude Include="src\Gradient\Core\Application.h" />
@@ -172,6 +161,14 @@
     <ClInclude Include="src\Gradient\EventSystem\MouseEvent.h" />
     <ClInclude Include="src\Gradient\EventSystem\WindowEvent.h" />
     <ClInclude Include="src\Gradient\Math\Math.h" />
+    <ClInclude Include="src\Gradient\Rendering\Camera\Camera.h" />
+    <ClInclude Include="src\Gradient\Rendering\Camera\OrthographicCamera.h" />
+    <ClInclude Include="src\Gradient\Rendering\Camera\PerspectiveCamera.h" />
+    <ClInclude Include="src\Gradient\Rendering\Material.h" />
+    <ClInclude Include="src\Gradient\Rendering\Model\Mesh2D.h" />
+    <ClInclude Include="src\Gradient\Rendering\Model\Mesh3D.h" />
+    <ClInclude Include="src\Gradient\Rendering\Model\Model.h" />
+    <ClInclude Include="src\Gradient\Rendering\Shader.h" />
     <ClInclude Include="src\Gradient\Rendering\Texture.h" />
     <ClInclude Include="src\Gradient\Scopes\Scope.h" />
     <ClInclude Include="vendor\boost\boost\assert.hpp" />
@@ -946,21 +943,25 @@
     <ClInclude Include="vendor\tinyobjloader\tol\tinyobjloader.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Gradient\Rendering\Camera\PerspectiveCamera.cpp" />
-    <ClCompile Include="src\Gradient\Rendering\Camera\OrthographicCamera.cpp" />
-    <ClCompile Include="src\Gradient\Rendering\Model\Mesh2D.cpp" />
-    <ClCompile Include="src\Gradient\Rendering\Shader.cpp" />
-    <ClCompile Include="src\Gradient\Rendering\Model\Mesh3D.cpp" />
-    <ClCompile Include="src\Gradient\Rendering\Model\Model.cpp" />
     <ClCompile Include="src\Gradient\Core.cpp" />
     <ClCompile Include="src\Gradient\Core\Application.cpp" />
     <ClCompile Include="src\Gradient\Core\Input.cpp" />
     <ClCompile Include="src\Gradient\Core\Log.cpp" />
     <ClCompile Include="src\Gradient\Core\Window.cpp" />
+    <ClCompile Include="src\Gradient\Rendering\Camera\OrthographicCamera.cpp" />
+    <ClCompile Include="src\Gradient\Rendering\Camera\PerspectiveCamera.cpp" />
+    <ClCompile Include="src\Gradient\Rendering\Model\Mesh2D.cpp" />
+    <ClCompile Include="src\Gradient\Rendering\Model\Mesh3D.cpp" />
+    <ClCompile Include="src\Gradient\Rendering\Model\Model.cpp" />
+    <ClCompile Include="src\Gradient\Rendering\Shader.cpp" />
     <ClCompile Include="src\Gradient\Rendering\Texture.cpp" />
     <ClCompile Include="src\Gradient\Scopes\Scope.cpp" />
     <ClCompile Include="vendor\stb\stb\stb_image.cpp" />
     <ClCompile Include="vendor\tinyobjloader\tol\tinyobjloader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Gradient\Shaders\2D.glsl" />
+    <None Include="src\Gradient\Shaders\Phong.glsl" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="vendor\glfw\GLFW.vcxproj">
@@ -969,10 +970,6 @@
     <ProjectReference Include="vendor\glad\Glad.vcxproj">
       <Project>{BDD6857C-A90D-870D-52FA-6C103E10030F}</Project>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="src\Gradient\Shaders\Phong.glsl" />
-    <None Include="src\Gradient\Shaders\2D.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

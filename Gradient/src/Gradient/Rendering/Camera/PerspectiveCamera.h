@@ -21,8 +21,8 @@ namespace Gradient
 
 		inline CameraData GetCamData() { return cam; }
 
-		void DrawMesh2D(Mesh2D& mesh) override;
+		void DrawMesh2D(Mesh2D& mesh);
 
-		void DrawMesh3D(Mesh3D& mesh) override;
+		void DrawMesh3D(Mesh3D& mesh);
 	};
 }
