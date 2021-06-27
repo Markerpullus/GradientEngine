@@ -952,7 +952,6 @@
     <ClCompile Include="src\Gradient\Rendering\Camera\PerspectiveCamera.cpp" />
     <ClCompile Include="src\Gradient\Rendering\Model\Mesh2D.cpp" />
     <ClCompile Include="src\Gradient\Rendering\Model\Mesh3D.cpp" />
-    <ClCompile Include="src\Gradient\Rendering\Model\Model.cpp" />
     <ClCompile Include="src\Gradient\Rendering\Shader.cpp" />
     <ClCompile Include="src\Gradient\Rendering\Texture.cpp" />
     <ClCompile Include="src\Gradient\Scopes\Scope.cpp" />

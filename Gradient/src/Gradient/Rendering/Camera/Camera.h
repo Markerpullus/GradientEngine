@@ -13,7 +13,7 @@ namespace Gradient
 		Matrix4 projection;
 	};
 
-	class GD_API Camera
+	class Camera
 	{
 	protected:
 		CameraData cam;

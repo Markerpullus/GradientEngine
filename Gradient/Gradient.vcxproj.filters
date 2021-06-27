@@ -2642,9 +2642,6 @@
     <ClCompile Include="src\Gradient\Rendering\Model\Mesh3D.cpp">
       <Filter>src\Gradient\Rendering\Model</Filter>
     </ClCompile>
-    <ClCompile Include="src\Gradient\Rendering\Model\Model.cpp">
-      <Filter>src\Gradient\Rendering\Model</Filter>
-    </ClCompile>
     <ClCompile Include="src\Gradient\Rendering\Shader.cpp">
       <Filter>src\Gradient\Rendering</Filter>
     </ClCompile>
