@@ -3,7 +3,8 @@
 #include "boost/bind.hpp"
 #include "Gradient/Core/Application.h"
 #include "Gradient/Core/Log.h"
-#include "Gradient/Rendering/Model/Mesh2D.h"
+#include "Gradient/Rendering/Model/Model.h"
+#include "Gradient/Rendering/Camera/OrthographicCamera.h"
 
 namespace Gradient
 {
@@ -52,14 +53,16 @@ namespace Gradient
 		std::vector<unsigned int> indices = { 0, 1, 2, 2, 3, 0 };
 		Texture texture = Texture(100, 100, Vector3(1.0f, 0.0f, 1.0f), TextureType::Default);
 		Mesh2D mesh(vertices, indices, texture);
-		Shader shader("../Gradient/src/Gradient/Shaders/2D.glsl");
+		Model2D model(std::vector<Mesh2D>{mesh}, glm::rotate(Matrix4(1.0f), glm::radians(45.0f), Vector3(0.0f, 1.0f, 0.0f)));
+		Shader shader2D("../Gradient/src/Gradient/Shaders/2D.glsl");
+		OrthographicCamera cam(Vector3(0.0f, 0.0f, -1.0f), Vector3(0.0f, 0.0f, 1.0f), Vector3(0.0f, 1.0f, 0.0f), 2.0f, 2.0f, 1.0f, 2.0f);
 
 		while (!glfwWindowShouldClose(window->GetGLFWwindow()))
 		{
 			glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 			glClear(GL_COLOR_BUFFER_BIT);
 
-			mesh.Draw(shader);
+			cam.DrawModel(model, shader2D);
 
 			glfwSwapBuffers(window->GetGLFWwindow());
 			glfwPollEvents();

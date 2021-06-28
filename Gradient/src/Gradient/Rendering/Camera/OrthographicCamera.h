@@ -4,10 +4,12 @@
 
 namespace Gradient
 {
-	class GD_API OrthographicCamera : Camera
+	class GD_API OrthographicCamera : public Camera
 	{
+	private:
+		float zNear, zFar;
 	public:
-		OrthographicCamera(Vector3 p, Vector3 r, Vector3 u, float w, float h);
+		OrthographicCamera(Vector3 p, Vector3 r, Vector3 u, float w, float h, float znear, float zfar);
 		~OrthographicCamera() = default;
 	};
 }

@@ -4,7 +4,7 @@
 
 namespace Gradient
 {
-	class GD_API PerspectiveCamera : Camera
+	class GD_API PerspectiveCamera : public Camera
 	{
 	private:
 		float zNear, zFar;

@@ -1,7 +1,12 @@
 #include "Gradient/Rendering/Camera/Camera.h"
+#include "Gradient/Core/Log.h"
 
 namespace Gradient
 {
+	Camera::Camera(Vector3 p, Vector3 r, Vector3 u, float w, float h)
+		: position(p), rotation(r), up(u), width(w), height(h)
+	{ }
+
 	void Camera::SetPosition(Vector3 p)
 	{
 		position = p;
@@ -20,13 +25,12 @@ namespace Gradient
 		cam.view = glm::lookAt(position, (position + rotation), up);
 	}
 
-	void Camera::DrawModel(Model2D& model)
+	void Camera::DrawModel(Model2D& model, Shader& shader)
 	{
-		Shader shader("../Gradient/src/Gradient/Shaders/2D.glsl");
+		shader.Bind();
 		shader.SetUniformMat4f("u_model", model.model);
 		shader.SetUniformMat4f("u_view", cam.view);
 		shader.SetUniformMat4f("u_proj", cam.projection);
-		shader.SetUniform3f("u_viewPos", position);
 
 		// TODO: Set light uniforms
 
@@ -36,9 +40,9 @@ namespace Gradient
 		}
 	}
 
-	void Camera::DrawModel(Model3D& model)
+	void Camera::DrawModel(Model3D& model, Shader& shader)
 	{
-		Shader shader("../Gradient/src/Gradient/Shaders/Phong.glsl");
+		shader.Bind();
 		shader.SetUniformMat4f("u_model", model.model);
 		shader.SetUniformMat4f("u_view", cam.view);
 		shader.SetUniformMat4f("u_proj", cam.projection);

@@ -22,21 +22,19 @@ namespace Gradient
 		float width, height;
 
 	public:
-		Camera(Vector3 p, Vector3 r, Vector3 u, float w, float h)
-			: position(p), rotation(r), up(u), width(w), height(h)
-		{ };
+		Camera(Vector3 p, Vector3 r, Vector3 u, float w, float h);
 		~Camera() = default;
 
 		void SetPosition(Vector3 p);
-		
+
 		void SetRotation(Vector3 r);
-		
+
 		void SetUpVector(Vector3 u);
 
 		inline CameraData GetCamData() { return cam; }
 
-		void DrawModel(Model2D& model);
+		void DrawModel(Model2D& model, Shader& shader);
 
-		void DrawModel(Model3D& model);
+		void DrawModel(Model3D& model, Shader& shader);
 	};
 }
