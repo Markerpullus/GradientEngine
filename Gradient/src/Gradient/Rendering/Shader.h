@@ -43,8 +43,6 @@ namespace Gradient
 
 		void SetUniformMat4f(const std::string& name, const Matrix4& mat);
 
-		void SetUniformLight(const std::string& name, const Light& light);
-
 		unsigned int GetUniformLocation(const std::string& name);
 	};
 }

@@ -147,9 +147,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Gradient\Rendering\Light\DirectionalLight.h" />
-    <ClInclude Include="src\Gradient\Rendering\Light\Light.h" />
-    <ClInclude Include="src\Gradient\Rendering\Light\PointLight.h" />
+    <ClInclude Include="src\Gradient\Rendering\Light.h" />
     <ClInclude Include="src\Gradient.h" />
     <ClInclude Include="src\Gradient\Core.h" />
     <ClInclude Include="src\Gradient\Core\Application.h" />

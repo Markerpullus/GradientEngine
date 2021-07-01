@@ -3,6 +3,7 @@
 #include "Gradient//Core.h"
 #include "Gradient/Math/Math.h"
 #include "Gradient/Rendering/Model/Model.h"
+#include "Gradient/Rendering/Light.h"
 
 namespace Gradient
 {
@@ -35,6 +36,6 @@ namespace Gradient
 
 		void DrawModel(Model2D& model, Shader& shader);
 
-		void DrawModel(Model3D& model, Shader& shader);
+		void DrawModel(Model3D& model, Shader& shader, std::vector<Light&> lights);
 	};
 }

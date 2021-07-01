@@ -126,14 +126,6 @@ namespace Gradient
 		glUniformMatrix4fv(GetUniformLocation(name), 1, GL_FALSE, &mat[0][0]);
 	}
 
-	void Shader::SetUniformLight(const std::string& name, const Light& light)
-	{
-		SetUniform3f(name + ".Ambient", light.Ambient);
-		SetUniform3f(name + ".Diffuse", light.Diffuse);
-		SetUniform3f(name + ".Specular", light.Specular);
-		SetUniform3f(name + ".Position", light.Position);
-	}
-
 	unsigned int Shader::GetUniformLocation(const std::string& name)
 	{
 		if (uniformLocationCache.find(name) != uniformLocationCache.end())
