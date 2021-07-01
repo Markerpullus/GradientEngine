@@ -2613,6 +2613,9 @@
     <ClInclude Include="vendor\tinyobjloader\tol\tinyobjloader.h">
       <Filter>vendor\tinyobjloader\tol</Filter>
     </ClInclude>
+    <ClInclude Include="src\Gradient\Rendering\Light\PointLight.h" />
+    <ClInclude Include="src\Gradient\Rendering\Light\Light.h" />
+    <ClInclude Include="src\Gradient\Rendering\Light\DirectionalLight.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Gradient\Core.cpp">

@@ -12,13 +12,4 @@ namespace Gradient
 
 		float Shininess;
 	};
-
-	struct Light
-	{
-		Vector3 Ambient;
-		Vector3 Diffuse;
-		Vector3 Specular;
-
-		Vector3 Position;
-	};
 }

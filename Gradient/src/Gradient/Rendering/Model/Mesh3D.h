@@ -14,7 +14,6 @@ namespace Gradient
 		Vector3 Position;
 		Vector3 Normal;
 		Vector2 TexCoord;
-		Vector3 Tangent;
 	};
 
 	class GD_API Mesh3D
