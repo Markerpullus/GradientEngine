@@ -14,13 +14,13 @@ namespace Gradient
 
 	void ScopeStack::PushFront(Scope* scope)
 	{
-		stack.insert(stack.begin(), scope);
+		stack.emplace(stack.begin(), scope);
 		scope->OnAttach();
 	}
 
 	void ScopeStack::PushBack(Scope* scope)
 	{
-		stack.push_back(scope);
+		stack.emplace_back(scope);
 		scope->OnAttach();
 	}
 
