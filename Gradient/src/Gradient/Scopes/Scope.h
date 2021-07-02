@@ -6,7 +6,7 @@
 
 namespace Gradient
 {
-	class Scope
+	class GD_API Scope
 	{
 	private:
 		char* name;
@@ -16,13 +16,13 @@ namespace Gradient
 			: name(n)
 		{ }
 
-		virtual void OnAttach();
+		virtual void OnAttach() = 0;
 
-		virtual void OnDetech();
+		virtual void OnDetech() = 0;
 
-		virtual void OnEvent(Event& e);
+		virtual void OnEvent(Event& e) = 0;
 
-		virtual void OnUpdate();
+		virtual void OnUpdate() = 0;
 	};
 
 	class ScopeStack
