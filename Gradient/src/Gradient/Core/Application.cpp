@@ -26,6 +26,9 @@ namespace Gradient
 	{
 		switch (e.name)
 		{
+		case EventName::WindowClose:
+			running = false;
+			break;
 		case EventName::KeyDown:
 			GD_CORE_INFO("Key Down: {}", dynamic_cast<KeyDownEvent&>(e).ToChar());
 			break;

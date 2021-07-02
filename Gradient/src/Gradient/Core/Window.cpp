@@ -2,6 +2,7 @@
 #include "Gradient/Core/Log.h"
 #include "Gradient/EventSystem/KeyEvent.h"
 #include "Gradient/EventSystem/MouseEvent.h"
+#include "Gradient/EventSystem/WindowEvent.h"
 
 namespace Gradient
 {	
@@ -75,6 +76,22 @@ namespace Gradient
 				Window* self = (Window*)glfwGetWindowUserPointer(win);
 				entered ? self->EventHandler(MouseEnterWindowEvent())
 					: self->EventHandler(MouseLeaveWindowEvent());
+			});
+
+		// Window Resize Event
+		glfwSetWindowSizeCallback(data.Win,
+			[](GLFWwindow* win, int width, int height)
+			{
+				Window* self = (Window*)glfwGetWindowUserPointer(win);
+				self->EventHandler(WindowResizeEvent(width, height));
+			});
+
+		// Window Close Event
+		glfwSetWindowCloseCallback(data.Win, 
+			[](GLFWwindow* win)
+			{
+				Window* self = (Window*)glfwGetWindowUserPointer(win);
+				self->EventHandler(WindowCloseEvent());
 			});
 	}
 

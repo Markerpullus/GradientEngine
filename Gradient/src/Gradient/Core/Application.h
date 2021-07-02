@@ -15,6 +15,7 @@ namespace Gradient
 		std::unique_ptr<Window> window;
 
 		static Application* self;
+		bool running;
 	public:
 		Application();
 		virtual ~Application();
