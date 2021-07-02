@@ -4,7 +4,7 @@
 #include "Gradient/Core/Window.h"
 #include "Gradient/EventSystem/Event.h"
 #include "Gradient/EventSystem/KeyEvent.h"
-#include "Gradient/ECS/Scope.h"
+#include "Gradient/Core/Scope.h"
 
 #include <memory>
 

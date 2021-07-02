@@ -172,7 +172,7 @@
     <ClInclude Include="src\Gradient\Rendering\Model\Model.h" />
     <ClInclude Include="src\Gradient\Rendering\Shader.h" />
     <ClInclude Include="src\Gradient\Rendering\Texture.h" />
-    <ClInclude Include="src\Gradient\ECS\Scope.h" />
+    <ClInclude Include="src\Gradient\Core\Scope.h" />
     <ClInclude Include="vendor\boost\boost\assert.hpp" />
     <ClInclude Include="vendor\boost\boost\assert\source_location.hpp" />
     <ClInclude Include="vendor\boost\boost\bind.hpp" />
@@ -958,7 +958,7 @@
     <ClCompile Include="src\Gradient\Rendering\Model\Mesh3D.cpp" />
     <ClCompile Include="src\Gradient\Rendering\Shader.cpp" />
     <ClCompile Include="src\Gradient\Rendering\Texture.cpp" />
-    <ClCompile Include="src\Gradient\ECS\Scope.cpp" />
+    <ClCompile Include="src\Gradient\Core\Scope.cpp" />
     <ClCompile Include="vendor\stb\stb\stb_image.cpp" />
     <ClCompile Include="vendor\tinyobjloader\tol\tinyobjloader.cpp" />
   </ItemGroup>
