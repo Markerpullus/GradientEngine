@@ -12,6 +12,7 @@ namespace Gradient
 	Application* Application::self;
 	Application::Application()
 	{
+		running = true;
 		window = std::make_unique<Window>(Window());
 		scopeStack = std::make_unique<ScopeStack>(ScopeStack());
 
@@ -90,7 +91,7 @@ namespace Gradient
 		PerspectiveCamera cam(Vector3(0.0f, 0.0f, 2.0f), Vector3(0.0f, 0.0f, -1.0f), Vector3(0.0f, 1.0f, 0.0f), 2.0f, 2.0f, 90.0f, 0.01f, 100.0f);
 		std::vector<Light*> lights = { &PointLight(Vector3(0.15f, 0.15f, 0.15f), Vector3(0.5f, 0.5f, 0.5f), Vector3(1.0f, 1.0f, 1.0f), Vector3(1.5f, 1.0f, 2.0f)) };
 
-		while (!glfwWindowShouldClose(window->GetGLFWwindow()))
+		while (running)
 		{
 			glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 			glClear(GL_COLOR_BUFFER_BIT);

@@ -300,7 +300,7 @@
     <ClInclude Include="src\Gradient\Rendering\Texture.h">
       <Filter>src\Gradient\Rendering</Filter>
     </ClInclude>
-    <ClInclude Include="src\Gradient\Scopes\Scope.h">
+    <ClInclude Include="src\Gradient\ECS\Scope.h">
       <Filter>src\Gradient\Scopes</Filter>
     </ClInclude>
     <ClInclude Include="vendor\boost\boost\assert.hpp">
@@ -2649,7 +2649,7 @@
     <ClCompile Include="src\Gradient\Rendering\Texture.cpp">
       <Filter>src\Gradient\Rendering</Filter>
     </ClCompile>
-    <ClCompile Include="src\Gradient\Scopes\Scope.cpp">
+    <ClCompile Include="src\Gradient\ECS\Scope.cpp">
       <Filter>src\Gradient\Scopes</Filter>
     </ClCompile>
     <ClCompile Include="vendor\stb\stb\stb_image.cpp">

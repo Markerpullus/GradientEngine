@@ -1,4 +1,4 @@
-#include "Gradient/Core/Scopes/Scope.h"
+#include "Gradient/ECS/Scope.h"
 
 namespace Gradient
 {
