@@ -41,15 +41,15 @@ namespace Gradient
 		// Set Diffuse
 		glActiveTexture(GL_TEXTURE0);
 		shader.SetUniform1i("u_mat.Diffuse", 0);
-		glBindTexture(GL_TEXTURE_2D, material.Diffuse.id);
+		glBindTexture(GL_TEXTURE_2D, material.diffuse.id);
 
 		// Set Specular
 		glActiveTexture(GL_TEXTURE1);
 		shader.SetUniform1i("u_mat.Specular", 1);
-		glBindTexture(GL_TEXTURE_2D, material.Specular.id);
+		glBindTexture(GL_TEXTURE_2D, material.specular.id);
 
 		// Set Shininess
-		shader.SetUniform1f("u_mat.Shininess", material.Shininess);
+		shader.SetUniform1f("u_mat.Shininess", material.shininess);
 
 		// Bind and draw
 		glBindVertexArray(vao);

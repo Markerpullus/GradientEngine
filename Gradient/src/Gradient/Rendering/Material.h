@@ -7,9 +7,9 @@ namespace Gradient
 {
 	struct Material
 	{
-		Texture Diffuse;
-		Texture Specular;
+		Texture diffuse;
+		Texture specular;
 
-		float Shininess;
+		float shininess;
 	};
 }

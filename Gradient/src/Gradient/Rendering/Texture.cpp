@@ -6,7 +6,7 @@
 namespace Gradient
 {
 	Texture::Texture(const char* path, TextureType type)
-		: Type(type)
+		: type(type)
 	{
 		std::string filename = std::string(path);
 		filename = path;
@@ -46,7 +46,7 @@ namespace Gradient
 	}
 
 	Texture::Texture(int width, int height, Vector3 color, TextureType type)
-		: Type(type)
+		: type(type)
 	{
 		glGenTextures(1, &id);
 		glBindTexture(GL_TEXTURE_2D, id);

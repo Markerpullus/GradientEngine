@@ -10,7 +10,7 @@ namespace Gradient
 	void Window::ConnectEventCallBacks()
 	{
 		// Key Events
-		glfwSetKeyCallback(data.Win, 
+		glfwSetKeyCallback(data.win, 
 			[](GLFWwindow* win, int key, int scancode, int action, int mods)
 			{
 				Window* self = (Window*)glfwGetWindowUserPointer(win);
@@ -30,7 +30,7 @@ namespace Gradient
 			});
 
 		// Type Event
-		glfwSetCharCallback(data.Win,
+		glfwSetCharCallback(data.win,
 			[](GLFWwindow* win, unsigned int key)
 			{
 				Window* self = (Window*)glfwGetWindowUserPointer(win);
@@ -38,7 +38,7 @@ namespace Gradient
 			});
 
 		// Mouse Button Event
-		glfwSetMouseButtonCallback(data.Win,
+		glfwSetMouseButtonCallback(data.win,
 			[](GLFWwindow* win, int button, int action, int mods)
 			{
 				Window* self = (Window*)glfwGetWindowUserPointer(win);
@@ -54,7 +54,7 @@ namespace Gradient
 			});
 
 		// Mouse Scroll Event
-		glfwSetScrollCallback(data.Win,
+		glfwSetScrollCallback(data.win,
 			[](GLFWwindow* win, double xOffset, double yOffset)
 			{
 				Window* self = (Window*)glfwGetWindowUserPointer(win);
@@ -62,7 +62,7 @@ namespace Gradient
 			});
 
 		// Mouse Move Event
-		glfwSetCursorPosCallback(data.Win, 
+		glfwSetCursorPosCallback(data.win, 
 			[](GLFWwindow* win, double xPos, double yPos)
 			{
 				Window* self = (Window*)glfwGetWindowUserPointer(win);
@@ -70,7 +70,7 @@ namespace Gradient
 			});
 
 		// Mouse Enter/Leave Window Event
-		glfwSetCursorEnterCallback(data.Win, 
+		glfwSetCursorEnterCallback(data.win, 
 			[](GLFWwindow* win, int entered)
 			{
 				Window* self = (Window*)glfwGetWindowUserPointer(win);
@@ -79,7 +79,7 @@ namespace Gradient
 			});
 
 		// Window Resize Event
-		glfwSetWindowSizeCallback(data.Win,
+		glfwSetWindowSizeCallback(data.win,
 			[](GLFWwindow* win, int width, int height)
 			{
 				Window* self = (Window*)glfwGetWindowUserPointer(win);
@@ -87,7 +87,7 @@ namespace Gradient
 			});
 
 		// Window Close Event
-		glfwSetWindowCloseCallback(data.Win, 
+		glfwSetWindowCloseCallback(data.win, 
 			[](GLFWwindow* win)
 			{
 				Window* self = (Window*)glfwGetWindowUserPointer(win);
@@ -118,20 +118,20 @@ namespace Gradient
 		glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 		glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
-		data.Win = glfwCreateWindow(w, h, n, NULL, NULL);
-		data.Width = w;
-		data.Height = h;
-		data.Name = n;
-		glfwSetWindowUserPointer(data.Win, reinterpret_cast<void*>(this));
+		data.win = glfwCreateWindow(w, h, n, NULL, NULL);
+		data.width = w;
+		data.height = h;
+		data.name = n;
+		glfwSetWindowUserPointer(data.win, reinterpret_cast<void*>(this));
 
-		if (data.Win == NULL)
+		if (data.win == NULL)
 		{
 			GD_CORE_CRITICAL("Failed to create window");
 			glfwTerminate();
 			return;
 		}
 
-		glfwMakeContextCurrent(data.Win);
+		glfwMakeContextCurrent(data.win);
 
 		glfwSwapInterval(1);
 
@@ -144,7 +144,7 @@ namespace Gradient
 
 		glViewport(0, 0, w, h);
 		GD_CORE_INFO("Using OpenGL version: {0}", glGetString(GL_VERSION));
-		glfwSetInputMode(data.Win, GLFW_STICKY_KEYS, GL_TRUE);
+		glfwSetInputMode(data.win, GLFW_STICKY_KEYS, GL_TRUE);
 
 		ConnectEventCallBacks();
 	}

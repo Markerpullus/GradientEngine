@@ -11,9 +11,9 @@ namespace Gradient
 {
 	struct Vertex3D
 	{
-		Vector3 Position;
-		Vector3 Normal;
-		Vector2 TexCoord;
+		Vector3 position;
+		Vector3 normal;
+		Vector2 texCoord;
 	};
 
 	class GD_API Mesh3D

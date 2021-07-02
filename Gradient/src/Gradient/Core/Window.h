@@ -15,10 +15,10 @@ namespace Gradient
 
 		struct WindowData
 		{
-			GLFWwindow* Win;
-			int Width;
-			int Height;
-			char* Name;
+			GLFWwindow* win;
+			int width;
+			int height;
+			char* name;
 		};
 
 		WindowData data;
@@ -35,7 +35,7 @@ namespace Gradient
 
 		void Init(int w, int h, char* n);
 
-		inline GLFWwindow* GetGLFWwindow() { return data.Win; }
+		inline GLFWwindow* GetGLFWwindow() { return data.win; }
 
 		inline WindowData GetData() { return data; }
 

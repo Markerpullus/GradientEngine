@@ -16,7 +16,7 @@ namespace Gradient
 	struct Texture
 	{
 		unsigned int id;
-		TextureType Type;
+		TextureType type;
 
 		Texture(const char* path, TextureType type);
 
