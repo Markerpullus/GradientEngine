@@ -79,7 +79,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>GD_PLATFORM_WINDOWS;GD_BUILD_DLL;GD_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\glfw\include;vendor\glad\include;vendor\boost;vendor\glm;vendor\stb;vendor\tinyobjloader;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\glfw\include;vendor\glad\include;vendor\boost;vendor\entt\src;vendor\glm;vendor\stb;vendor\tinyobjloader;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -100,7 +100,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>GD_PLATFORM_WINDOWS;GD_BUILD_DLL;GD_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\glfw\include;vendor\glad\include;vendor\boost;vendor\glm;vendor\stb;vendor\tinyobjloader;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\glfw\include;vendor\glad\include;vendor\boost;vendor\entt\src;vendor\glm;vendor\stb;vendor\tinyobjloader;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -126,7 +126,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>GD_PLATFORM_WINDOWS;GD_BUILD_DLL;GD_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\glfw\include;vendor\glad\include;vendor\boost;vendor\glm;vendor\stb;vendor\tinyobjloader;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\glfw\include;vendor\glad\include;vendor\boost;vendor\entt\src;vendor\glm;vendor\stb;vendor\tinyobjloader;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -147,14 +147,14 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Gradient\Rendering\Renderer.h" />
-    <ClInclude Include="src\Gradient\Rendering\Light.h" />
     <ClInclude Include="src\Gradient.h" />
     <ClInclude Include="src\Gradient\Core.h" />
     <ClInclude Include="src\Gradient\Core\Application.h" />
     <ClInclude Include="src\Gradient\Core\Input.h" />
     <ClInclude Include="src\Gradient\Core\Log.h" />
+    <ClInclude Include="src\Gradient\Core\Scope.h" />
     <ClInclude Include="src\Gradient\Core\Window.h" />
+    <ClInclude Include="src\Gradient\ECS\Scene.h" />
     <ClInclude Include="src\Gradient\Entry.h" />
     <ClInclude Include="src\Gradient\EventSystem\Event.h" />
     <ClInclude Include="src\Gradient\EventSystem\KeyCodes.h" />
@@ -166,13 +166,14 @@
     <ClInclude Include="src\Gradient\Rendering\Camera\Camera.h" />
     <ClInclude Include="src\Gradient\Rendering\Camera\OrthographicCamera.h" />
     <ClInclude Include="src\Gradient\Rendering\Camera\PerspectiveCamera.h" />
+    <ClInclude Include="src\Gradient\Rendering\Light.h" />
     <ClInclude Include="src\Gradient\Rendering\Material.h" />
     <ClInclude Include="src\Gradient\Rendering\Model\Mesh2D.h" />
     <ClInclude Include="src\Gradient\Rendering\Model\Mesh3D.h" />
     <ClInclude Include="src\Gradient\Rendering\Model\Model.h" />
+    <ClInclude Include="src\Gradient\Rendering\Renderer.h" />
     <ClInclude Include="src\Gradient\Rendering\Shader.h" />
     <ClInclude Include="src\Gradient\Rendering\Texture.h" />
-    <ClInclude Include="src\Gradient\Core\Scope.h" />
     <ClInclude Include="vendor\boost\boost\assert.hpp" />
     <ClInclude Include="vendor\boost\boost\assert\source_location.hpp" />
     <ClInclude Include="vendor\boost\boost\bind.hpp" />
@@ -533,6 +534,61 @@
     <ClInclude Include="vendor\boost\boost\type_traits\type_identity.hpp" />
     <ClInclude Include="vendor\boost\boost\version.hpp" />
     <ClInclude Include="vendor\boost\boost\visit_each.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\core\algorithm.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\core\any.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\core\family.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\core\fwd.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\core\hashed_string.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\core\ident.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\core\monostate.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\core\type_info.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\core\type_traits.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\core\utility.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\entity\entity.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\entity\fwd.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\entity\group.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\entity\handle.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\entity\helper.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\entity\observer.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\entity\organizer.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\entity\poly_storage.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\entity\registry.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\entity\runtime_view.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\entity\snapshot.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\entity\sparse_set.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\entity\storage.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\entity\utility.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\entity\view.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\entt.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\fwd.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\locator\locator.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\meta\adl_pointer.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\meta\container.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\meta\ctx.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\meta\factory.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\meta\meta.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\meta\node.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\meta\pointer.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\meta\policy.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\meta\range.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\meta\resolve.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\meta\template.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\meta\type_traits.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\meta\utility.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\platform\android-ndk-r17.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\poly\fwd.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\poly\poly.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\process\process.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\process\scheduler.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\resource\cache.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\resource\fwd.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\resource\handle.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\resource\loader.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\signal\delegate.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\signal\dispatcher.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\signal\emitter.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\signal\fwd.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\signal\sigh.hpp" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
     <ClInclude Include="vendor\glm\glm\detail\_features.hpp" />
     <ClInclude Include="vendor\glm\glm\detail\_fixes.hpp" />
@@ -945,20 +1001,21 @@
     <ClInclude Include="vendor\tinyobjloader\tol\tinyobjloader.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Gradient\Rendering\Renderer.cpp" />
     <ClCompile Include="src\Gradient\Core.cpp" />
     <ClCompile Include="src\Gradient\Core\Application.cpp" />
     <ClCompile Include="src\Gradient\Core\Input.cpp" />
     <ClCompile Include="src\Gradient\Core\Log.cpp" />
+    <ClCompile Include="src\Gradient\Core\Scope.cpp" />
     <ClCompile Include="src\Gradient\Core\Window.cpp" />
+    <ClCompile Include="src\Gradient\ECS\Scene.cpp" />
     <ClCompile Include="src\Gradient\Rendering\Camera\Camera.cpp" />
     <ClCompile Include="src\Gradient\Rendering\Camera\OrthographicCamera.cpp" />
     <ClCompile Include="src\Gradient\Rendering\Camera\PerspectiveCamera.cpp" />
     <ClCompile Include="src\Gradient\Rendering\Model\Mesh2D.cpp" />
     <ClCompile Include="src\Gradient\Rendering\Model\Mesh3D.cpp" />
+    <ClCompile Include="src\Gradient\Rendering\Renderer.cpp" />
     <ClCompile Include="src\Gradient\Rendering\Shader.cpp" />
     <ClCompile Include="src\Gradient\Rendering\Texture.cpp" />
-    <ClCompile Include="src\Gradient\Core\Scope.cpp" />
     <ClCompile Include="vendor\stb\stb\stb_image.cpp" />
     <ClCompile Include="vendor\tinyobjloader\tol\tinyobjloader.cpp" />
   </ItemGroup>

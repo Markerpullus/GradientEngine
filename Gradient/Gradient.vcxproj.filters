@@ -10,6 +10,9 @@
     <Filter Include="src\Gradient\Core">
       <UniqueIdentifier>{625FC6F2-CE75-C488-17ED-4FAA83429510}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Gradient\ECS">
+      <UniqueIdentifier>{14F6C7B9-00EF-E60B-2921-CC901579C617}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Gradient\EventSystem">
       <UniqueIdentifier>{8071096E-6C96-58EE-95E1-3D7E8165570C}</UniqueIdentifier>
     </Filter>
@@ -24,9 +27,6 @@
     </Filter>
     <Filter Include="src\Gradient\Rendering\Model">
       <UniqueIdentifier>{1739B1EB-03F4-A097-ACAB-19E29845EB27}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\Gradient\Scopes">
-      <UniqueIdentifier>{06BB53E2-721C-31F0-FB89-77A267EA67AF}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\Gradient\Shaders">
       <UniqueIdentifier>{A3FB7037-8F8A-FA00-38A9-0EFC24170BA7}</UniqueIdentifier>
@@ -199,6 +199,42 @@
     <Filter Include="vendor\boost\boost\type_traits\detail">
       <UniqueIdentifier>{08365CBA-74FA-5AAA-3D60-8B74A9E3F6DF}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vendor\entt">
+      <UniqueIdentifier>{DD8078C1-4936-F1B6-D22A-EB8D3EDFE7BA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\entt\src">
+      <UniqueIdentifier>{746573D9-E0F0-E09D-E901-6492550C3D9E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\entt\src\entt">
+      <UniqueIdentifier>{3EB37C64-2A42-062E-D360-1A29BFCE16D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\entt\src\entt\core">
+      <UniqueIdentifier>{761A8FB1-E2DC-C23B-2B8D-51C8978E9B19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\entt\src\entt\entity">
+      <UniqueIdentifier>{EA015956-560F-873C-DFF5-82274B0253F3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\entt\src\entt\locator">
+      <UniqueIdentifier>{A10C6E3D-8DC7-5DE9-367F-D6332219A879}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\entt\src\entt\meta">
+      <UniqueIdentifier>{F46B94B1-602E-C83B-A9DE-56C815E0A019}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\entt\src\entt\platform">
+      <UniqueIdentifier>{7211EEB1-DE29-D5DB-A7D6-647513AE6975}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\entt\src\entt\poly">
+      <UniqueIdentifier>{B13A96B1-1DFD-C93B-66AD-58C8D2AEA219}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\entt\src\entt\process">
+      <UniqueIdentifier>{0C793079-F833-2025-A1EB-986F8D856AB5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\entt\src\entt\resource">
+      <UniqueIdentifier>{35B74499-A1CF-2BC3-6A7C-BB5CD653C05C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\entt\src\entt\signal">
+      <UniqueIdentifier>{0BB29F76-77BF-CD5C-00A6-C9476CB29913}</UniqueIdentifier>
+    </Filter>
     <Filter Include="vendor\glm">
       <UniqueIdentifier>{829FC5A8-6E57-07F6-D75E-E051C335A2E6}</UniqueIdentifier>
     </Filter>
@@ -246,8 +282,14 @@
     <ClInclude Include="src\Gradient\Core\Log.h">
       <Filter>src\Gradient\Core</Filter>
     </ClInclude>
+    <ClInclude Include="src\Gradient\Core\Scope.h">
+      <Filter>src\Gradient\Core</Filter>
+    </ClInclude>
     <ClInclude Include="src\Gradient\Core\Window.h">
       <Filter>src\Gradient\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gradient\ECS\Scene.h">
+      <Filter>src\Gradient\ECS</Filter>
     </ClInclude>
     <ClInclude Include="src\Gradient\Entry.h">
       <Filter>src\Gradient</Filter>
@@ -282,6 +324,9 @@
     <ClInclude Include="src\Gradient\Rendering\Camera\PerspectiveCamera.h">
       <Filter>src\Gradient\Rendering\Camera</Filter>
     </ClInclude>
+    <ClInclude Include="src\Gradient\Rendering\Light.h">
+      <Filter>src\Gradient\Rendering</Filter>
+    </ClInclude>
     <ClInclude Include="src\Gradient\Rendering\Material.h">
       <Filter>src\Gradient\Rendering</Filter>
     </ClInclude>
@@ -294,14 +339,14 @@
     <ClInclude Include="src\Gradient\Rendering\Model\Model.h">
       <Filter>src\Gradient\Rendering\Model</Filter>
     </ClInclude>
+    <ClInclude Include="src\Gradient\Rendering\Renderer.h">
+      <Filter>src\Gradient\Rendering</Filter>
+    </ClInclude>
     <ClInclude Include="src\Gradient\Rendering\Shader.h">
       <Filter>src\Gradient\Rendering</Filter>
     </ClInclude>
     <ClInclude Include="src\Gradient\Rendering\Texture.h">
       <Filter>src\Gradient\Rendering</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Gradient\Core\Scope.h">
-      <Filter>src\Gradient\Scopes</Filter>
     </ClInclude>
     <ClInclude Include="vendor\boost\boost\assert.hpp">
       <Filter>vendor\boost\boost</Filter>
@@ -1382,6 +1427,171 @@
     </ClInclude>
     <ClInclude Include="vendor\boost\boost\visit_each.hpp">
       <Filter>vendor\boost\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\core\algorithm.hpp">
+      <Filter>vendor\entt\src\entt\core</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\core\any.hpp">
+      <Filter>vendor\entt\src\entt\core</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\core\family.hpp">
+      <Filter>vendor\entt\src\entt\core</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\core\fwd.hpp">
+      <Filter>vendor\entt\src\entt\core</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\core\hashed_string.hpp">
+      <Filter>vendor\entt\src\entt\core</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\core\ident.hpp">
+      <Filter>vendor\entt\src\entt\core</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\core\monostate.hpp">
+      <Filter>vendor\entt\src\entt\core</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\core\type_info.hpp">
+      <Filter>vendor\entt\src\entt\core</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\core\type_traits.hpp">
+      <Filter>vendor\entt\src\entt\core</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\core\utility.hpp">
+      <Filter>vendor\entt\src\entt\core</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\entity\entity.hpp">
+      <Filter>vendor\entt\src\entt\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\entity\fwd.hpp">
+      <Filter>vendor\entt\src\entt\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\entity\group.hpp">
+      <Filter>vendor\entt\src\entt\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\entity\handle.hpp">
+      <Filter>vendor\entt\src\entt\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\entity\helper.hpp">
+      <Filter>vendor\entt\src\entt\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\entity\observer.hpp">
+      <Filter>vendor\entt\src\entt\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\entity\organizer.hpp">
+      <Filter>vendor\entt\src\entt\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\entity\poly_storage.hpp">
+      <Filter>vendor\entt\src\entt\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\entity\registry.hpp">
+      <Filter>vendor\entt\src\entt\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\entity\runtime_view.hpp">
+      <Filter>vendor\entt\src\entt\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\entity\snapshot.hpp">
+      <Filter>vendor\entt\src\entt\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\entity\sparse_set.hpp">
+      <Filter>vendor\entt\src\entt\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\entity\storage.hpp">
+      <Filter>vendor\entt\src\entt\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\entity\utility.hpp">
+      <Filter>vendor\entt\src\entt\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\entity\view.hpp">
+      <Filter>vendor\entt\src\entt\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\entt.hpp">
+      <Filter>vendor\entt\src\entt</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\fwd.hpp">
+      <Filter>vendor\entt\src\entt</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\locator\locator.hpp">
+      <Filter>vendor\entt\src\entt\locator</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\meta\adl_pointer.hpp">
+      <Filter>vendor\entt\src\entt\meta</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\meta\container.hpp">
+      <Filter>vendor\entt\src\entt\meta</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\meta\ctx.hpp">
+      <Filter>vendor\entt\src\entt\meta</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\meta\factory.hpp">
+      <Filter>vendor\entt\src\entt\meta</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\meta\meta.hpp">
+      <Filter>vendor\entt\src\entt\meta</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\meta\node.hpp">
+      <Filter>vendor\entt\src\entt\meta</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\meta\pointer.hpp">
+      <Filter>vendor\entt\src\entt\meta</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\meta\policy.hpp">
+      <Filter>vendor\entt\src\entt\meta</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\meta\range.hpp">
+      <Filter>vendor\entt\src\entt\meta</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\meta\resolve.hpp">
+      <Filter>vendor\entt\src\entt\meta</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\meta\template.hpp">
+      <Filter>vendor\entt\src\entt\meta</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\meta\type_traits.hpp">
+      <Filter>vendor\entt\src\entt\meta</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\meta\utility.hpp">
+      <Filter>vendor\entt\src\entt\meta</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\platform\android-ndk-r17.hpp">
+      <Filter>vendor\entt\src\entt\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\poly\fwd.hpp">
+      <Filter>vendor\entt\src\entt\poly</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\poly\poly.hpp">
+      <Filter>vendor\entt\src\entt\poly</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\process\process.hpp">
+      <Filter>vendor\entt\src\entt\process</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\process\scheduler.hpp">
+      <Filter>vendor\entt\src\entt\process</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\resource\cache.hpp">
+      <Filter>vendor\entt\src\entt\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\resource\fwd.hpp">
+      <Filter>vendor\entt\src\entt\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\resource\handle.hpp">
+      <Filter>vendor\entt\src\entt\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\resource\loader.hpp">
+      <Filter>vendor\entt\src\entt\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\signal\delegate.hpp">
+      <Filter>vendor\entt\src\entt\signal</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\signal\dispatcher.hpp">
+      <Filter>vendor\entt\src\entt\signal</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\signal\emitter.hpp">
+      <Filter>vendor\entt\src\entt\signal</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\signal\fwd.hpp">
+      <Filter>vendor\entt\src\entt\signal</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\signal\sigh.hpp">
+      <Filter>vendor\entt\src\entt\signal</Filter>
     </ClInclude>
     <ClInclude Include="vendor\glm\glm\common.hpp">
       <Filter>vendor\glm\glm</Filter>
@@ -2613,8 +2823,6 @@
     <ClInclude Include="vendor\tinyobjloader\tol\tinyobjloader.h">
       <Filter>vendor\tinyobjloader\tol</Filter>
     </ClInclude>
-    <ClInclude Include="src\Gradient\Rendering\Light.h" />
-    <ClInclude Include="src\Gradient\Rendering\Renderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Gradient\Core.cpp">
@@ -2629,8 +2837,17 @@
     <ClCompile Include="src\Gradient\Core\Log.cpp">
       <Filter>src\Gradient\Core</Filter>
     </ClCompile>
+    <ClCompile Include="src\Gradient\Core\Scope.cpp">
+      <Filter>src\Gradient\Core</Filter>
+    </ClCompile>
     <ClCompile Include="src\Gradient\Core\Window.cpp">
       <Filter>src\Gradient\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Gradient\ECS\Scene.cpp">
+      <Filter>src\Gradient\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Gradient\Rendering\Camera\Camera.cpp">
+      <Filter>src\Gradient\Rendering\Camera</Filter>
     </ClCompile>
     <ClCompile Include="src\Gradient\Rendering\Camera\OrthographicCamera.cpp">
       <Filter>src\Gradient\Rendering\Camera</Filter>
@@ -2644,14 +2861,14 @@
     <ClCompile Include="src\Gradient\Rendering\Model\Mesh3D.cpp">
       <Filter>src\Gradient\Rendering\Model</Filter>
     </ClCompile>
+    <ClCompile Include="src\Gradient\Rendering\Renderer.cpp">
+      <Filter>src\Gradient\Rendering</Filter>
+    </ClCompile>
     <ClCompile Include="src\Gradient\Rendering\Shader.cpp">
       <Filter>src\Gradient\Rendering</Filter>
     </ClCompile>
     <ClCompile Include="src\Gradient\Rendering\Texture.cpp">
       <Filter>src\Gradient\Rendering</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Gradient\Core\Scope.cpp">
-      <Filter>src\Gradient\Scopes</Filter>
     </ClCompile>
     <ClCompile Include="vendor\stb\stb\stb_image.cpp">
       <Filter>vendor\stb\stb</Filter>
@@ -2659,13 +2876,13 @@
     <ClCompile Include="vendor\tinyobjloader\tol\tinyobjloader.cpp">
       <Filter>vendor\tinyobjloader\tol</Filter>
     </ClCompile>
-    <ClCompile Include="src\Gradient\Rendering\Camera\Camera.cpp" />
-    <ClCompile Include="src\Gradient\Rendering\Renderer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\Gradient\Shaders\2D.glsl">
       <Filter>src\Gradient\Shaders</Filter>
     </None>
-    <None Include="src\Gradient\Shaders\Phong.glsl" />
+    <None Include="src\Gradient\Shaders\Phong.glsl">
+      <Filter>src\Gradient\Shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>

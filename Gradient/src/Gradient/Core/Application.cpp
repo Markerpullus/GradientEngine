@@ -14,7 +14,6 @@ namespace Gradient
 	{
 		running = true;
 		window = std::make_unique<Window>(Window());
-		scopeStack = std::make_unique<ScopeStack>(ScopeStack());
 
 		window->SetMainEventCallBack(boost::bind(&Application::MainEventHandler, this, _1));
 		self = this;

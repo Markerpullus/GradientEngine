@@ -15,6 +15,7 @@ IncludeDir["SPDLOG"] = "Gradient/vendor/spdlog/include"
 IncludeDir["GLFW"] = "Gradient/vendor/glfw/include"
 IncludeDir["GLAD"] = "Gradient/vendor/glad/include"
 IncludeDir["BOOST"] = "Gradient/vendor/boost"
+IncludeDir["ENTT"] = "Gradient/vendor/entt/src"
 IncludeDir["GLM"] = "Gradient/vendor/glm"
 IncludeDir["STB"] = "Gradient/vendor/stb"
 IncludeDir["TOL"] = "Gradient/vendor/tinyobjloader"
@@ -35,6 +36,7 @@ project "Gradient"
 		"%{prj.name}/src/**",
 
 		"%{prj.name}/vendor/boost/**.hpp",
+		"%{prj.name}/vendor/entt/src/**.hpp",
 		"%{prj.name}/vendor/glm/**.hpp",
 		"%{prj.name}/vendor/glm/**.inl",
 		"%{prj.name}/vendor/stb/**",
@@ -48,6 +50,7 @@ project "Gradient"
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.GLAD}",
 		"%{IncludeDir.BOOST}",
+		"%{IncludeDir.ENTT}",
 		"%{IncludeDir.GLM}",
 		"%{IncludeDir.STB}",
 		"%{IncludeDir.TOL}"
@@ -111,6 +114,7 @@ project "TestGame"
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.GLAD}",
 		"%{IncludeDir.BOOST}",
+		"%{IncludeDir.ENTT}",
 		"%{IncludeDir.GLM}",
 		"%{IncludeDir.STB}",
 		"%{IncludeDir.TOL}"
