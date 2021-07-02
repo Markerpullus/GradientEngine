@@ -13,7 +13,7 @@ namespace Gradient
 		Matrix4 projection;
 	};
 
-	class Camera
+	class GD_API Camera
 	{
 	protected:
 		CameraData cam;
@@ -34,8 +34,6 @@ namespace Gradient
 
 		inline CameraData GetCamData() { return cam; }
 
-		void DrawModel(Model2D& model, Shader& shader);
-
-		void DrawModel(Model3D& model, Shader& shader, std::vector<Light*>& lights);
+		friend class Renderer;
 	};
 }

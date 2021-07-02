@@ -2614,6 +2614,7 @@
       <Filter>vendor\tinyobjloader\tol</Filter>
     </ClInclude>
     <ClInclude Include="src\Gradient\Rendering\Light.h" />
+    <ClInclude Include="src\Gradient\Rendering\Renderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Gradient\Core.cpp">
@@ -2659,6 +2660,7 @@
       <Filter>vendor\tinyobjloader\tol</Filter>
     </ClCompile>
     <ClCompile Include="src\Gradient\Rendering\Camera\Camera.cpp" />
+    <ClCompile Include="src\Gradient\Rendering\Renderer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\Gradient\Shaders\2D.glsl">

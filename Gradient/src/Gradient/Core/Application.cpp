@@ -3,7 +3,7 @@
 #include "boost/bind.hpp"
 #include "Gradient/Core/Application.h"
 #include "Gradient/Core/Log.h"
-#include "Gradient/Rendering/Model/Model.h"
+#include "Gradient/Rendering/Renderer.h"
 #include "Gradient/Rendering/Camera/OrthographicCamera.h"
 #include "Gradient/Rendering/Camera/PerspectiveCamera.h"
 
@@ -90,16 +90,16 @@ namespace Gradient
 		Shader shader3D("../Gradient/src/Gradient/Shaders/Phong.glsl");
 		PerspectiveCamera cam(Vector3(0.0f, 0.0f, 2.0f), Vector3(0.0f, 0.0f, -1.0f), Vector3(0.0f, 1.0f, 0.0f), 2.0f, 2.0f, 90.0f, 0.01f, 100.0f);
 		std::vector<Light*> lights = { &PointLight(Vector3(0.15f, 0.15f, 0.15f), Vector3(0.5f, 0.5f, 0.5f), Vector3(1.0f, 1.0f, 1.0f), Vector3(1.5f, 1.0f, 2.0f)) };
+		Renderer renderer(cam);
 
 		while (running)
 		{
-			glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-			glClear(GL_COLOR_BUFFER_BIT);
+			renderer.SetClearColor(Vector3(0.0f, 0.0f, 0.0f));
+			renderer.BeginFrame();
 
-			cam.DrawModel(model, shader3D, lights);
+			renderer.DrawModel(model, shader3D, lights);
 
-			glfwSwapBuffers(window->GetGLFWwindow());
-			glfwPollEvents();
+			renderer.EndFrame();
 		}
 	}
 }
