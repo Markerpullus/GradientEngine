@@ -66,28 +66,27 @@ uniform MaterialTexture u_mat;
 uniform vec3 u_viewPos;
 uniform int u_pointLightsSize;
 uniform PointLight u_pointLights[MAX_POINTLIGHTS];
-uniform int u_dirLightsSize; // DC
-uniform DirectionalLight u_dirLights[MAX_DIRLIGHTS]; // DC
+//uniform int u_dirLightsSize; // DC
+//uniform DirectionalLight u_dirLights[MAX_DIRLIGHTS]; // DC
 
 vec3 CalcPointLight(PointLight light, vec3 normal, vec3 fragPos, vec3 viewDir)
 {
-	vec3 lightDir = normalize(light.position - fragPos);
+	vec3 lightDir = normalize(light.Position - fragPos);
 	// diffuse shading
-	float diff = max(dot(normal, lightDir), 0.0);
+	float diff = max(dot(normal, lightDir), 0.0f);
 	// specular shading
 	vec3 reflectDir = reflect(-lightDir, normal);
-	float spec = pow(max(dot(viewDir, reflectDir), 0.0), material.shininess);
+	float spec = pow(max(dot(viewDir, reflectDir), 0.0f), u_mat.Shininess);
 	// attenuation
-	float distance = length(light.position - fragPos);
-	float attenuation = 1.0 / (light.constant + light.linear * distance +
-		light.quadratic * (distance * distance));
+	float distance = length(light.Position - fragPos);
+	//float attenuation = 1.0 / (light.constant + light.linear * distance + light.quadratic * (distance * distance));
 	// combine results
-	vec3 ambient = light.ambient * vec3(texture(material.diffuse, TexCoords));
-	vec3 diffuse = light.diffuse * diff * vec3(texture(material.diffuse, TexCoords));
-	vec3 specular = light.specular * spec * vec3(texture(material.specular, TexCoords));
-	ambient *= attenuation;
-	diffuse *= attenuation;
-	specular *= attenuation;
+	vec3 ambient = light.Ambient * vec3(texture(u_mat.Diffuse, v_texCoords));
+	vec3 diffuse = light.Diffuse * diff * vec3(texture(u_mat.Diffuse, v_texCoords));
+	vec3 specular = light.Specular * spec * vec3(texture(u_mat.Specular, v_texCoords));
+	//ambient *= attenuation;
+	//diffuse *= attenuation;
+	//specular *= attenuation;
 	return (ambient + diffuse + specular);
 }
 
@@ -96,12 +95,12 @@ void main()
 	vec3 norm = normalize(v_normal);
 	vec3 viewDir = normalize(u_viewPos - v_fragPos);
 
-	vec3 result(1.0f, 1.0f, 1.0f);
+	vec3 result = vec3(0.0f);
 	
 	// TODO: dirlight
 
 	for (int i = 0; i < u_pointLightsSize; i++)
 		result += CalcPointLight(u_pointLights[i], norm, v_fragPos, viewDir);
 
-	color = result;
+	color = vec4(result, 1.0f);
 };

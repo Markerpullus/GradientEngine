@@ -36,6 +36,6 @@ namespace Gradient
 
 		void DrawModel(Model2D& model, Shader& shader);
 
-		void DrawModel(Model3D& model, Shader& shader, std::vector<Light&> lights);
+		void DrawModel(Model3D& model, Shader& shader, std::vector<Light*>& lights);
 	};
 }

@@ -9,7 +9,7 @@ namespace Gradient
 	{
 		PointLight,
 		DirectionalLight,
-		FlashLight
+		SpotLight
 	};
 
 	class GD_API Light
