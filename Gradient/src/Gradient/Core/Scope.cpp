@@ -1,4 +1,4 @@
-#include "Gradient/ECS/Scope.h"
+#include "Gradient/Core/Scope.h"
 
 namespace Gradient
 {
@@ -7,7 +7,7 @@ namespace Gradient
 	{
 		for (auto scope : stack)
 		{
-			scope->OnDetech();
+			scope->OnDetach();
 			delete scope;
 		}
 	}
@@ -28,14 +28,14 @@ namespace Gradient
 	{
 		Scope* scope = stack.front();
 		stack.erase(stack.begin());
-		scope->OnDetech();
+		scope->OnDetach();
 	}
 
 	void ScopeStack::PopBack()
 	{
 		Scope* scope = stack.back();
 		stack.pop_back();
-		scope->OnDetech();
+		scope->OnDetach();
 	}
 
 }

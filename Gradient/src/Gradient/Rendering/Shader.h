@@ -8,7 +8,7 @@
 
 namespace Gradient
 {
-	class Shader
+	class GD_API Shader
 	{
 	private:
 		unsigned int id;

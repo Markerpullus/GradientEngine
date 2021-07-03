@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Gradient/Core.h"
 #include "Gradient/Math/Math.h"
 
 #include <string>
@@ -13,7 +14,7 @@ namespace Gradient
 		Specular
 	};
 
-	struct Texture
+	struct GD_API Texture
 	{
 		unsigned int id;
 		TextureType type;

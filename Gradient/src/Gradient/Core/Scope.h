@@ -2,30 +2,31 @@
 
 #include "Gradient/EventSystem/Event.h"
 
+#include <string>
 #include <vector>
 
 namespace Gradient
 {
 	class GD_API Scope
 	{
-	private:
-		char* name;
+	protected:
+		std::string name;
 
 	public:
-		Scope(char* n)
+		Scope(const std::string& n)
 			: name(n)
 		{ }
 
 		virtual void OnAttach() = 0;
 
-		virtual void OnDetech() = 0;
+		virtual void OnDetach() = 0;
 
 		virtual void OnEvent(Event& e) = 0;
 
 		virtual void OnUpdate() = 0;
 	};
 
-	class ScopeStack
+	class GD_API ScopeStack
 	{
 	private:
 		std::vector<Scope*> stack;
@@ -33,6 +34,10 @@ namespace Gradient
 	public:
 		ScopeStack() { }
 		~ScopeStack();
+
+		std::vector<Scope*>::iterator begin() { return stack.begin(); }
+
+		std::vector<Scope*>::iterator end() { return stack.end(); }
 
 		void PushFront(Scope* scope);
 

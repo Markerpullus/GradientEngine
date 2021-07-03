@@ -14,6 +14,7 @@ namespace Gradient
 	{
 		running = true;
 		window = std::make_unique<Window>(Window());
+		scopeStack = std::make_unique<ScopeStack>(ScopeStack());
 
 		window->SetMainEventCallBack(boost::bind(&Application::MainEventHandler, this, _1));
 		self = this;
@@ -26,23 +27,13 @@ namespace Gradient
 
 	void Application::MainEventHandler(Event& e)
 	{
-		switch (e.name)
+		if (e.name == EventName::WindowClose)
 		{
-		case EventName::WindowClose:
 			running = false;
-			break;
-		case EventName::KeyDown:
-			GD_CORE_INFO("Key Down: {}", dynamic_cast<KeyDownEvent&>(e).ToChar());
-			break;
-		case EventName::KeyUp:
-			GD_CORE_INFO("Key Up: {}", dynamic_cast<KeyUpEvent&>(e).ToChar());
-			break;
-		case EventName::KeyRepeat:
-			GD_CORE_INFO("Key Repeat");
-			break;
-		case EventName::KeyTyped:
-			GD_CORE_INFO("Key Typed: {}", dynamic_cast<KeyTypedEvent&>(e).ToChar());
-			break;
+		}
+		for (auto scope : (*scopeStack))
+		{
+			scope->OnEvent(e);
 		}
 	}
 
@@ -68,6 +59,7 @@ namespace Gradient
 		
 
 		// 3D Test
+		/*
 		Vector3 positions[] = { Vector3(-0.5f, -0.5f, -0.5f), Vector3(0.5f, -0.5f, -0.5f), Vector3(0.5f, 0.5f, -0.5f), Vector3(0.5f, 0.5f, -0.5f),
 		Vector3(-0.5f, 0.5f, -0.5f), Vector3(-0.5f, -0.5f, -0.5f) };
 		Vector3 normals[] = { Vector3(0.0f,  0.0f, 1.0f), Vector3(0.0f,  0.0f, 1.0f), Vector3(0.0f,  0.0f, 1.0f), Vector3(0.0f,  0.0f, 1.0f),
@@ -99,6 +91,14 @@ namespace Gradient
 			renderer.DrawModel(model, shader3D, lights);
 
 			renderer.EndFrame();
+		}
+		*/
+		while (running)
+		{
+			for (auto scope : (*scopeStack))
+			{
+				scope->OnUpdate();
+			}
 		}
 	}
 }

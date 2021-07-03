@@ -2,6 +2,7 @@
 
 #include "Gradient/Core.h"
 #include "Gradient/Core/Window.h"
+#include "Gradient/Core/Scope.h"
 #include "Gradient/EventSystem/Event.h"
 #include "Gradient/EventSystem/KeyEvent.h"
 
@@ -13,6 +14,7 @@ namespace Gradient
 	{
 	protected:
 		std::unique_ptr<Window> window;
+		std::unique_ptr<ScopeStack> scopeStack;
 
 		static Application* self;
 		bool running;
