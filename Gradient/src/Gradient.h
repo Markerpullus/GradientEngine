@@ -13,6 +13,3 @@
 #include "Gradient/Rendering/Renderer.h"
 #include "Gradient/Rendering/Camera/OrthographicCamera.h"
 #include "Gradient/Rendering/Camera/PerspectiveCamera.h"
-
-// Main Function of Engine
-#include "Gradient/Entry.h"

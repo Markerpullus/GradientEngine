@@ -28,7 +28,7 @@ void GameScope::OnAttach()
 	Gradient::Mesh3D mesh(vertices, indices, material);
 	model = new Gradient::Model3D(std::vector<Gradient::Mesh3D>{mesh}, glm::rotate(Matrix4(1.0f), glm::radians(30.0f), Vector3(0.0f, 1.0f, 0.0f)));
 	shader = new Gradient::Shader("../Gradient/src/Gradient/Shaders/Phong.glsl");
-	cam = new Gradient::PerspectiveCamera(Vector3(0.0f, 0.0f, 2.0f), Vector3(0.0f, 0.0f, -1.0f), Vector3(0.0f, 1.0f, 0.0f), 2.0f, 2.0f, 90.0f, 0.01f, 100.0f);
+	cam = new Gradient::PerspectiveCamera(Vector3(0.0f, 0.0f, 2.0f), Vector3(0.0f, 0.0f, -1.0f), Vector3(0.0f, 1.0f, 0.0f), 4.0f, 3.0f, 90.0f, 0.01f, 100.0f);
 	
 	renderer = new Gradient::Renderer(*cam);
 }

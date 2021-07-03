@@ -1,4 +1,5 @@
 #include <Gradient.h>
+#include <Gradient/Entry.h>
 
 #include "GameScope.h"
 

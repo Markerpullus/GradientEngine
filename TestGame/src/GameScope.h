@@ -1,8 +1,6 @@
 #pragma once
 
-#include <Gradient/Core/Scope.h>
-#include <Gradient/Rendering/Renderer.h>
-#include <Gradient/Rendering/Camera/PerspectiveCamera.h>
+#include <Gradient.h>
 
 class GameScope : public Gradient::Scope
 {
