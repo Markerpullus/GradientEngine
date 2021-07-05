@@ -1,7 +1,8 @@
 #pragma once
 
 #include "Gradient/Core.h"
-#include "entt/entt.hpp"
+#include "Gradient/ECS/Actor.h"
+#include "entt/entity/registry.hpp"
 
 namespace Gradient
 {
@@ -12,8 +13,19 @@ namespace Gradient
 
 		int index;
 
+		Scene(int i);
+
 	public:
-		Scene() {}
-		~Scene() = default;
+		
+		~Scene();
+
+		Actor& CreateActor();
+
+		void DestroyActor(Actor& actor);
+
+		void OnUpdate();
+
+		friend class SceneManager;
+		friend class Actor;
 	};
 }

@@ -2823,6 +2823,8 @@
     <ClInclude Include="vendor\tinyobjloader\tol\tinyobjloader.h">
       <Filter>vendor\tinyobjloader\tol</Filter>
     </ClInclude>
+    <ClInclude Include="src\Gradient\ECS\Actor.h" />
+    <ClInclude Include="src\Gradient\ECS\SceneManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Gradient\Core.cpp">
@@ -2876,6 +2878,8 @@
     <ClCompile Include="vendor\tinyobjloader\tol\tinyobjloader.cpp">
       <Filter>vendor\tinyobjloader\tol</Filter>
     </ClCompile>
+    <ClCompile Include="src\Gradient\ECS\Actor.cpp" />
+    <ClCompile Include="src\Gradient\ECS\SceneManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\Gradient\Shaders\2D.glsl">

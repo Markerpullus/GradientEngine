@@ -147,6 +147,8 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Gradient\ECS\SceneManager.h" />
+    <ClInclude Include="src\Gradient\ECS\Actor.h" />
     <ClInclude Include="src\Gradient.h" />
     <ClInclude Include="src\Gradient\Core.h" />
     <ClInclude Include="src\Gradient\Core\Application.h" />
@@ -1001,6 +1003,8 @@
     <ClInclude Include="vendor\tinyobjloader\tol\tinyobjloader.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Gradient\ECS\SceneManager.cpp" />
+    <ClCompile Include="src\Gradient\ECS\Actor.cpp" />
     <ClCompile Include="src\Gradient\Core.cpp" />
     <ClCompile Include="src\Gradient\Core\Application.cpp" />
     <ClCompile Include="src\Gradient\Core\Input.cpp" />
