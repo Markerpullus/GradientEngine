@@ -147,6 +147,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Gradient\ECS\Component.h" />
     <ClInclude Include="src\Gradient\ECS\SceneManager.h" />
     <ClInclude Include="src\Gradient\ECS\Actor.h" />
     <ClInclude Include="src\Gradient.h" />

@@ -2825,6 +2825,7 @@
     </ClInclude>
     <ClInclude Include="src\Gradient\ECS\Actor.h" />
     <ClInclude Include="src\Gradient\ECS\SceneManager.h" />
+    <ClInclude Include="src\Gradient\ECS\Component.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Gradient\Core.cpp">
