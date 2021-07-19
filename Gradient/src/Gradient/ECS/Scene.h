@@ -27,5 +27,6 @@ namespace Gradient
 
 		friend class SceneManager;
 		friend class Actor;
+		friend class Handler;
 	};
 }

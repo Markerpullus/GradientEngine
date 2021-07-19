@@ -2826,6 +2826,8 @@
     <ClInclude Include="src\Gradient\ECS\Actor.h" />
     <ClInclude Include="src\Gradient\ECS\SceneManager.h" />
     <ClInclude Include="src\Gradient\ECS\Component.h" />
+    <ClInclude Include="src\Gradient\ECS\Handlers\Handler.h" />
+    <ClInclude Include="src\Gradient\ECS\Handlers\CameraHandler.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Gradient\Core.cpp">
@@ -2881,6 +2883,7 @@
     </ClCompile>
     <ClCompile Include="src\Gradient\ECS\Actor.cpp" />
     <ClCompile Include="src\Gradient\ECS\SceneManager.cpp" />
+    <ClCompile Include="src\Gradient\ECS\Handlers\CameraHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\Gradient\Shaders\2D.glsl">
