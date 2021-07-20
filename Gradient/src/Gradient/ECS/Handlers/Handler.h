@@ -4,7 +4,8 @@ namespace
 {
 	enum class HandlerType
 	{
-		Camera,
+		OrthographicCamera,
+		PerspectiveCamera,
 		Model,
 		Physics
 	};
@@ -20,8 +21,8 @@ namespace
 		{ }
 		~Handler() = default;
 
-		virtual void OnInit();
+		virtual void OnInit() = 0;
 
-		virtual void OnUpdate();
+		virtual void OnUpdate() = 0;
 	};
 }
