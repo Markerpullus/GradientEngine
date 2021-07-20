@@ -2,10 +2,29 @@
 
 namespace Gradient
 {
-	OrthographicCamera::OrthographicCamera(Vector3 p, Vector3 r, Vector3 u, float w, float h, float znear, float zfar)
-		: Camera(p, r, u, w, h), zNear(znear), zFar(zfar)
+	void OrthographicCamera::RecalcProjection()
 	{
-		cam.view = glm::lookAt(p, (p + r), u);
-		cam.projection = glm::ortho(-w / 2.0f, w / 2.0f, -h / 2.0f, h / 2.0f, znear, zfar);
+		cam.projection = glm::ortho(-width / 2.0f, width / 2.0f, -height / 2.0f, height / 2.0f, zNear, zFar);
+	}
+
+	OrthographicCamera::OrthographicCamera(float w, float h, float znear, float zfar)
+		: Camera(w, h)
+	{
+		zNear = znear;
+		zFar = zfar;
+		cam.view = glm::lookAt(position, (position + rotation), up);
+		RecalcProjection();
+	}
+
+	void OrthographicCamera::SetZNear(float znear)
+	{
+		zNear = znear;
+		RecalcProjection();
+	}
+
+	void OrthographicCamera::SetZFar(float zfar)
+	{
+		zFar = zfar;
+		RecalcProjection();
 	}
 }

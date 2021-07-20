@@ -3,8 +3,8 @@
 
 namespace Gradient
 {
-	Camera::Camera(Vector3 p, Vector3 r, Vector3 u, float w, float h)
-		: position(p), rotation(r), up(u), width(w), height(h)
+	Camera::Camera(float w, float h)
+		:width(w), height(h)
 	{ }
 
 	void Camera::SetPosition(Vector3 p)

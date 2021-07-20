@@ -15,5 +15,15 @@ namespace Gradient
 			Vector3 rotation = Vector3(1.0f);
 			Vector3 scale = Vector3(1.0f);
 		};
+
+		struct GD_API OrthographicCamera
+		{
+
+		};
+
+		struct GD_API PerspectiveCamera
+		{
+
+		};
 	}
 }

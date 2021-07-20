@@ -20,6 +20,8 @@ namespace
 		{ }
 		~Handler() = default;
 
+		virtual void OnInit();
+
 		virtual void OnUpdate();
 	};
 }
