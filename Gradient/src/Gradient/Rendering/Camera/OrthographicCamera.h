@@ -10,7 +10,7 @@ namespace Gradient
 		void RecalcProjection();
 
 	public:
-		OrthographicCamera(float w, float h, float znear, float zfar);
+		OrthographicCamera(float w, float h);
 		~OrthographicCamera() = default;
 
 		void SetZNear(float znear);

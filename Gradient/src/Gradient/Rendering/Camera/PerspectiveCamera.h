@@ -7,11 +7,11 @@ namespace Gradient
 	class GD_API PerspectiveCamera : public Camera
 	{
 	private:
-		float fov;
+		float fov = 90.0f;
 		void RecalcProjection();
 
 	public:
-		PerspectiveCamera(float w, float h, float fov, float znear, float zfar);
+		PerspectiveCamera(float w, float h);
 		~PerspectiveCamera() = default;
 
 		void SetFov(float nfov);

@@ -7,11 +7,9 @@ namespace Gradient
 		cam.projection = glm::ortho(-width / 2.0f, width / 2.0f, -height / 2.0f, height / 2.0f, zNear, zFar);
 	}
 
-	OrthographicCamera::OrthographicCamera(float w, float h, float znear, float zfar)
+	OrthographicCamera::OrthographicCamera(float w, float h)
 		: Camera(w, h)
 	{
-		zNear = znear;
-		zFar = zfar;
 		cam.view = glm::lookAt(position, (position + rotation), up);
 		RecalcProjection();
 	}

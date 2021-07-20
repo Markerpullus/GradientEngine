@@ -8,11 +8,9 @@ namespace Gradient
 			glm::perspective(glm::radians(fov), width / height, zNear, zFar);
 	}
 
-	PerspectiveCamera::PerspectiveCamera(float w, float h, float fov, float znear, float zfar)
+	PerspectiveCamera::PerspectiveCamera(float w, float h)
 		: Camera(w, h)
 	{
-		zNear = znear;
-		zFar = zfar;
 		cam.view = glm::lookAt(position, (position + rotation), up);
 		RecalcProjection();
 	}
