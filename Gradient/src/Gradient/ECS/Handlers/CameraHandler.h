@@ -14,14 +14,16 @@ namespace Gradient
 		std::unique_ptr<OrthographicCamera> camera;
 
 	public:
-		OrthographicCameraHandler()
-			: Handler(HandlerType::OrthographicCamera)
+		OrthographicCameraHandler(Actor& a)
+			: Handler(HandlerType::OrthographicCamera, &a)
 		{ };
 		~OrthographicCameraHandler() = default;
 
 		virtual void OnInit() override;
 
 		virtual void OnUpdate() override;
+
+		virtual void OnDestroy() override;
 	};
 
 	class PerspectiveCamera : public Handler
@@ -30,13 +32,15 @@ namespace Gradient
 		std::unique_ptr<PerspectiveCamera> camera;
 
 	public:
-		PerspectiveCamera()
-			: Handler(HandlerType::PerspectiveCamera)
+		PerspectiveCamera(Actor& a)
+			: Handler(HandlerType::PerspectiveCamera, &a)
 		{ };
 		~PerspectiveCamera() = default;
 
 		virtual void OnInit() override;
 
 		virtual void OnUpdate() override;
+
+		virtual void OnDestroy() override;
 	};
 }

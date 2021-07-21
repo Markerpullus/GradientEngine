@@ -14,7 +14,7 @@ namespace Gradient
 		}
 		else
 		{
-			GD_CORE_ERROR("Actor already has component");
+			GD_CORE_WARN("Actor already has component");
 		}
 	}
 

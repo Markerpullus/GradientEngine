@@ -18,12 +18,15 @@ namespace Gradient
 
 		struct GD_API OrthographicCamera
 		{
-
+			float width = 800.0f, height = 600.0f;
+			float zNear = 0.01f, zFar = 100.0f;
 		};
 
 		struct GD_API PerspectiveCamera
 		{
-
+			float width = 800.0f, height = 600.0f;
+			float zNear = 0.01f, zFar = 100.0f;
+			float fov = 90.0f;
 		};
 	}
 }

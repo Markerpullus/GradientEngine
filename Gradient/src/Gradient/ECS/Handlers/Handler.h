@@ -1,6 +1,8 @@
 #pragma once
 
-namespace
+#include "Gradient/ECS/Actor.h"
+
+namespace Gradient
 {
 	enum class HandlerType
 	{
@@ -13,16 +15,19 @@ namespace
 	class Handler
 	{
 	protected:
+		Actor* owner;
 		HandlerType type;
 
 	public:
-		Handler(HandlerType t)
-			: type(t)
+		Handler(HandlerType t, Actor* a)
+			: type(t), owner(a)
 		{ }
 		~Handler() = default;
 
 		virtual void OnInit() = 0;
 
 		virtual void OnUpdate() = 0;
+
+		virtual void OnDestroy() = 0;
 	};
 }
