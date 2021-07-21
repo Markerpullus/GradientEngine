@@ -1,4 +1,5 @@
 #include "Gradient/ECS/Scene.h"
+#include "Gradient/ECS/Actor.h"
 
 namespace Gradient
 {

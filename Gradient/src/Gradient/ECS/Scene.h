@@ -1,11 +1,12 @@
 #pragma once
 
 #include "Gradient/Core.h"
-#include "Gradient/ECS/Actor.h"
 #include "entt/entity/registry.hpp"
 
 namespace Gradient
 {
+	class GD_API Actor;
+
 	class GD_API Scene
 	{
 	private:

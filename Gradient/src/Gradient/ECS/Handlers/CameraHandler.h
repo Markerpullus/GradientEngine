@@ -26,16 +26,16 @@ namespace Gradient
 		virtual void OnDestroy() override;
 	};
 
-	class PerspectiveCamera : public Handler
+	class PerspectiveCameraHandler: public Handler
 	{
 	private:
 		std::unique_ptr<PerspectiveCamera> camera;
 
 	public:
-		PerspectiveCamera(Actor& a)
+		PerspectiveCameraHandler(Actor& a)
 			: Handler(HandlerType::PerspectiveCamera, &a)
 		{ };
-		~PerspectiveCamera() = default;
+		~PerspectiveCameraHandler() = default;
 
 		virtual void OnInit() override;
 

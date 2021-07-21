@@ -1,10 +1,12 @@
 #pragma once
 
-#include "Gradient/ECS/Scene.h"
+#include "Gradient/Core.h"
 #include "entt/entity/registry.hpp"
 
 namespace Gradient
 {
+	class GD_API Scene;
+
 	class GD_API Actor
 	{
 	private:
@@ -15,7 +17,7 @@ namespace Gradient
 		Actor(const Actor& actor) = default;
 		Actor(entt::entity h, Scene* s)
 			: handle(h), scene(s)
-		{ }
+		{ };
 		~Actor() = default;
 
 		template<typename T>

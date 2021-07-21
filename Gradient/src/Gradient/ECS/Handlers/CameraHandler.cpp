@@ -16,14 +16,14 @@ namespace Gradient
 	{
 	}
 
-	void PerspectiveCamera::OnInit()
+	void PerspectiveCameraHandler::OnInit()
 	{
 	}
 
-	void PerspectiveCamera::OnUpdate()
+	void PerspectiveCameraHandler::OnUpdate()
 	{
 	}
-	void PerspectiveCamera::OnDestroy()
+	void PerspectiveCameraHandler::OnDestroy()
 	{
 	}
 }

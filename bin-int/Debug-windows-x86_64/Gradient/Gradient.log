@@ -1,47 +1,14 @@
-﻿  Application.cpp
-Z:\Programming\Gradient\Gradient\vendor\boost\boost\bind.hpp(41): message : The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.
-Z:\Programming\Gradient\Gradient\src\Gradient\Core\Window.h(28,33): warning C4251: 'Gradient::Window::EventHandler': class 'boost::function<void (Gradient::Event &)>' needs to have dll-interface to be used by clients of class 'Gradient::Window'
-Z:\Programming\Gradient\Gradient\src\Gradient\Core\Window.h(14): message : see declaration of 'boost::function<void (Gradient::Event &)>'
-Z:\Programming\Gradient\Gradient\src\Gradient\Core\Scope.h(13,19): warning C4251: 'Gradient::Scope::name': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Gradient::Scope'
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\xstring(4648): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-Z:\Programming\Gradient\Gradient\src\Gradient\Core\Scope.h(32,28): warning C4251: 'Gradient::ScopeStack::stack': class 'std::vector<Gradient::Scope *,std::allocator<Gradient::Scope *>>' needs to have dll-interface to be used by clients of class 'Gradient::ScopeStack'
-Z:\Programming\Gradient\Gradient\src\Gradient\Core\Scope.h(32): message : see declaration of 'std::vector<Gradient::Scope *,std::allocator<Gradient::Scope *>>'
-Z:\Programming\Gradient\Gradient\src\Gradient\Core\Application.h(16,33): warning C4251: 'Gradient::Application::window': class 'std::unique_ptr<Gradient::Window,std::default_delete<Gradient::Window>>' needs to have dll-interface to be used by clients of class 'Gradient::Application'
-Z:\Programming\Gradient\Gradient\src\Gradient\Core\Application.h(16): message : see declaration of 'std::unique_ptr<Gradient::Window,std::default_delete<Gradient::Window>>'
-Z:\Programming\Gradient\Gradient\src\Gradient\Core\Application.h(17,41): warning C4251: 'Gradient::Application::scopeStack': class 'std::unique_ptr<Gradient::ScopeStack,std::default_delete<Gradient::ScopeStack>>' needs to have dll-interface to be used by clients of class 'Gradient::Application'
-Z:\Programming\Gradient\Gradient\src\Gradient\Core\Application.h(17): message : see declaration of 'std::unique_ptr<Gradient::ScopeStack,std::default_delete<Gradient::ScopeStack>>'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': macro redefinition
-Z:\Programming\Gradient\Gradient\vendor\glad\include\glad\glad.h(32): message : see previous definition of 'APIENTRY'
-Z:\Programming\Gradient\Gradient\src\Gradient\Core\Log.h(21,52): warning C4251: 'Gradient::Log::coreLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Gradient::Log'
-Z:\Programming\Gradient\Gradient\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
-Z:\Programming\Gradient\Gradient\src\Gradient\Core\Log.h(23,54): warning C4251: 'Gradient::Log::clientLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Gradient::Log'
-Z:\Programming\Gradient\Gradient\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
+﻿  CameraHandler.cpp
 Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Shader.h(17,60): warning C4251: 'Gradient::Shader::uniformLocationCache': class 'std::unordered_map<std::string,int,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,int>>>' needs to have dll-interface to be used by clients of class 'Gradient::Shader'
 Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Shader.h(17): message : see declaration of 'std::unordered_map<std::string,int,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,int>>>'
 Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Model\Mesh2D.h(21,33): warning C4251: 'Gradient::Mesh2D::vertices': class 'std::vector<Gradient::Vertex2D,std::allocator<Gradient::Vertex2D>>' needs to have dll-interface to be used by clients of class 'Gradient::Mesh2D'
 Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Model\Mesh2D.h(21): message : see declaration of 'std::vector<Gradient::Vertex2D,std::allocator<Gradient::Vertex2D>>'
-Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Model\Mesh2D.h(22,36): warning C4251: 'Gradient::Mesh2D::indices': class 'std::vector<unsigned int,std::allocator<T>>' needs to have dll-interface to be used by clients of class 'Gradient::Mesh2D'
-          with
-          [
-              T=fmt::v7::detail::bigint::bigit
-          ]
-Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Model\Mesh2D.h(22): message : see declaration of 'std::vector<unsigned int,std::allocator<T>>'
-          with
-          [
-              T=fmt::v7::detail::bigint::bigit
-          ]
+Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Model\Mesh2D.h(22,36): warning C4251: 'Gradient::Mesh2D::indices': class 'std::vector<unsigned int,std::allocator<unsigned int>>' needs to have dll-interface to be used by clients of class 'Gradient::Mesh2D'
+Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Model\Mesh2D.h(22): message : see declaration of 'std::vector<unsigned int,std::allocator<unsigned int>>'
 Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Model\Mesh3D.h(22,33): warning C4251: 'Gradient::Mesh3D::vertices': class 'std::vector<Gradient::Vertex3D,std::allocator<Gradient::Vertex3D>>' needs to have dll-interface to be used by clients of class 'Gradient::Mesh3D'
 Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Model\Mesh3D.h(22): message : see declaration of 'std::vector<Gradient::Vertex3D,std::allocator<Gradient::Vertex3D>>'
-Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Model\Mesh3D.h(23,36): warning C4251: 'Gradient::Mesh3D::indices': class 'std::vector<unsigned int,std::allocator<T>>' needs to have dll-interface to be used by clients of class 'Gradient::Mesh3D'
-          with
-          [
-              T=fmt::v7::detail::bigint::bigit
-          ]
-Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Model\Mesh2D.h(22): message : see declaration of 'std::vector<unsigned int,std::allocator<T>>'
-          with
-          [
-              T=fmt::v7::detail::bigint::bigit
-          ]
+Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Model\Mesh3D.h(23,36): warning C4251: 'Gradient::Mesh3D::indices': class 'std::vector<unsigned int,std::allocator<unsigned int>>' needs to have dll-interface to be used by clients of class 'Gradient::Mesh3D'
+Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Model\Mesh2D.h(22): message : see declaration of 'std::vector<unsigned int,std::allocator<unsigned int>>'
 Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Model\Model.h(12,29): warning C4251: 'Gradient::Model2D::meshes': class 'std::vector<Gradient::Mesh2D,std::allocator<Gradient::Mesh2D>>' needs to have dll-interface to be used by clients of class 'Gradient::Model2D'
 Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Model\Model.h(12): message : see declaration of 'std::vector<Gradient::Mesh2D,std::allocator<Gradient::Mesh2D>>'
 Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Model\Model.h(19,16): warning C4251: 'Gradient::Model2D::model': struct 'glm::mat<4,4,glm::f32,glm::packed_highp>' needs to have dll-interface to be used by clients of class 'Gradient::Model2D'
@@ -60,10 +27,16 @@ Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Light.h(35,19): warning 
 Z:\Programming\Gradient\Gradient\vendor\glm\glm\fwd.hpp(420): message : see declaration of 'glm::vec<3,float,glm::packed_highp>'
 Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Light.h(45,20): warning C4251: 'Gradient::DirectionalLight::direction': struct 'glm::vec<3,float,glm::packed_highp>' needs to have dll-interface to be used by clients of class 'Gradient::DirectionalLight'
 Z:\Programming\Gradient\Gradient\vendor\glm\glm\fwd.hpp(420): message : see declaration of 'glm::vec<3,float,glm::packed_highp>'
-Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Camera\Camera.h(20,19): warning C4251: 'Gradient::Camera::position': struct 'glm::vec<3,float,glm::packed_highp>' needs to have dll-interface to be used by clients of class 'Gradient::Camera'
+Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Camera\Camera.h(20,20): warning C4251: 'Gradient::Camera::position': struct 'glm::vec<3,float,glm::packed_highp>' needs to have dll-interface to be used by clients of class 'Gradient::Camera'
 Z:\Programming\Gradient\Gradient\vendor\glm\glm\fwd.hpp(420): message : see declaration of 'glm::vec<3,float,glm::packed_highp>'
-Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Camera\Camera.h(21,19): warning C4251: 'Gradient::Camera::rotation': struct 'glm::vec<3,float,glm::packed_highp>' needs to have dll-interface to be used by clients of class 'Gradient::Camera'
+Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Camera\Camera.h(21,20): warning C4251: 'Gradient::Camera::rotation': struct 'glm::vec<3,float,glm::packed_highp>' needs to have dll-interface to be used by clients of class 'Gradient::Camera'
 Z:\Programming\Gradient\Gradient\vendor\glm\glm\fwd.hpp(420): message : see declaration of 'glm::vec<3,float,glm::packed_highp>'
-Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Camera\Camera.h(22,13): warning C4251: 'Gradient::Camera::up': struct 'glm::vec<3,float,glm::packed_highp>' needs to have dll-interface to be used by clients of class 'Gradient::Camera'
+Z:\Programming\Gradient\Gradient\src\Gradient\Rendering\Camera\Camera.h(22,14): warning C4251: 'Gradient::Camera::up': struct 'glm::vec<3,float,glm::packed_highp>' needs to have dll-interface to be used by clients of class 'Gradient::Camera'
 Z:\Programming\Gradient\Gradient\vendor\glm\glm\fwd.hpp(420): message : see declaration of 'glm::vec<3,float,glm::packed_highp>'
+  Scene.cpp
+Z:\Programming\Gradient\Gradient\src\Gradient\ECS\Scene.h(13,26): warning C4251: 'Gradient::Scene::registry': class 'entt::basic_registry<entt::entity>' needs to have dll-interface to be used by clients of class 'Gradient::Scene'
+Z:\Programming\Gradient\Gradient\vendor\entt\src\entt\entity\fwd.hpp(76): message : see declaration of 'entt::basic_registry<entt::entity>'
+  Generating Code...
+Z:\Programming\Gradient\Gradient\src\Gradient\ECS\Scene.cpp(18): warning C4172: returning address of local variable or temporary: actor
+     Creating library ..\bin\Debug-windows-x86_64\Gradient\Gradient.lib and object ..\bin\Debug-windows-x86_64\Gradient\Gradient.exp
   Gradient.vcxproj -> Z:\Programming\Gradient\bin\Debug-windows-x86_64\Gradient\Gradient.dll
