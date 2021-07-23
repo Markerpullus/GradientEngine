@@ -10,11 +10,14 @@ namespace Gradient
 
 	void OrthographicCameraHandler::OnUpdate()
 	{
-		camera->SetPosition(owner->GetComponent<Component::Transform>().translation);
-		Vector3 rotation = owner->GetComponent<Component::Transform>().rotation;
-		camera->SetOrientation(Vector3(cos(rotation.z)*cos(rotation.x),
-			sin(rotation.x),
-			sin(rotation.z)*cos(rotation.x)));
+		auto transform = owner->GetComponent<Component::Transform>();
+		auto cam = owner->GetComponent<Component::OrthographicCamera>();
+		camera->SetPosition(transform.translation);
+		camera->SetOrientation(transform.rotation * Vector3(0, 0, -1));
+		camera->SetUpVector(transform.rotation * Vector3(0, 1, 0));
+		camera->SetZFar(cam.zFar);
+		camera->SetZNear(cam.zNear);
+		camera->SetDimensions(cam.width, cam.height);
 	}
 
 	void OrthographicCameraHandler::OnDestroy()

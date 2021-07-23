@@ -8,7 +8,7 @@ namespace Gradient
 	{
 	private:
 		float fov = 90.0f;
-		void RecalcProjection();
+		virtual void RecalcProjection() override;
 
 	public:
 		PerspectiveCamera(float w, float h);

@@ -23,6 +23,8 @@ namespace Gradient
 		float width, height;
 		float zNear = 0.01f, zFar = 100.0f;
 
+		virtual void RecalcProjection() = 0;
+
 	public:
 		Camera(float w, float h);
 		~Camera() = default;
@@ -32,6 +34,8 @@ namespace Gradient
 		void SetOrientation(Vector3 r);
 
 		void SetUpVector(Vector3 u);
+
+		void SetDimensions(float w, float h);
 
 		inline CameraData GetCamData() { return cam; }
 

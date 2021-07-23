@@ -24,4 +24,10 @@ namespace Gradient
 		up = u;
 		cam.view = glm::lookAt(position, (position + orientation), up);
 	}
+
+	void Camera::SetDimensions(float w, float h)
+	{
+		width, height = w, h;
+		RecalcProjection();
+	}
 }
