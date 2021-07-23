@@ -29,5 +29,7 @@ namespace Gradient
 		virtual void OnUpdate() = 0;
 
 		virtual void OnDestroy() = 0;
+
+		friend class Scene;
 	};
 }

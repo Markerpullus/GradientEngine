@@ -1,5 +1,6 @@
 #include "Gradient/ECS/Scene.h"
-#include "Gradient/ECS/Actor.h"
+#include "Gradient/ECS/Component.h"
+#include "Gradient/ECS/Handlers/CameraHandler.h"
 
 namespace Gradient
 {
@@ -26,5 +27,7 @@ namespace Gradient
 	void Scene::OnUpdate()
 	{
 		// Componenet handlers
+
+		// Rendering pipeline
 	}
 }

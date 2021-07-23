@@ -1,7 +1,10 @@
 #pragma once
 
 #include "Gradient/Core.h"
+#include "Gradient/ECS/Handlers/Handler.h"
 #include "entt/entity/registry.hpp"
+
+#include <vector>
 
 namespace Gradient
 {
@@ -15,6 +18,8 @@ namespace Gradient
 		int index;
 
 		Scene(int i);
+
+		std::vector<Handler*> handlers;
 
 	public:
 		
