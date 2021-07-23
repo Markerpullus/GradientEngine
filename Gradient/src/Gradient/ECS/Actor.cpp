@@ -20,10 +20,10 @@ namespace Gradient
 			Handler* handler;
 			switch (T)
 			{
-			case Components::OrthographicCamera:
+			case Component::OrthographicCamera:
 				handler = new OrthographicCameraHandler(*this);
 				break;
-			case Components::PerspectiveCamera:
+			case Component::PerspectiveCamera:
 				handler = new PerspectiveCameraHandler(*this);
 				break;
 			default:
@@ -31,6 +31,7 @@ namespace Gradient
 				break;
 			}
 			if (handler != nullptr)
+				handler->OnInit();
 				scene->handlers.emplace_back(handler);
 		}
 		else

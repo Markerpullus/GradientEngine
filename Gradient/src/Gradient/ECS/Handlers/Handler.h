@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Gradient/ECS/Actor.h"
+#include "Gradient/ECS/Component.h"
 
 namespace Gradient
 {

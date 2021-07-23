@@ -7,7 +7,7 @@
 
 namespace Gradient
 {
-	namespace Components
+	namespace Component
 	{
 		struct GD_API Transform
 		{

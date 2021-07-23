@@ -10,6 +10,11 @@ namespace Gradient
 
 	Scene::~Scene()
 	{
+		for (auto it : handlers)
+		{
+			it->OnDestroy();
+			delete it;
+		}
 		registry.clear();
 	}
 

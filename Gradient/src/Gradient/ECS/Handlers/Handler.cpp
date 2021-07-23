@@ -1,5 +1,4 @@
 #include "Gradient/ECS/Handlers/Handler.h"
-#include "Gradient/ECS/Component.h"
 
 namespace Gradient
 {
@@ -8,10 +7,10 @@ namespace Gradient
 	{
 		switch (T)
 		{
-		case Components::OrthographicCamera:
+		case Component::OrthographicCamera:
 			return HandlerType::OrthographicCamera;
 			break;
-		case Components::PerspectiveCamera:
+		case Component::PerspectiveCamera:
 			return HandlerType::PerspectiveCamera;
 			break;
 		default:

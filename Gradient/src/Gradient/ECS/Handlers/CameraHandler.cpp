@@ -9,7 +9,7 @@ namespace Gradient
 
 	void OrthographicCameraHandler::OnUpdate()
 	{
-		
+		camera->SetPosition(owner->GetComponent<Component::Transform>().translation);
 	}
 
 	void OrthographicCameraHandler::OnDestroy()
@@ -18,6 +18,7 @@ namespace Gradient
 
 	void PerspectiveCameraHandler::OnInit()
 	{
+		camera = std::make_unique<PerspectiveCamera>(PerspectiveCamera(800.0f, 600.0f));
 	}
 
 	void PerspectiveCameraHandler::OnUpdate()
