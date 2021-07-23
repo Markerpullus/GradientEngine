@@ -18,7 +18,7 @@ namespace Gradient
 	protected:
 		CameraData cam = { Matrix4(1.0f), Matrix4(1.0f) };
 		Vector3 position = Vector3(0.0f);
-		Vector3 direction = Vector3(0.0f, 0.0f, -1.0f);
+		Vector3 orientation = Vector3(0.0f, 0.0f, -1.0f);
 		Vector3 up = Vector3(0.0f, 1.0f, 0.0f);
 		float width, height;
 		float zNear = 0.01f, zFar = 100.0f;
@@ -29,7 +29,7 @@ namespace Gradient
 
 		void SetPosition(Vector3 p);
 
-		void SetDirection(Vector3 r);
+		void SetOrientation(Vector3 r);
 
 		void SetUpVector(Vector3 u);
 

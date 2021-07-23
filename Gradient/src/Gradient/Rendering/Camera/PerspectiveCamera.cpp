@@ -11,7 +11,7 @@ namespace Gradient
 	PerspectiveCamera::PerspectiveCamera(float w, float h)
 		: Camera(w, h)
 	{
-		cam.view = glm::lookAt(position, (position + direction), up);
+		cam.view = glm::lookAt(position, (position + orientation), up);
 		RecalcProjection();
 	}
 
