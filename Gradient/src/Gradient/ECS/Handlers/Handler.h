@@ -6,6 +6,7 @@ namespace Gradient
 {
 	enum class HandlerType
 	{
+		None = 0,
 		OrthographicCamera,
 		PerspectiveCamera,
 		Model,
@@ -30,6 +31,10 @@ namespace Gradient
 
 		virtual void OnDestroy() = 0;
 
+		template <typename T>
+		static HandlerType GetEnumFromType();
+
 		friend class Scene;
+		friend class Actor;
 	};
 }

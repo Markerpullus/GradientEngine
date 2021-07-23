@@ -1,5 +1,10 @@
 #include "Gradient/ECS/Actor.h"
+#include "Gradient/ECS/Scene.h"
+#include "Gradient/ECS/Handlers/CameraHandler.h"
+#include "Gradient/ECS/Component.h"
 #include "Gradient/Core/Log.h"
+
+#include <algorithm>
 
 namespace Gradient
 {
@@ -11,6 +16,22 @@ namespace Gradient
 		{
 			auto& comp = registry.emplace<T>(handle);
 			comp = component;
+
+			Handler* handler;
+			switch (T)
+			{
+			case Components::OrthographicCamera:
+				handler = new OrthographicCameraHandler(*this);
+				break;
+			case Components::PerspectiveCamera:
+				handler = new PerspectiveCameraHandler(*this);
+				break;
+			default:
+				handler = nullptr;
+				break;
+			}
+			if (handler != nullptr)
+				scene->handlers.emplace_back(handler);
 		}
 		else
 		{
@@ -22,6 +43,16 @@ namespace Gradient
 	void Actor::RemoveComponent()
 	{
 		scene->registry.remove<T>(handle);
+		for (auto it : scene->handlers)
+		{
+			if (it->type == Handler::GetEnumFromType<T>() && it->owner == this)
+			{
+				it->OnDestroy();
+				delete it;
+				scene->handlers.erase(std::remove(scene->handlers.begin(), scene->handlers.end(), it), 
+					scene->handlers.end());
+			}
+		}
 	}
 
 	template<typename T>

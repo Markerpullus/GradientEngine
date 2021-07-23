@@ -1007,6 +1007,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Gradient\ECS\Handlers\CameraHandler.cpp" />
+    <ClCompile Include="src\Gradient\ECS\Handlers\Handler.cpp" />
     <ClCompile Include="src\Gradient\ECS\SceneManager.cpp" />
     <ClCompile Include="src\Gradient\ECS\Actor.cpp" />
     <ClCompile Include="src\Gradient\Core.cpp" />
