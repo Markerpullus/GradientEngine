@@ -10,18 +10,18 @@ namespace Gradient
 	void Camera::SetPosition(Vector3 p)
 	{
 		position = p;
-		cam.view = glm::lookAt(position, (position + rotation), up);
+		cam.view = glm::lookAt(position, (position + direction), up);
 	}
 
-	void Camera::SetRotation(Vector3 r)
+	void Camera::SetDirection(Vector3 r)
 	{
-		rotation = r;
-		cam.view = glm::lookAt(position, (position + rotation), up);
+		direction = r;
+		cam.view = glm::lookAt(position, (position + direction), up);
 	}
 
 	void Camera::SetUpVector(Vector3 u)
 	{
 		up = u;
-		cam.view = glm::lookAt(position, (position + rotation), up);
+		cam.view = glm::lookAt(position, (position + direction), up);
 	}
 }

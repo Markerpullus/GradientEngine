@@ -5,6 +5,8 @@
 #include "glm/gtx/rotate_vector.hpp"
 #include "glm/gtx/string_cast.hpp"
 
+#include <cmath>
+
 // Lol get robbed glm
 using Vector2 = glm::vec2;
 using Vector3 = glm::vec3;

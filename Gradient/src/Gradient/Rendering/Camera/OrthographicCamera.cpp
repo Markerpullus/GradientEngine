@@ -10,7 +10,7 @@ namespace Gradient
 	OrthographicCamera::OrthographicCamera(float w, float h)
 		: Camera(w, h)
 	{
-		cam.view = glm::lookAt(position, (position + rotation), up);
+		cam.view = glm::lookAt(position, (position + direction), up);
 		RecalcProjection();
 	}
 

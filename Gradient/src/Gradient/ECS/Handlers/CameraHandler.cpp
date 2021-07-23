@@ -1,4 +1,5 @@
 #include "Gradient/ECS/Handlers/CameraHandler.h"
+#include "Gradient/Math/Math.h"
 
 namespace Gradient
 {

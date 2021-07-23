@@ -12,7 +12,7 @@ namespace Gradient
 		struct GD_API Transform
 		{
 			Vector3 translation = Vector3(0.0f);
-			Vector3 rotation = Vector3(1.0f);
+			Vector3 rotation = Vector3(1.0f); // pitch, roll, yaw
 			Vector3 scale = Vector3(1.0f);
 		};
 
