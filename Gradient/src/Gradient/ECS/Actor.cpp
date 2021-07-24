@@ -57,8 +57,8 @@ namespace Gradient
 	}
 
 	template<typename T>
-	T& Actor::GetComponent()
+	void* Actor::GetComponent()
 	{
-		return scene->registry.get<T>(handle);
+		return (void*)scene->registry.get<T>(handle);
 	}
 }

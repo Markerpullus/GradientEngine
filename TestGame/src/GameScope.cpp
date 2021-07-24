@@ -9,6 +9,7 @@ GameScope::GameScope()
 void GameScope::OnAttach()
 {
 	// I know bro, the code is ugly af
+	/*
 	Vector3 positions[] = { Vector3(-0.5f, -0.5f, -0.5f), Vector3(0.5f, -0.5f, -0.5f), Vector3(0.5f, 0.5f, -0.5f), Vector3(0.5f, 0.5f, -0.5f),
 		Vector3(-0.5f, 0.5f, -0.5f), Vector3(-0.5f, -0.5f, -0.5f) };
 	Vector3 normals[] = { Vector3(0.0f,  0.0f, 1.0f), Vector3(0.0f,  0.0f, 1.0f), Vector3(0.0f,  0.0f, 1.0f), Vector3(0.0f,  0.0f, 1.0f),
@@ -31,11 +32,12 @@ void GameScope::OnAttach()
 	cam = new Gradient::PerspectiveCamera(Vector3(0.0f, 0.0f, 2.0f), Vector3(0.0f, 0.0f, -1.0f), Vector3(0.0f, 1.0f, 0.0f), 4.0f, 3.0f, 90.0f, 0.01f, 100.0f);
 	
 	renderer = new Gradient::Renderer(*cam);
+	*/
 }
 
 void GameScope::OnDetach()
 {
-	delete renderer, cam, model, shader;
+	//delete renderer, cam, model, shader;
 }
 
 void GameScope::OnEvent(Gradient::Event& e)
@@ -45,6 +47,7 @@ void GameScope::OnEvent(Gradient::Event& e)
 
 void GameScope::OnUpdate()
 {
+	/*
 	renderer->SetClearColor(Vector3(0.0f, 0.0f, 0.0f));
 	renderer->BeginFrame();
 
@@ -54,4 +57,5 @@ void GameScope::OnUpdate()
 	renderer->DrawModel(*model, *shader, lights);
 
 	renderer->EndFrame();
+	*/
 }

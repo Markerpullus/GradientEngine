@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>Z:\Programming\Gradient\bin\Debug-windows-x86_64\Gradient\Gradient.dll</FullPath>
+      <FullPath>Z:\GradientEngine\bin\Debug-windows-x86_64\Gradient\Gradient.dll</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

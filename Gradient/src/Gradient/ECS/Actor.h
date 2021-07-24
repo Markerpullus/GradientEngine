@@ -27,7 +27,7 @@ namespace Gradient
 		void RemoveComponent();
 
 		template<typename T>
-		T& GetComponent();
+		void* GetComponent();
 
 		friend class Scene;
 	};
