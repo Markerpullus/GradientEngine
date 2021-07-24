@@ -1,9 +1,9 @@
-[submodule ".\\Gradient\\vendor\\spdlog"]
-	path = .\\Gradient\\vendor\\spdlog
+[submodule "Gradient/vendor/spdlog"]
+	path = Gradient/vendor/spdlog
 	url = https://github.com/gabime/spdlog
-[submodule ".\\Gradient\\vendor\\glfw"]
-	path = .\\Gradient\\vendor\\glfw
+[submodule "Gradient/vendor/entt"]
+	path = Gradient/vendor/entt
+	url = https://github.com/skypjack/entt
+[submodule "Gradient/vendor/glfw"]
+	path = Gradient/vendor/glfw
 	url = https://github.com/TheCherno/glfw
-[submodule ".\\Gradient\\vendor\\entt"]
-	path = .\\Gradient\\vendor\\entt
-	url = https://github.com/skypjack/entt.git
