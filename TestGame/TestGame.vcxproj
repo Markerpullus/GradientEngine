@@ -131,6 +131,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\GameScope.h" />
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="src\GameScope.cpp" />
     <ClCompile Include="src\TestGame.cpp" />
   </ItemGroup>
@@ -138,9 +141,6 @@
     <ProjectReference Include="..\Gradient\Gradient.vcxproj">
       <Project>{D3A9F532-BF76-503E-E88F-3EE6D4BB85CC}</Project>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="src\GameScope.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

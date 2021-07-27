@@ -82,7 +82,7 @@
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\glfw\include;vendor\glad\include;vendor\boost;vendor\entt\src;vendor\glm;vendor\stb;vendor\tinyobjloader;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -107,7 +107,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <AdditionalOptions>/MT %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -147,11 +147,6 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Gradient\ECS\Handlers\CameraHandler.h" />
-    <ClInclude Include="src\Gradient\ECS\Handlers\Handler.h" />
-    <ClInclude Include="src\Gradient\ECS\Component.h" />
-    <ClInclude Include="src\Gradient\ECS\SceneManager.h" />
-    <ClInclude Include="src\Gradient\ECS\Actor.h" />
     <ClInclude Include="src\Gradient.h" />
     <ClInclude Include="src\Gradient\Core.h" />
     <ClInclude Include="src\Gradient\Core\Application.h" />
@@ -159,7 +154,12 @@
     <ClInclude Include="src\Gradient\Core\Log.h" />
     <ClInclude Include="src\Gradient\Core\Scope.h" />
     <ClInclude Include="src\Gradient\Core\Window.h" />
+    <ClInclude Include="src\Gradient\ECS\Actor.h" />
+    <ClInclude Include="src\Gradient\ECS\Component.h" />
+    <ClInclude Include="src\Gradient\ECS\Handlers\CameraHandler.h" />
+    <ClInclude Include="src\Gradient\ECS\Handlers\Handler.h" />
     <ClInclude Include="src\Gradient\ECS\Scene.h" />
+    <ClInclude Include="src\Gradient\ECS\SceneManager.h" />
     <ClInclude Include="src\Gradient\Entry.h" />
     <ClInclude Include="src\Gradient\EventSystem\Event.h" />
     <ClInclude Include="src\Gradient\EventSystem\KeyCodes.h" />
@@ -549,6 +549,7 @@
     <ClInclude Include="vendor\entt\src\entt\core\type_info.hpp" />
     <ClInclude Include="vendor\entt\src\entt\core\type_traits.hpp" />
     <ClInclude Include="vendor\entt\src\entt\core\utility.hpp" />
+    <ClInclude Include="vendor\entt\src\entt\entity\component.hpp" />
     <ClInclude Include="vendor\entt\src\entt\entity\entity.hpp" />
     <ClInclude Include="vendor\entt\src\entt\entity\fwd.hpp" />
     <ClInclude Include="vendor\entt\src\entt\entity\group.hpp" />
@@ -1006,17 +1007,17 @@
     <ClInclude Include="vendor\tinyobjloader\tol\tinyobjloader.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Gradient\ECS\Handlers\CameraHandler.cpp" />
-    <ClCompile Include="src\Gradient\ECS\Handlers\Handler.cpp" />
-    <ClCompile Include="src\Gradient\ECS\SceneManager.cpp" />
-    <ClCompile Include="src\Gradient\ECS\Actor.cpp" />
     <ClCompile Include="src\Gradient\Core.cpp" />
     <ClCompile Include="src\Gradient\Core\Application.cpp" />
     <ClCompile Include="src\Gradient\Core\Input.cpp" />
     <ClCompile Include="src\Gradient\Core\Log.cpp" />
     <ClCompile Include="src\Gradient\Core\Scope.cpp" />
     <ClCompile Include="src\Gradient\Core\Window.cpp" />
+    <ClCompile Include="src\Gradient\ECS\Actor.cpp" />
+    <ClCompile Include="src\Gradient\ECS\Handlers\CameraHandler.cpp" />
+    <ClCompile Include="src\Gradient\ECS\Handlers\Handler.cpp" />
     <ClCompile Include="src\Gradient\ECS\Scene.cpp" />
+    <ClCompile Include="src\Gradient\ECS\SceneManager.cpp" />
     <ClCompile Include="src\Gradient\Rendering\Camera\Camera.cpp" />
     <ClCompile Include="src\Gradient\Rendering\Camera\OrthographicCamera.cpp" />
     <ClCompile Include="src\Gradient\Rendering\Camera\PerspectiveCamera.cpp" />

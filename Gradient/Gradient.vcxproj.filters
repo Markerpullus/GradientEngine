@@ -13,6 +13,9 @@
     <Filter Include="src\Gradient\ECS">
       <UniqueIdentifier>{14F6C7B9-00EF-E60B-2921-CC901579C617}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Gradient\ECS\Handlers">
+      <UniqueIdentifier>{74AD032A-E06F-37B4-2920-C64095211092}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Gradient\EventSystem">
       <UniqueIdentifier>{8071096E-6C96-58EE-95E1-3D7E8165570C}</UniqueIdentifier>
     </Filter>
@@ -288,7 +291,22 @@
     <ClInclude Include="src\Gradient\Core\Window.h">
       <Filter>src\Gradient\Core</Filter>
     </ClInclude>
+    <ClInclude Include="src\Gradient\ECS\Actor.h">
+      <Filter>src\Gradient\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gradient\ECS\Component.h">
+      <Filter>src\Gradient\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gradient\ECS\Handlers\CameraHandler.h">
+      <Filter>src\Gradient\ECS\Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gradient\ECS\Handlers\Handler.h">
+      <Filter>src\Gradient\ECS\Handlers</Filter>
+    </ClInclude>
     <ClInclude Include="src\Gradient\ECS\Scene.h">
+      <Filter>src\Gradient\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gradient\ECS\SceneManager.h">
       <Filter>src\Gradient\ECS</Filter>
     </ClInclude>
     <ClInclude Include="src\Gradient\Entry.h">
@@ -1457,6 +1475,9 @@
     </ClInclude>
     <ClInclude Include="vendor\entt\src\entt\core\utility.hpp">
       <Filter>vendor\entt\src\entt\core</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\entt\src\entt\entity\component.hpp">
+      <Filter>vendor\entt\src\entt\entity</Filter>
     </ClInclude>
     <ClInclude Include="vendor\entt\src\entt\entity\entity.hpp">
       <Filter>vendor\entt\src\entt\entity</Filter>
@@ -2823,11 +2844,6 @@
     <ClInclude Include="vendor\tinyobjloader\tol\tinyobjloader.h">
       <Filter>vendor\tinyobjloader\tol</Filter>
     </ClInclude>
-    <ClInclude Include="src\Gradient\ECS\Actor.h" />
-    <ClInclude Include="src\Gradient\ECS\SceneManager.h" />
-    <ClInclude Include="src\Gradient\ECS\Component.h" />
-    <ClInclude Include="src\Gradient\ECS\Handlers\Handler.h" />
-    <ClInclude Include="src\Gradient\ECS\Handlers\CameraHandler.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Gradient\Core.cpp">
@@ -2848,7 +2864,19 @@
     <ClCompile Include="src\Gradient\Core\Window.cpp">
       <Filter>src\Gradient\Core</Filter>
     </ClCompile>
+    <ClCompile Include="src\Gradient\ECS\Actor.cpp">
+      <Filter>src\Gradient\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Gradient\ECS\Handlers\CameraHandler.cpp">
+      <Filter>src\Gradient\ECS\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Gradient\ECS\Handlers\Handler.cpp">
+      <Filter>src\Gradient\ECS\Handlers</Filter>
+    </ClCompile>
     <ClCompile Include="src\Gradient\ECS\Scene.cpp">
+      <Filter>src\Gradient\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Gradient\ECS\SceneManager.cpp">
       <Filter>src\Gradient\ECS</Filter>
     </ClCompile>
     <ClCompile Include="src\Gradient\Rendering\Camera\Camera.cpp">
@@ -2881,10 +2909,6 @@
     <ClCompile Include="vendor\tinyobjloader\tol\tinyobjloader.cpp">
       <Filter>vendor\tinyobjloader\tol</Filter>
     </ClCompile>
-    <ClCompile Include="src\Gradient\ECS\Actor.cpp" />
-    <ClCompile Include="src\Gradient\ECS\SceneManager.cpp" />
-    <ClCompile Include="src\Gradient\ECS\Handlers\CameraHandler.cpp" />
-    <ClCompile Include="src\Gradient\ECS\Handlers\Handler.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\Gradient\Shaders\2D.glsl">

@@ -91,8 +91,11 @@ project "Gradient"
 		defines "GD_DIST"
 		optimize "On"
 
+	filter { "system:windows", "configurations:Debug" }
+		buildoptions "/MDd"
+
 	filter { "system:windows", "configurations:Release" }
-		buildoptions "/MT"
+		buildoptions "/MD"
 
 project "TestGame"
 	location "TestGame"
